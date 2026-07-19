@@ -17,14 +17,26 @@ const W = 1920;
 const H = 1080; // capture at a fixed 16:9 canvas regardless of window size
 
 async function captureSlide(slide: ReactElement): Promise<string> {
+  // A zero-size, clipped wrapper hides this from the viewer without moving
+  // the captured node off-screen — html-to-image clones inline styles into
+  // an SVG foreignObject, so a `left:-10000px` node renders 10000px outside
+  // the captured canvas and comes back blank. The host itself stays at a
+  // normal (unpositioned) layout so its clone paints at the origin.
+  const clip = document.createElement('div');
+  clip.style.cssText =
+    'position:fixed; top:0; left:0; width:0; height:0; overflow:hidden; pointer-events:none;';
   const host = document.createElement('div');
-  host.style.cssText = `position:fixed; left:-10000px; top:0; width:${W}px; height:${H}px; overflow:hidden;`;
-  document.body.appendChild(host);
+  host.style.cssText = `width:${W}px; height:${H}px; overflow:hidden;`;
+  clip.appendChild(host);
+  document.body.appendChild(clip);
   const root = createRoot(host);
   try {
     await new Promise<void>((resolve) => {
       root.render(
-        <div className="deck" style={{ width: W, height: H, position: 'relative' }}>
+        <div
+          className="deck export-capture"
+          style={{ width: W, height: H, position: 'relative' }}
+        >
           <DeckCtx.Provider value={{ clicks: 9999, isStatic: true }}>
             <div className="slide-stage" style={{ animation: 'none' }}>
               {slide}
@@ -39,7 +51,7 @@ async function captureSlide(slide: ReactElement): Promise<string> {
     return await toPng(host, { pixelRatio: 1 });
   } finally {
     root.unmount();
-    host.remove();
+    clip.remove();
   }
 }
 

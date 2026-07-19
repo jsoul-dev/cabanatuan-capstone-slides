@@ -11,6 +11,7 @@ import type { ReactElement, ReactNode } from 'react';
 import { MotionConfig } from 'framer-motion';
 import { DeckCtx } from './DeckContext';
 import Annotator, { type Stroke } from './Annotator';
+import { exportDeck, type ExportKind } from './export';
 import {
   IconSidebar,
   IconGrid,
@@ -21,6 +22,7 @@ import {
   IconShrink,
   IconPresent,
   IconClose,
+  IconDownload,
 } from './icons';
 
 /* ── The paged presentation engine + the Slidev-style chrome (dock + rail).
@@ -113,6 +115,13 @@ export default function Deck({ children }: { children: ReactNode }) {
       }
     }
   );
+  const [exportOpen, setExportOpen] = useState(false);
+  const [exportBusy, setExportBusy] = useState<{
+    kind: ExportKind;
+    done: number;
+    total: number;
+  } | null>(null);
+  const exportMenuRef = useRef<HTMLDivElement>(null);
 
   // per-slide build maxima (so going back restores the right click state) and
   // per-slide annotations (so drawings persist on the slide they were made).
@@ -192,6 +201,36 @@ export default function Deck({ children }: { children: ReactNode }) {
       window.location.pathname + '?presenter=1' + window.location.hash;
     window.open(url, 'deck-presenter');
   }, [isPresenter]);
+  const runExport = useCallback(
+    async (kind: ExportKind) => {
+      setExportOpen(false);
+      setExportBusy({ kind, done: 0, total });
+      try {
+        await exportDeck(kind, slides, (done, tot) =>
+          setExportBusy({ kind, done, total: tot })
+        );
+      } catch (err) {
+        alert(`Export failed: ${err instanceof Error ? err.message : err}`);
+      } finally {
+        setExportBusy(null);
+      }
+    },
+    [slides, total]
+  );
+
+  // close the export popover on outside click
+  useEffect(() => {
+    if (!exportOpen) return;
+    const onClick = (e: MouseEvent) => {
+      if (
+        exportMenuRef.current &&
+        !exportMenuRef.current.contains(e.target as Node)
+      )
+        setExportOpen(false);
+    };
+    document.addEventListener('mousedown', onClick);
+    return () => document.removeEventListener('mousedown', onClick);
+  }, [exportOpen]);
 
   // keyboard
   useEffect(() => {
@@ -251,11 +290,16 @@ export default function Deck({ children }: { children: ReactNode }) {
         case 'H':
           setUiHidden((v) => !v);
           break;
+        case 'e':
+        case 'E':
+          setExportOpen((v) => !v);
+          break;
         case 'Escape':
           setRailOpen(false);
           setGridOpen(false);
           setDrawing(false);
           setUiHidden(false);
+          setExportOpen(false);
           break;
       }
     };
@@ -526,6 +570,42 @@ export default function Deck({ children }: { children: ReactNode }) {
             >
               <IconPresent />
             </button>
+            <span className="noir-sep" />
+            <div className="noir-export" ref={exportMenuRef}>
+              <button
+                className={'noir-icon-btn' + (exportOpen ? ' on' : '')}
+                data-tip="Export (E)"
+                disabled={!!exportBusy}
+                onClick={() => setExportOpen((v) => !v)}
+              >
+                <IconDownload />
+              </button>
+              {exportOpen && !exportBusy && (
+                <div className="noir-export-menu">
+                  <button
+                    className="noir-export-item"
+                    onClick={() => runExport('pdf')}
+                  >
+                    Export PDF
+                  </button>
+                  <button
+                    className="noir-export-item"
+                    onClick={() => runExport('pptx')}
+                  >
+                    Export PPTX
+                  </button>
+                </div>
+              )}
+              {exportBusy && (
+                <div className="noir-export-menu">
+                  <div className="noir-export-status">
+                    <span className="noir-spinner" />
+                    Exporting {exportBusy.kind.toUpperCase()} —{' '}
+                    {exportBusy.done}/{exportBusy.total}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

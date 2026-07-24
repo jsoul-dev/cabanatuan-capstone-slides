@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import type { ReactElement } from 'react';
-import { toPng } from 'html-to-image';
+import { toJpeg } from 'html-to-image';
 import { DeckCtx } from './DeckContext';
 // jspdf/pptxgenjs are dynamically imported below — they're only needed once
 // the user actually exports, and jsPDF alone drags in a ~250kB html2canvas
@@ -8,10 +8,10 @@ import { DeckCtx } from './DeckContext';
 
 /* Export the deck as PDF / PPTX. Slides are arbitrary live web content
    (canvas, SVG, animation) — there's no way to turn that into editable
-   PDF/PPTX shapes, so each slide is rasterized to a PNG (reusing the same
+   PDF/PPTX shapes, so each slide is rasterized to a JPEG (reusing the same
    isStatic:true / clicks:9999 context Thumb uses for thumbnails, so builds
    and entrance animations render in their final state with no waiting) and
-   the PNGs are laid one-per-page/slide into the output file. */
+   the images are laid one-per-page/slide into the output file. */
 
 const W = 1920;
 const H = 1080; // capture at a fixed 16:9 canvas regardless of window size
@@ -53,7 +53,11 @@ async function captureSlide(slide: ReactElement, bg: string): Promise<string> {
     // reliably inline the captured root's own background, and a CSS custom
     // property wouldn't resolve inside the isolated SVG it rasterizes
     // through, so pass the theme color pre-resolved to a literal value.
-    return await toPng(host, { pixelRatio: 1, backgroundColor: bg });
+    // JPEG (not PNG): the canvas is fully opaque now, so there's no alpha
+    // channel worth keeping — jsPDF embeds PNG's RGBA essentially
+    // uncompressed (a 26-slide deck came out at 200MB+), while JPEG gives
+    // real compression and is a fraction of the size at this quality.
+    return await toJpeg(host, { pixelRatio: 1, backgroundColor: bg, quality: 0.92 });
   } finally {
     root.unmount();
     clip.remove();
@@ -89,7 +93,7 @@ async function exportToPdf(images: string[], filename: string) {
   const pdf = new jsPDF({ orientation: 'landscape', unit: 'px', format: [W, H] });
   images.forEach((img, i) => {
     if (i > 0) pdf.addPage([W, H], 'landscape');
-    pdf.addImage(img, 'PNG', 0, 0, W, H);
+    pdf.addImage(img, 'JPEG', 0, 0, W, H);
   });
   pdf.save(filename + '.pdf');
 }

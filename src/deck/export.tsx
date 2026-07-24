@@ -16,7 +16,7 @@ import { DeckCtx } from './DeckContext';
 const W = 1920;
 const H = 1080; // capture at a fixed 16:9 canvas regardless of window size
 
-async function captureSlide(slide: ReactElement): Promise<string> {
+async function captureSlide(slide: ReactElement, bg: string): Promise<string> {
   // A zero-size, clipped wrapper hides this from the viewer without moving
   // the captured node off-screen — html-to-image clones inline styles into
   // an SVG foreignObject, so a `left:-10000px` node renders 10000px outside
@@ -48,7 +48,12 @@ async function captureSlide(slide: ReactElement): Promise<string> {
       // the browser a paint before we snapshot.
       requestAnimationFrame(() => requestAnimationFrame(() => resolve()));
     });
-    return await toPng(host, { pixelRatio: 1 });
+    // The live app's dark theme comes from `body`'s background — an
+    // ancestor this offscreen host doesn't have. html-to-image also doesn't
+    // reliably inline the captured root's own background, and a CSS custom
+    // property wouldn't resolve inside the isolated SVG it rasterizes
+    // through, so pass the theme color pre-resolved to a literal value.
+    return await toPng(host, { pixelRatio: 1, backgroundColor: bg });
   } finally {
     root.unmount();
     clip.remove();
@@ -60,9 +65,12 @@ export async function captureSlides(
   onProgress?: (done: number, total: number) => void
 ): Promise<string[]> {
   await document.fonts?.ready;
+  const bg = getComputedStyle(document.documentElement)
+    .getPropertyValue('--bg')
+    .trim();
   const images: string[] = [];
   for (const slide of slides) {
-    images.push(await captureSlide(slide));
+    images.push(await captureSlide(slide, bg));
     onProgress?.(images.length, slides.length);
   }
   return images;

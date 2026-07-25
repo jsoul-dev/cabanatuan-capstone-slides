@@ -25,17 +25,14 @@ export default function Build({
     registerMax?.(at);
   }, [at, registerMax]);
 
-  const shown = clicks >= at;
-
-  // Static previews (thumbnails) pass clicks:9999 so this is always true —
-  // export capture passes real click counts to render each build step.
   if (isStatic)
     return (
-      <div className={className} style={{ ...style, opacity: shown ? 1 : 0 }}>
+      <div className={className} style={style}>
         {children}
       </div>
     );
 
+  const shown = clicks >= at;
   return (
     <motion.div
       className={className}

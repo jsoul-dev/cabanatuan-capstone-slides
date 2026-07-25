@@ -99,7 +99,7 @@ Each top-level child of `<Deck>` is one slide. Compose them from the component l
 | `F` | Fullscreen |
 | `P` | Presenter mode — synced new tab |
 | `H` | Hide the UI |
-| `E` | Export — download as PDF or PPTX |
+| `E` | Export — download as PDF |
 | `Esc` | Close overlays |
 
 - **Presenter mode** opens in a second tab with a timer, next-slide preview, and editable notes — kept in sync with the audience tab via `BroadcastChannel`.

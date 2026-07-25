@@ -68,13 +68,30 @@ async function captureSlides(
   slides: ReactElement[],
   onProgress?: (done: number, total: number) => void
 ): Promise<string[]> {
+  // fonts.ready only waits for faces something on-screen already requested
+  // — force-load every family/weight the deck uses so a slide that's first
+  // to use e.g. mono type doesn't get captured mid-fetch with a fallback font.
+  await Promise.all(
+    [
+      '400 16px Inter',
+      '500 16px Inter',
+      '600 16px Inter',
+      '700 16px Inter',
+      '400 16px "JetBrains Mono"',
+      '500 16px "JetBrains Mono"',
+    ].map((f) => document.fonts?.load(f))
+  );
   await document.fonts?.ready;
   const bg = getComputedStyle(document.documentElement)
     .getPropertyValue('--bg')
     .trim();
   const images: string[] = [];
-  for (const slide of slides) {
-    images.push(await captureSlide(slide, bg));
+  for (const [i, slide] of slides.entries()) {
+    try {
+      images.push(await captureSlide(slide, bg));
+    } catch (err) {
+      throw new Error(`Slide ${i + 1}: ${err instanceof Error ? err.message : err}`);
+    }
     onProgress?.(images.length, slides.length);
   }
   return images;

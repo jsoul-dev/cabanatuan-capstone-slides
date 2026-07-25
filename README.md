@@ -105,6 +105,7 @@ Each top-level child of `<Deck>` is one slide. Compose them from the component l
 - **Presenter mode** opens in a second tab with a timer, next-slide preview, and editable notes — kept in sync with the audience tab via `BroadcastChannel`.
 - **Annotations are content-anchored**: a circle drawn around a stat on a laptop rings the same stat on a phone, wherever the layout moved it. Drawings persist per slide.
 - **Deep links**: the URL hash tracks the slide (`/#7`), so you can share a link straight to a slide.
+- **Export**: `E` renders the deck to a PDF, one page per slide — click-builds fully revealed and animations settled to their final frame, so nothing exports mid-fade or blank. It's a flat snapshot for handoff or print, not an editable format (slides are live web pages, not vector shapes).
 
 ## Component library
 

@@ -11,6 +11,7 @@ import type { ReactElement, ReactNode } from 'react';
 import { MotionConfig } from 'framer-motion';
 import { DeckCtx } from './DeckContext';
 import Annotator, { type Stroke } from './Annotator';
+import { exportPdf } from './export';
 import {
   IconSidebar,
   IconGrid,
@@ -21,6 +22,7 @@ import {
   IconShrink,
   IconPresent,
   IconClose,
+  IconDownload,
 } from './icons';
 
 /* ── The paged presentation engine + the Slidev-style chrome (dock + rail).
@@ -28,7 +30,7 @@ import {
      → / ↓ / Space   next (reveals the next <Build>, then the next slide)
      ← / ↑           previous            S sidebar     G grid view
      Home / End      first / last        A annotate    P presenter (new tab)
-     F fullscreen    H hide/show the UI
+     F fullscreen    H hide/show the UI  E export PDF
      swipe ← / →     next / previous on touch (vertical drags scroll the slide)
    Copy verbatim; theme only via the :root tokens. ───────────────────────── */
 
@@ -114,6 +116,10 @@ export default function Deck({ children }: { children: ReactNode }) {
       }
     }
   );
+  const [exportBusy, setExportBusy] = useState<{
+    done: number;
+    total: number;
+  } | null>(null);
 
   // per-slide build maxima (so going back restores the right click state) and
   // per-slide annotations (so drawings persist on the slide they were made).
@@ -193,6 +199,16 @@ export default function Deck({ children }: { children: ReactNode }) {
       window.location.pathname + '?presenter=1' + window.location.hash;
     window.open(url, 'deck-presenter');
   }, [isPresenter]);
+  const runExport = useCallback(async () => {
+    setExportBusy({ done: 0, total });
+    try {
+      await exportPdf(slides, (done, tot) => setExportBusy({ done, total: tot }));
+    } catch (err) {
+      alert(`Export failed: ${err instanceof Error ? err.message : err}`);
+    } finally {
+      setExportBusy(null);
+    }
+  }, [slides, total]);
 
   // keyboard
   useEffect(() => {
@@ -252,6 +268,10 @@ export default function Deck({ children }: { children: ReactNode }) {
         case 'H':
           setUiHidden((v) => !v);
           break;
+        case 'e':
+        case 'E':
+          runExport();
+          break;
         case 'Escape':
           setRailOpen(false);
           setGridOpen(false);
@@ -262,7 +282,17 @@ export default function Deck({ children }: { children: ReactNode }) {
     };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
-  }, [next, prev, go, total, toggleRail, toggleGrid, toggleFs, openPresenter]);
+  }, [
+    next,
+    prev,
+    go,
+    total,
+    toggleRail,
+    toggleGrid,
+    toggleFs,
+    openPresenter,
+    runExport,
+  ]);
 
   // touch: a quick horizontal swipe pages; vertical drags stay free so a
   // slide taller than a phone screen can scroll (see base.css ≤640px)
@@ -586,6 +616,19 @@ export default function Deck({ children }: { children: ReactNode }) {
               onClick={openPresenter}
             >
               <IconPresent />
+            </button>
+            <span className="noir-sep" />
+            <button
+              className="noir-icon-btn"
+              data-tip={
+                exportBusy
+                  ? `Exporting — ${exportBusy.done}/${exportBusy.total}`
+                  : 'Export PDF (E)'
+              }
+              disabled={!!exportBusy}
+              onClick={runExport}
+            >
+              {exportBusy ? <span className="noir-spinner" /> : <IconDownload />}
             </button>
           </div>
         </div>

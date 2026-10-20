@@ -40,10 +40,12 @@ export default function Tabs({
           {tabs.map((t, i) => (
             <button
               key={i}
+              id={`tab-${pillId}-${i}`}
               className={'tab' + (i === active ? ' on' : '')}
               onClick={() => setActive(i)}
               role="tab"
               aria-selected={i === active}
+              aria-controls={`tabpanel-${pillId}-${i}`}
               tabIndex={i === active ? 0 : -1}
             >
               {i === active && (
@@ -62,7 +64,13 @@ export default function Tabs({
           ))}
         </div>
       </div>
-      <div className="tabs-panel">
+      <div
+        className="tabs-panel"
+        role="tabpanel"
+        id={`tabpanel-${pillId}-${active}`}
+        aria-labelledby={`tab-${pillId}-${active}`}
+        tabIndex={0}
+      >
         {isStatic ? (
           <div className="tabs-panel-inner">{tabs[active].content}</div>
         ) : (

@@ -38,17 +38,66 @@ body {
 .slide-stage {
   position: absolute;
   inset: 0;
-  animation: slideIn 0.5s var(--ease) both;
+  animation: slideIn3D 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  transform-style: preserve-3d;
+  will-change: transform, opacity, filter;
 }
-@keyframes slideIn {
-  from {
+@keyframes slideIn3D {
+  0% {
     opacity: 0;
-    transform: scale(1.018);
+    transform: perspective(1400px) translate3d(0, 28px, -150px) rotateX(4.5deg) scale(0.93);
+    filter: blur(10px) brightness(1.25);
   }
-  to {
+  60% {
     opacity: 1;
-    transform: scale(1);
+    filter: blur(0px) brightness(1.04);
   }
+  100% {
+    opacity: 1;
+    transform: perspective(1400px) translate3d(0, 0, 0) rotateX(0deg) scale(1);
+    filter: blur(0px) brightness(1);
+  }
+}
+
+/* 3D Floating, Shimmer & Glass Accents */
+@keyframes float3D {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.4deg);
+  }
+}
+@keyframes shimmerGold {
+  0% {
+    filter: drop-shadow(0 15px 35px rgba(254, 207, 67, 0.35));
+  }
+  50% {
+    filter: drop-shadow(0 25px 60px rgba(254, 207, 67, 0.7));
+  }
+  100% {
+    filter: drop-shadow(0 15px 35px rgba(254, 207, 67, 0.35));
+  }
+}
+.float-3d {
+  animation: float3D 6s ease-in-out infinite;
+}
+.shimmer-gold {
+  animation: shimmerGold 4s ease-in-out infinite;
+}
+.glass-panel-3d {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(254, 207, 67, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.8), 0 0 35px rgba(23, 103, 180, 0.16);
+  border-radius: var(--radius);
+  transition: all 0.4s var(--ease);
+}
+.glass-panel-3d:hover {
+  border-color: rgba(254, 207, 67, 0.55);
+  box-shadow: 0 35px 70px -10px rgba(0, 0, 0, 0.9), 0 0 55px rgba(254, 207, 67, 0.32);
+  transform: translateY(-4px);
 }
 
 /* ── A slide = one full-viewport screen. Content is RESPONSIVE: it

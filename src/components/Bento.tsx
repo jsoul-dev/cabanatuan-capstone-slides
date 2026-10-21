@@ -10,7 +10,7 @@ import { useDeck } from '../deck/DeckContext';
 export type BentoTile = {
   k?: string;
   fig?: ReactNode;
-  title?: string;
+  title?: ReactNode;
   body?: string;
   c?: number;
   r?: number;
@@ -46,7 +46,7 @@ export default function Bento({
           {title && (
             <h2
               className="headline"
-              style={{ marginBottom: 'clamp(20px,3vh,34px)', maxWidth: '24ch' }}
+              style={{ marginBottom: 'clamp(20px,3vh,34px)', maxWidth: '32ch', textWrap: 'balance' }}
             >
               {title}
             </h2>

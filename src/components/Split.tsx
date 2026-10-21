@@ -31,7 +31,7 @@ export default function Split({
           <Reveal delay={0.08}>
             <h2
               className="headline"
-              style={{ fontSize: 'clamp(32px,4.6vw,54px)' }}
+              style={{ fontSize: 'clamp(32px,4.6vw,54px)', maxWidth: '28ch', textWrap: 'balance' }}
             >
               {title}
             </h2>

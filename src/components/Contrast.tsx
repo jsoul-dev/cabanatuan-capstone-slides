@@ -11,7 +11,7 @@ import { useDeck } from '../deck/DeckContext';
      right={{ label: 'With Acme', title: 'Answers on tap', points: ['…'] }} /> */
 export type ContrastPanel = {
   label?: string;
-  title?: string;
+  title?: ReactNode;
   points: ReactNode[];
 };
 
@@ -100,6 +100,8 @@ export default function Contrast({
                 textAlign: 'center',
                 marginInline: 'auto',
                 marginBottom: 'clamp(26px,4.5vh,46px)',
+                maxWidth: '38ch',
+                textWrap: 'balance',
               }}
             >
               {title}

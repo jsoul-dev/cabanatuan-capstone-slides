@@ -203,9 +203,10 @@ strong {
 .headline {
   font-weight: 600;
   letter-spacing: -0.03em;
-  line-height: 1.04;
+  line-height: 1.08;
   font-size: clamp(32px, 5.2vw, 62px);
-  max-width: 18ch;
+  max-width: 32ch;
+  text-wrap: balance;
 }
 .lead {
   font-size: clamp(17px, 2.1vw, 25px);
@@ -1613,6 +1614,10 @@ strong {
   padding: clamp(22px, 2.4vw, 32px);
   border-radius: var(--radius-lg);
   text-align: left;
+}
+.con-panel .chip {
+  align-self: flex-start;
+  width: fit-content;
 }
 .con-panel.dim {
   background: var(--surface);

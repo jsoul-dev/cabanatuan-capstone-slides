@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import Reveal from '../deck/Reveal';
 import { useDeck } from '../deck/DeckContext';
@@ -15,7 +16,7 @@ export default function Team({
   people,
 }: {
   kicker?: string;
-  title?: string;
+  title?: ReactNode;
   people: Person[];
   nav?: string;
   notes?: string;
@@ -42,6 +43,8 @@ export default function Team({
                 textAlign: 'center',
                 marginInline: 'auto',
                 marginBottom: 'clamp(26px,4.5vh,46px)',
+                maxWidth: '36ch',
+                textWrap: 'balance',
               }}
             >
               {title}

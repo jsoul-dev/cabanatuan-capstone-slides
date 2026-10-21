@@ -16,7 +16,7 @@ export default function Steps({
   items,
 }: {
   kicker?: string;
-  title?: string;
+  title?: ReactNode;
   items: Step[];
   nav?: string;
   notes?: string;
@@ -43,6 +43,8 @@ export default function Steps({
                 textAlign: 'center',
                 marginInline: 'auto',
                 marginBottom: 'clamp(26px,4.5vh,48px)',
+                maxWidth: '36ch',
+                textWrap: 'balance',
               }}
             >
               {title}

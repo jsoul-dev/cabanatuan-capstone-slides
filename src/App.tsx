@@ -237,7 +237,7 @@ export default function App() {
         <Contrast
           nav="The Problem"
           kicker="PT #1 · Business Concept Development"
-          title="The Tropical Dilemma: Fading Scents vs. Costly Designer Imports"
+          title={<>The Tropical Dilemma:<br />Fading Scents vs. Costly Designer Imports</>}
           left={{
             label: 'The Commuter Dilemma',
             title: 'Tropical Disappointment',
@@ -500,9 +500,11 @@ export default function App() {
                   textAlign: 'center',
                   marginInline: 'auto',
                   marginBottom: 'clamp(20px, 3vh, 32px)',
+                  maxWidth: '32ch',
+                  textWrap: 'balance',
                 }}
               >
-                Primary Monogram & Secondary Master Lockup
+                Primary Monogram &amp;<br />Secondary Master Lockup
               </h2>
             </Reveal>
             <div
@@ -590,7 +592,7 @@ export default function App() {
         <Bento
           nav="Gestalt Theory"
           kicker="CT #1 · Design Psychology & Gestalt Principles"
-          title="Closure, Continuation & Royal Color Psychology"
+          title={<>Closure, Continuation &<br />Royal Color Psychology</>}
           tiles={[
             {
               c: 6,
@@ -745,7 +747,7 @@ export default function App() {
         <Split
           nav="Color Harmony"
           kicker="CT #3 · Color Theory & Visual Harmony"
-          title="Complementary Color Scheme: Sapphire & Gold"
+          title={<>Complementary Color Scheme:<br />Sapphire & Gold</>}
           body={
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               <p>
@@ -768,6 +770,10 @@ export default function App() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(199,202,207,0.15)', padding: '5px 10px', borderRadius: 8, border: '1px solid #C7CACF' }}>
                   <span style={{ width: 12, height: 12, borderRadius: '50%', background: '#C7CACF' }} />
                   <span style={{ fontSize: 12, fontFamily: 'var(--font-mono)' }}>#C7CACF · Platinum</span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(1,2,4,0.65)', padding: '5px 10px', borderRadius: 8, border: '1px solid rgba(255,255,255,0.16)' }}>
+                  <span style={{ width: 12, height: 12, borderRadius: '50%', background: '#010204', border: '1px solid rgba(255,255,255,0.35)' }} />
+                  <span style={{ fontSize: 12, fontFamily: 'var(--font-mono)' }}>#010204 · Obsidian Black</span>
                 </div>
               </div>
               <p>
@@ -801,7 +807,7 @@ export default function App() {
         <Steps
           nav="Creative Synergy"
           kicker="Holistic Synthesis & Cross-Task Alignment"
-          title="Four Milestones, One Cohesive Brand Identity"
+          title={<>Four Milestones,<br />One Cohesive Brand Identity</>}
           items={[
             {
               title: '1. Foundation (PT #1)',
@@ -829,7 +835,7 @@ export default function App() {
         <Team
           nav="Project Team"
           kicker="College of Information and Communications Technology · IT-WS-06"
-          title="The Creators Behind SCENTALA · BSIT 4-C"
+          title={<>The Creators Behind SCENTALA · <span style={{ whiteSpace: 'nowrap' }}>BSIT 4‑C</span></>}
           people={[
             {
               name: 'Kerby S. Bautista',
@@ -876,9 +882,10 @@ export default function App() {
               <h1
                 className="display"
                 style={{
-                  fontSize: 'clamp(38px, 6vw, 76px)',
-                  lineHeight: 1.05,
-                  marginBottom: 16,
+                  fontSize: 'clamp(28px, 4.3vw, 56px)',
+                  lineHeight: 1.12,
+                  marginBottom: 18,
+                  textWrap: 'balance',
                 }}
               >
                 A Scent That <span className="accent-text">Outshines</span> The Rest.

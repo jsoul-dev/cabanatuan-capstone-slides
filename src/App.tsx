@@ -626,110 +626,172 @@ export default function App() {
         </Slide>
 
         {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 6: BRAND FOUNDATION, ETYMOLOGY & VALUES (Inspired by Image 2)
+            SLIDE 6: BRAND FOUNDATION, ETYMOLOGY & VALUES (Inspired by Image 2 & 3)
             ────────────────────────────────────────────────────────────────── */}
         <Slide nav="Brand Ethos" notes="The name SCENTALA embraces Filipino cultural pride: 'Tala' is the star that guided our ancestors through the archipelago at night. Our values commit to authentic quality rather than predatory luxury markups.">
           <div style={{ maxWidth: 1180, width: '100%', marginInline: 'auto' }}>
             <EditorialBar category="PT #1 · Brand Foundation & Philosophy" page="06 / 16" />
 
-            <Reveal>
-              <div style={{ marginBottom: 'clamp(18px, 2.5vh, 28px)' }}>
-                <div className="kicker" style={{ marginBottom: 6 }}>
-                  Heritage &amp; Core Ideology
-                </div>
-                <h2
-                  className="headline"
-                  style={{
-                    fontSize: 'clamp(28px, 3.8vw, 48px)',
-                    maxWidth: '32ch',
-                    margin: 0,
-                  }}
-                >
-                  Rooted in Heritage, Formulated for Daily Radiance
-                </h2>
-              </div>
-            </Reveal>
-
-            {/* 3 Tall Vertical Cards directly inspired by Image 2 */}
             <div
               style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(3, 1fr)',
-                gap: 'clamp(16px, 2vw, 24px)',
+                gridTemplateColumns: '0.85fr 1.15fr',
+                gap: 'clamp(20px, 3.5vw, 44px)',
+                alignItems: 'center',
               }}
             >
-              {/* Card 1: Etymology & Origin */}
-              <Reveal delay={0.08}>
-                <div className="editorial-card-tall" style={{ minHeight: 340 }}>
-                  <div>
-                    <div className="kicker" style={{ color: 'var(--primary)', marginBottom: 8 }}>
-                      01 · Etymology
-                    </div>
-                    <h3 style={{ fontSize: 'clamp(20px, 2.1vw, 25px)', color: 'var(--fg)', fontFamily: 'var(--font-head)', margin: '0 0 10px' }}>
-                      Scent + Tala (Star)
-                    </h3>
-                    <p className="foot" style={{ color: 'var(--fg-muted)', lineHeight: 1.6, margin: 0, fontSize: '0.92em' }}>
-                      A deliberate fusion of "Scent" and the Tagalog word <strong>"Tala,"</strong> meaning celestial star. Symbolizes radiant guidance, Filipino cultural identity, and an aura that shines distinctly above the noise.
-                    </p>
+              {/* Left Column: Editorial Philosophy */}
+              <div>
+                <Reveal>
+                  <div className="kicker" style={{ marginBottom: 6 }}>
+                    PT #1 · Heritage &amp; Philosophy
                   </div>
-                  <div style={{ borderTop: '1px solid var(--hair-2)', paddingTop: 10, marginTop: 16 }}>
-                    <span style={{ fontSize: 11, fontFamily: 'var(--font-mono)', color: 'var(--primary)' }}>
-                      CULTURAL GUIDANCE
-                    </span>
-                  </div>
-                </div>
-              </Reveal>
+                  <h2
+                    className="headline"
+                    style={{
+                      fontSize: 'clamp(28px, 3.6vw, 46px)',
+                      lineHeight: 1.05,
+                      marginBottom: 18,
+                    }}
+                  >
+                    Designed to Be Remembered
+                  </h2>
+                  <p
+                    style={{
+                      color: 'var(--fg-muted)',
+                      lineHeight: 1.6,
+                      fontSize: 'clamp(14px, 1.4vw, 16px)',
+                      marginBottom: 20,
+                    }}
+                  >
+                    While many commercial brands compete for fleeting attention, SCENTALA focuses on creating lasting, indelible impressions. Through climate-resilient oil formulation, authentic ingredients, and cultural pride, we transform everyday fragrance into an unmistakable personal signature.
+                  </p>
+                </Reveal>
 
-              {/* Card 2: Brand Tagline */}
-              <Reveal delay={0.16}>
-                <div
-                  className="editorial-card-tall"
-                  style={{
-                    minHeight: 340,
-                    background: 'linear-gradient(180deg, rgba(23,103,180,0.2) 0%, rgba(4,8,16,0.85) 100%)',
-                    borderColor: 'rgba(254, 207, 67, 0.35)',
-                  }}
-                >
-                  <div>
-                    <div className="kicker" style={{ color: 'var(--primary)', marginBottom: 8 }}>
-                      02 · Brand Tagline
+                <Reveal delay={0.1}>
+                  <div
+                    style={{
+                      padding: '14px 18px',
+                      borderRadius: 'var(--radius-sm)',
+                      background: 'linear-gradient(135deg, rgba(254, 207, 67, 0.1) 0%, rgba(23, 103, 180, 0.1) 100%)',
+                      border: '1px solid var(--hair)',
+                      marginBottom: 16,
+                    }}
+                  >
+                    <div style={{ fontSize: 11, fontFamily: 'var(--font-mono)', color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 4 }}>
+                      ETYMOLOGY: SCENT + TALA (STAR)
                     </div>
-                    <h3 style={{ fontSize: 'clamp(20px, 2.1vw, 25px)', color: 'var(--fg)', fontFamily: 'var(--font-head)', margin: '0 0 10px' }}>
+                    <div style={{ fontStyle: 'italic', color: 'var(--fg)', fontSize: 14, fontFamily: 'var(--font-head)' }}>
                       “A scent that outshines the rest.”
-                    </h3>
-                    <p className="foot" style={{ color: 'var(--fg)', lineHeight: 1.6, margin: 0, fontSize: '0.92em' }}>
-                      Our core brand promise to every wearer: empowering everyday commuters to carry an aura of prestige, distinction, and confidence from early morning rides to evening engagements.
-                    </p>
-                  </div>
-                  <div style={{ borderTop: '1px solid rgba(254,207,67,0.25)', paddingTop: 10, marginTop: 16 }}>
-                    <span style={{ fontSize: 11, fontFamily: 'var(--font-mono)', color: 'var(--primary)' }}>
-                      CORE VALUE PROPOSITION
-                    </span>
-                  </div>
-                </div>
-              </Reveal>
-
-              {/* Card 3: Mission & Vision */}
-              <Reveal delay={0.24}>
-                <div className="editorial-card-tall" style={{ minHeight: 340 }}>
-                  <div>
-                    <div className="kicker" style={{ color: 'var(--primary)', marginBottom: 8 }}>
-                      03 · Vision
                     </div>
-                    <h3 style={{ fontSize: 'clamp(20px, 2.1vw, 25px)', color: 'var(--fg)', fontFamily: 'var(--font-head)', margin: '0 0 10px' }}>
-                      Top Local Fragrance House
-                    </h3>
-                    <p className="foot" style={{ color: 'var(--fg-muted)', lineHeight: 1.6, margin: 0, fontSize: '0.92em' }}>
-                      To become the premier homegrown fragrance brand in the Philippines, celebrated nationwide for formulating authentic luxury-grade scents made fairly accessible to every student and young professional.
+                  </div>
+                </Reveal>
+              </div>
+
+              {/* Right Column: 3 Vertical Pillars matching Reference Image 3 */}
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(3, 1fr)',
+                  gap: 'clamp(10px, 1.4vw, 16px)',
+                }}
+              >
+                {/* Pillar 1: Premium Positioning (Dark Gradient) */}
+                <Reveal delay={0.08}>
+                  <div
+                    className="editorial-card-tall"
+                    style={{
+                      minHeight: 330,
+                      background: 'linear-gradient(180deg, rgba(23,103,180,0.25) 0%, rgba(4,8,16,0.95) 100%)',
+                      border: '1px solid rgba(254,207,67,0.3)',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'space-between',
+                      padding: 18,
+                    }}
+                  >
+                    <div>
+                      <div className="chip" style={{ color: 'var(--primary)', borderColor: 'var(--hair)', marginBottom: 12 }}>
+                        01
+                      </div>
+                      <h3 style={{ fontSize: 18, color: 'var(--fg)', fontFamily: 'var(--font-head)', margin: '0 0 8px' }}>
+                        Premium Positioning
+                      </h3>
+                    </div>
+                    <p className="foot" style={{ color: 'var(--fg-muted)', fontSize: 12, lineHeight: 1.5, margin: 0 }}>
+                      Crafted for commuters and young professionals who value exclusivity, sophistication, and elevated everyday confidence.
                     </p>
                   </div>
-                  <div style={{ borderTop: '1px solid var(--hair-2)', paddingTop: 10, marginTop: 16 }}>
-                    <span style={{ fontSize: 11, fontFamily: 'var(--font-mono)', color: 'var(--primary)' }}>
-                      NATIONAL ASPIRATION
-                    </span>
+                </Reveal>
+
+                {/* Pillar 2: Timeless Design (Presence Sand Photo) */}
+                <Reveal delay={0.16}>
+                  <div
+                    className="editorial-card-tall"
+                    style={{
+                      minHeight: 330,
+                      position: 'relative',
+                      overflow: 'hidden',
+                      border: '1px solid var(--hair-2)',
+                      padding: 0,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'space-between',
+                    }}
+                  >
+                    <div style={{ position: 'relative', width: '100%', height: 160, overflow: 'hidden' }}>
+                      <img
+                        src="/brand/scentala-presence-sand.jpg"
+                        alt="SCENTALA Timeless Design"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      />
+                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 50%, rgba(4,8,16,0.85) 100%)' }} />
+                    </div>
+                    <div style={{ padding: '14px 16px' }}>
+                      <h3 style={{ fontSize: 17, color: 'var(--fg)', fontFamily: 'var(--font-head)', margin: '0 0 6px' }}>
+                        Timeless Design
+                      </h3>
+                      <p className="foot" style={{ color: 'var(--fg-muted)', fontSize: 11.5, lineHeight: 1.5, margin: 0 }}>
+                        A refined visual identity designed to remain elegant, relevant, and desirable over time.
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </Reveal>
+                </Reveal>
+
+                {/* Pillar 3: Collectible Presentation (Unboxing Photo) */}
+                <Reveal delay={0.24}>
+                  <div
+                    className="editorial-card-tall"
+                    style={{
+                      minHeight: 330,
+                      position: 'relative',
+                      overflow: 'hidden',
+                      border: '1px solid var(--hair-2)',
+                      padding: 0,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'space-between',
+                    }}
+                  >
+                    <div style={{ position: 'relative', width: '100%', height: 160, overflow: 'hidden' }}>
+                      <img
+                        src="/brand/scentala-unboxing-presentation.jpg"
+                        alt="SCENTALA Collectible Presentation"
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      />
+                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 50%, rgba(4,8,16,0.85) 100%)' }} />
+                    </div>
+                    <div style={{ padding: '14px 16px' }}>
+                      <h3 style={{ fontSize: 17, color: 'var(--fg)', fontFamily: 'var(--font-head)', margin: '0 0 6px' }}>
+                        Collectible Presentation
+                      </h3>
+                      <p className="foot" style={{ color: 'var(--fg-muted)', fontSize: 11.5, lineHeight: 1.5, margin: 0 }}>
+                        Thoughtfully designed packaging and details that transform each flacon into a lasting keepsake.
+                      </p>
+                    </div>
+                  </div>
+                </Reveal>
+              </div>
             </div>
           </div>
         </Slide>
@@ -820,7 +882,114 @@ export default function App() {
         </Slide>
 
         {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 8: LOGO DESIGN IDEATION & DRAFT SKETCH (CT #1)
+            SLIDE 8: TACTILE CUSTOMER EXPERIENCE (Inspired by GOODIEST Image 2)
+            ────────────────────────────────────────────────────────────────── */}
+        <Slide nav="Experience" notes="Luxury extends far beyond the bottle itself. Every touchpoint—from our leakproof pocket atomizers to our bespoke fragrance sillage—is thoughtfully designed to transform a daily commute into an elevated personal experience.">
+          <div style={{ maxWidth: 1180, width: '100%', marginInline: 'auto' }}>
+            <EditorialBar category="PT #1 · Tactile Customer Experience" page="08 / 17" />
+
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: '1.05fr 0.95fr',
+                gap: 'clamp(24px, 4vw, 54px)',
+                alignItems: 'center',
+              }}
+            >
+              {/* Left Column: Hand Holding Flacon Editorial Shot */}
+              <Reveal>
+                <TiltCard>
+                  <div
+                    className="editorial-frame"
+                    style={{
+                      aspectRatio: '4/3',
+                      border: '1px solid var(--hair-2)',
+                      maxHeight: 460,
+                    }}
+                  >
+                    <img
+                      src="/brand/scentala-hand-flacon.jpg"
+                      alt="SCENTALA Flacon Held in Hand · Tactile Luxury"
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
+                    <div
+                      style={{
+                        position: 'absolute',
+                        inset: 0,
+                        background: 'linear-gradient(180deg, transparent 65%, rgba(4,8,16,0.85) 100%)',
+                        pointerEvents: 'none',
+                      }}
+                    />
+                    <div style={{ position: 'absolute', bottom: 12, left: 16, right: 16, display: 'flex', justifyContent: 'space-between' }}>
+                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--fg-muted)' }}>
+                        TACTILE TOUCHPOINT · INTIMATE SCALE
+                      </span>
+                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--primary)' }}>
+                        DAILY CONFIDENCE
+                      </span>
+                    </div>
+                  </div>
+                </TiltCard>
+              </Reveal>
+
+              {/* Right Column: Experience Pillars */}
+              <div>
+                <Reveal delay={0.08}>
+                  <div className="kicker" style={{ marginBottom: 6 }}>
+                    Customer Journey &amp; Touchpoints
+                  </div>
+                  <h2
+                    className="headline"
+                    style={{
+                      fontSize: 'clamp(26px, 3.4vw, 44px)',
+                      lineHeight: 1.06,
+                      marginBottom: 16,
+                      maxWidth: '26ch',
+                    }}
+                  >
+                    Luxury Extends Beyond the Bottle Itself
+                  </h2>
+                  <p
+                    className="foot"
+                    style={{
+                      color: 'var(--fg-muted)',
+                      lineHeight: 1.6,
+                      marginBottom: 20,
+                      fontSize: '0.94em',
+                    }}
+                  >
+                    Every detail—from the weight of the faceted cap in your palm to the leakproof atomizer in your pocket—is engineered to create an elevated, enduring sensory ritual.
+                  </p>
+                </Reveal>
+
+                <Reveal delay={0.14}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+                    <div style={cardBaseStyle}>
+                      <strong style={{ color: 'var(--primary)', fontFamily: 'var(--font-head)', fontSize: 17 }}>
+                        Elevated Packaging &amp; Ergonomics
+                      </strong>
+                      <p className="foot" style={{ color: 'var(--fg-muted)', margin: '4px 0 0', lineHeight: 1.5 }}>
+                        High-density glass and precision fine-mist pumps ensure each spray dispenses an even, micronized cloud that adheres flawlessly to skin.
+                      </p>
+                    </div>
+
+                    <div style={cardBaseStyle}>
+                      <strong style={{ color: 'var(--primary)', fontFamily: 'var(--font-head)', fontSize: 17 }}>
+                        Thoughtful Daily Mobility
+                      </strong>
+                      <p className="foot" style={{ color: 'var(--fg-muted)', margin: '4px 0 0', lineHeight: 1.5 }}>
+                        The 10ml Tala Pocket-Puff slides seamlessly into bags and pockets, empowering instant confidence boosts during hot commutes and sudden meetings.
+                      </p>
+                    </div>
+                  </div>
+                </Reveal>
+              </div>
+            </div>
+          </div>
+        </Slide>
+
+        {/* ──────────────────────────────────────────────────────────────────
+            SLIDE 9: LOGO DESIGN IDEATION & DRAFT SKETCH (CT #1)
             ────────────────────────────────────────────────────────────────── */}
         <Slide nav="Logo Sketch" notes="Before moving to vector illustration software, our design team grounded the identity in manual sketching. On the left is our authentic Creative Task 1 submission sketch, illustrating how the initial letters S and T naturally form the body and nozzle of a perfume bottle.">
           <div style={{ maxWidth: 1180, width: '100%', marginInline: 'auto' }}>

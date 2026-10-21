@@ -3013,3 +3013,52 @@ strong {
     animation: none !important;
   }
 }
+
+/* ===================================================================
+   LUXURY EDITORIAL PITCH DECK STYLES (Goodest / Numa aesthetic)
+   =================================================================== */
+.editorial-frame {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 40px rgba(23, 103, 180, 0.12);
+}
+.editorial-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.editorial-stat-hero {
+  font-family: var(--font-head);
+  font-size: clamp(38px, 4.8vw, 68px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--fg);
+}
+.editorial-stat-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+.editorial-card-tall {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(16px, 1.8vw, 24px);
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  transition: all 0.35s var(--ease);
+}
+.editorial-card-tall:hover {
+  border-color: rgba(254, 207, 67, 0.35);
+  transform: translateY(-3px);
+}

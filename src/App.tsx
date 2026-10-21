@@ -90,36 +90,146 @@ export default function App() {
         />
 
         {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 2: AGENDA / TABLE OF CONTENTS
+            SLIDE 2: BESPOKE PRESENTATION ROADMAP (5 MILESTONE CARDS)
             ────────────────────────────────────────────────────────────────── */}
-        <Agenda
+        <Slide
+          center
           nav="Roadmap"
-          kicker="Presentation Roadmap"
-          title="Comprehensive Brand Portfolio"
-          items={[
-            {
-              title: '01. Business Concept Development (PT #1)',
-              hint: 'Brand origin (Scent + Tala), Philippine climate problem, mission, vision, target audience, and value proposition.',
-            },
-            {
-              title: '02. Logo Design & Brand Identity (CT #1)',
-              hint: 'Ideation draft sketch, S+T flacon monogram, Gestalt principles of Closure & Continuation, and color psychology.',
-            },
-            {
-              title: '03. First Ever Brand Post (CT #2)',
-              hint: 'Digital launch campaign, raw volcanic stone visuals, faceted crystal flacon, and emotional copy resonance.',
-            },
-            {
-              title: '04. Promotional Event Poster (CT #3)',
-              hint: 'Signature Launch campaign concept, SM Cabanatuan event details, and complementary color wheel harmony.',
-            },
-            {
-              title: '05. Creative Synthesis & Project Team',
-              hint: 'Cross-task brand cohesion, commercial feasibility, and creators from BSIT 4-C.',
-            },
-          ]}
-          notes="Our presentation follows the exact milestone progression of our coursework. Each milestone directly reinforced and elevated the ones before it: from identifying the commuter pain point in PT-1, to sculpting our iconic mark in CT-1, debuting online in CT-2, and preparing our physical retail experience in CT-3."
-        />
+          notes="Our presentation follows the exact milestone progression of our coursework. Each milestone directly reinforced and elevated the ones before it: from identifying the commuter pain point in PT-1, to sculpting our iconic mark in CT-1, debuting online in CT-2, preparing our physical retail experience in CT-3, and presenting our unified brand in CT-4."
+        >
+          <div style={{ maxWidth: 1160, width: '100%', marginInline: 'auto' }}>
+            <Reveal>
+              <div className="kicker" style={{ textAlign: 'center', marginBottom: 8 }}>
+                Course Curriculum Roadmap · 5 Key Milestones
+              </div>
+              <h2
+                className="headline"
+                style={{
+                  textAlign: 'center',
+                  marginInline: 'auto',
+                  marginBottom: 'clamp(16px, 2.4vh, 26px)',
+                  fontSize: 'clamp(28px, 3.6vw, 42px)',
+                }}
+              >
+                The Strategic Evolution of <span className="accent-text">SCENTALA</span>
+              </h2>
+            </Reveal>
+
+            {/* 5 Milestone Cards: 3 on Top Row, 2 on Bottom Row */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(12px, 1.6vh, 18px)' }}>
+              {/* Row 1: PT-1, CT-1, CT-2 */}
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(3, 1fr)',
+                  gap: 'clamp(12px, 1.5vw, 18px)',
+                }}
+              >
+                {/* Milestone 1 */}
+                <Reveal delay={0.06}>
+                  <div className="glass-panel-3d" style={{ padding: 'clamp(14px, 1.6vw, 20px)', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+                      <span className="chip" style={{ color: 'var(--primary)', borderColor: 'var(--hair)' }}>
+                        MILESTONE 01
+                      </span>
+                      <span style={{ fontSize: 13, fontFamily: 'var(--font-mono)', color: 'var(--fg-faint)' }}>PT #1</span>
+                    </div>
+                    <h3 style={{ fontSize: 'clamp(18px, 1.7vw, 22px)', color: 'var(--fg)', marginBottom: 6, fontFamily: 'var(--font-head)' }}>
+                      Business Concept
+                    </h3>
+                    <p className="foot" style={{ color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0, fontSize: '0.92em' }}>
+                      Brand origin (Scent + Tala), heat resilience, commuter demographic (18–35), and value proposition.
+                    </p>
+                  </div>
+                </Reveal>
+
+                {/* Milestone 2 */}
+                <Reveal delay={0.12}>
+                  <div className="glass-panel-3d" style={{ padding: 'clamp(14px, 1.6vw, 20px)', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+                      <span className="chip" style={{ color: 'var(--primary)', borderColor: 'var(--hair)' }}>
+                        MILESTONE 02
+                      </span>
+                      <span style={{ fontSize: 13, fontFamily: 'var(--font-mono)', color: 'var(--fg-faint)' }}>CT #1</span>
+                    </div>
+                    <h3 style={{ fontSize: 'clamp(18px, 1.7vw, 22px)', color: 'var(--fg)', marginBottom: 6, fontFamily: 'var(--font-head)' }}>
+                      Logo & Identity
+                    </h3>
+                    <p className="foot" style={{ color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0, fontSize: '0.92em' }}>
+                      Pencil draft sketch, S+T flacon monogram, Gestalt principles of Closure & Continuation, and color theory.
+                    </p>
+                  </div>
+                </Reveal>
+
+                {/* Milestone 3 */}
+                <Reveal delay={0.18}>
+                  <div className="glass-panel-3d" style={{ padding: 'clamp(14px, 1.6vw, 20px)', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+                      <span className="chip" style={{ color: 'var(--primary)', borderColor: 'var(--hair)' }}>
+                        MILESTONE 03
+                      </span>
+                      <span style={{ fontSize: 13, fontFamily: 'var(--font-mono)', color: 'var(--fg-faint)' }}>CT #2</span>
+                    </div>
+                    <h3 style={{ fontSize: 'clamp(18px, 1.7vw, 22px)', color: 'var(--fg)', marginBottom: 6, fontFamily: 'var(--font-head)' }}>
+                      First Brand Post
+                    </h3>
+                    <p className="foot" style={{ color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0, fontSize: '0.92em' }}>
+                      Chiaroscuro lighting, textured volcanic stone base, faceted crystal flacon, and emotional launch copy.
+                    </p>
+                  </div>
+                </Reveal>
+              </div>
+
+              {/* Row 2: CT-3, CT-4 */}
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(2, 1fr)',
+                  gap: 'clamp(12px, 1.5vw, 18px)',
+                  maxWidth: 820,
+                  width: '100%',
+                  marginInline: 'auto',
+                }}
+              >
+                {/* Milestone 4 */}
+                <Reveal delay={0.24}>
+                  <div className="glass-panel-3d" style={{ padding: 'clamp(14px, 1.6vw, 20px)', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+                      <span className="chip" style={{ color: 'var(--primary)', borderColor: 'var(--hair)' }}>
+                        MILESTONE 04
+                      </span>
+                      <span style={{ fontSize: 13, fontFamily: 'var(--font-mono)', color: 'var(--fg-faint)' }}>CT #3</span>
+                    </div>
+                    <h3 style={{ fontSize: 'clamp(18px, 1.7vw, 22px)', color: 'var(--fg)', marginBottom: 6, fontFamily: 'var(--font-head)' }}>
+                      Promotional Event Poster
+                    </h3>
+                    <p className="foot" style={{ color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0, fontSize: '0.92em' }}>
+                      Signature Launch campaign at SM Cabanatuan City and complementary Sapphire & Gold color harmony.
+                    </p>
+                  </div>
+                </Reveal>
+
+                {/* Milestone 5 */}
+                <Reveal delay={0.3}>
+                  <div className="glass-panel-3d" style={{ padding: 'clamp(14px, 1.6vw, 20px)', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+                      <span className="chip" style={{ color: 'var(--primary)', borderColor: 'var(--hair)' }}>
+                        MILESTONE 05
+                      </span>
+                      <span style={{ fontSize: 13, fontFamily: 'var(--font-mono)', color: 'var(--fg-faint)' }}>CT #4</span>
+                    </div>
+                    <h3 style={{ fontSize: 'clamp(18px, 1.7vw, 22px)', color: 'var(--fg)', marginBottom: 6, fontFamily: 'var(--font-head)' }}>
+                      Creative Synergy & Credits
+                    </h3>
+                    <p className="foot" style={{ color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0, fontSize: '0.92em' }}>
+                      Cross-task alignment, comprehensive brand presentation deck, and student creators from BSIT 4-C.
+                    </p>
+                  </div>
+                </Reveal>
+              </div>
+            </div>
+          </div>
+        </Slide>
 
         {/* ──────────────────────────────────────────────────────────────────
             SLIDE 3: PT #1 — THE TROPICAL FRAGRANCE PROBLEM (CONTRAST)
@@ -287,20 +397,22 @@ export default function App() {
             SLIDE 6: PT #1 — PRODUCT LINE & COMPETITIVE MATRIX
             ────────────────────────────────────────────────────────────────── */}
         <Slide center nav="Products & Matrix" notes="Here we present our two core SKUs: the 50ml Signature EDP bottle and the 10ml Tala Pocket-Puff Atomizer. Our comparison matrix clearly illustrates our unfair advantage: matching niche luxury concentration while retaining student-friendly affordability.">
-          <div style={{ maxWidth: 960, width: '100%', marginInline: 'auto' }}>
+          <div style={{ maxWidth: 1060, width: '100%', marginInline: 'auto' }}>
             <Reveal>
-              <div className="kicker" style={{ textAlign: 'center', marginBottom: 10 }}>
+              <div className="kicker" style={{ textAlign: 'center', marginBottom: 8 }}>
                 PT #1 · Product Lineup & Competitive Advantage
               </div>
               <h2
-                className="headline"
+                className="headline shimmer-gold"
                 style={{
                   textAlign: 'center',
                   marginInline: 'auto',
-                  marginBottom: 'clamp(20px, 3vh, 32px)',
+                  marginBottom: 'clamp(14px, 2.2vh, 24px)',
+                  fontSize: 'clamp(22px, 2.7vw, 34px)',
+                  textWrap: 'balance',
                 }}
               >
-                50ml Signature Flacon & 10ml Tala Pocket-Puff
+                50ml Signature Flacon &amp; 10ml Tala Pocket-Puff
               </h2>
             </Reveal>
             <Reveal delay={0.1}>

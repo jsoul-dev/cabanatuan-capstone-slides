@@ -939,7 +939,7 @@ export default function App() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                   <span style={{ color: 'var(--primary)', fontSize: 16 }}>✦</span>
                   <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--fg)' }}>
-                    www.scentala.com
+                    scentala.netlify.app
                   </span>
                 </div>
                 <span style={{ color: 'var(--hair)' }}>|</span>

@@ -196,15 +196,35 @@ export default function StarField() {
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
+    <div
       aria-hidden
       style={{
         position: 'fixed',
         inset: 0,
         zIndex: 0,
         pointerEvents: 'none',
+        overflow: 'hidden',
       }}
-    />
+    >
+      <canvas
+        ref={canvasRef}
+        style={{
+          position: 'absolute',
+          inset: 0,
+          width: '100%',
+          height: '100%',
+        }}
+      />
+      {/* Persistent ambient atmosphere glows: top-left sapphire & bottom-right gold */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: '-15%',
+          background:
+            'radial-gradient(44% 50% at 24% 16%, rgba(23, 103, 180, 0.18), transparent 60%), radial-gradient(50% 56% at 82% 88%, rgba(254, 207, 67, 0.12), transparent 62%)',
+          pointerEvents: 'none',
+        }}
+      />
+    </div>
   );
 }

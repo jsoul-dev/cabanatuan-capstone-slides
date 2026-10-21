@@ -336,6 +336,66 @@ export default function Deck({ children }: { children: ReactNode }) {
     };
   }, [next, prev]);
 
+  // mouse wheel & trackpad scroll:
+  // scroll up (deltaY < 0) advances to next slide
+  // scroll down (deltaY > 0) goes back to previous slide
+  const nextRef = useRef(next);
+  nextRef.current = next;
+  const prevRef = useRef(prev);
+  prevRef.current = prev;
+  const drawingRef = useRef(drawing);
+  drawingRef.current = drawing;
+  const lastWheelTime = useRef(0);
+
+  useEffect(() => {
+    const cooldown = 450;
+    const threshold = 20;
+
+    const onWheel = (e: WheelEvent) => {
+      if (e.ctrlKey) return;
+      if (drawingRef.current) return;
+
+      const t = e.target instanceof Element ? e.target : null;
+      if (
+        t?.closest(
+          '.noir-rail,.noir-grid,.noir-presenter,.ann-bar,.ann-canvas,textarea,input'
+        )
+      ) {
+        return;
+      }
+
+      let el: HTMLElement | null = t instanceof HTMLElement ? t : null;
+      while (el && el !== document.body && el !== document.documentElement) {
+        if (el.scrollHeight > el.clientHeight && el.clientHeight > 0) {
+          const style = window.getComputedStyle(el);
+          if (style.overflowY === 'auto' || style.overflowY === 'scroll') {
+            const atTop = el.scrollTop <= 0;
+            const atBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 1;
+            if ((e.deltaY < 0 && !atTop) || (e.deltaY > 0 && !atBottom)) {
+              return;
+            }
+          }
+        }
+        el = el.parentElement;
+      }
+
+      const now = performance.now();
+      if (now - lastWheelTime.current < cooldown) return;
+
+      if (Math.abs(e.deltaY) >= threshold) {
+        lastWheelTime.current = now;
+        if (e.deltaY < 0) {
+          nextRef.current();
+        } else if (e.deltaY > 0) {
+          prevRef.current();
+        }
+      }
+    };
+
+    window.addEventListener('wheel', onWheel, { passive: true });
+    return () => window.removeEventListener('wheel', onWheel);
+  }, []);
+
   // safety net: if the authored deck kept the placeholder tab title, derive
   // one from the current slide's heading so shared links look right.
   useEffect(() => {

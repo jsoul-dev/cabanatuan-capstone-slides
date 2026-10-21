@@ -5,47 +5,45 @@
    "dark product" default — REPLACE them to match the brief or the brand.
    =================================================================== */
 :root {
-  /* Surfaces */
-  --bg: #05070a;
-  --bg-grad-1: rgba(79, 229, 176, 0.12);
-  --bg-grad-2: rgba(41, 192, 240, 0.08);
-  --surface: rgba(255, 255, 255, 0.045);
+  /* Surfaces — Scentala Midnight Obsidian & Sapphire */
+  --bg: #040810;
+  --bg-grad-1: rgba(23, 103, 180, 0.16);
+  --bg-grad-2: rgba(254, 207, 67, 0.10);
+  --surface: rgba(255, 255, 255, 0.04);
   --surface-2: rgba(255, 255, 255, 0.07);
 
   /* Ink */
-  --fg: #f4f7fa;
-  --fg-muted: #9aa4b2;
-  --fg-faint: #626d7d;
+  --fg: #f8fafc;
+  --fg-muted: #94a3b8;
+  --fg-faint: #64748b;
 
   /* Hairlines */
-  --hair: rgba(255, 255, 255, 0.1);
-  --hair-2: rgba(255, 255, 255, 0.06);
+  --hair: rgba(254, 207, 67, 0.18);
+  --hair-2: rgba(255, 255, 255, 0.08);
 
-  /* Accent — ONE accent. May be a 2–4 stop gradient within ~80° of hue. */
-  --primary: #4fe5b0;
+  /* Accent — Scentala Luminous Warm Gold */
+  --primary: #fecf43;
   --accent: linear-gradient(
     115deg,
-    #c8f56e 0%,
-    #5aeeb0 42%,
-    #34dcd8 74%,
-    #29c0f0 100%
+    #fff3b0 0%,
+    #fecf43 38%,
+    #e5b026 72%,
+    #b8860b 100%
   );
-  --accent-ink: #04140e;
+  --accent-ink: #040810;
 
   /* Radius */
-  --radius: 22px;
+  --radius: 20px;
   --radius-sm: 12px;
   --radius-lg: 26px;
 
   /* Depth */
-  --shadow: 0 50px 120px -50px rgba(0, 0, 0, 0.9);
-  --glow: 0 30px 80px -40px rgba(79, 229, 176, 0.5);
+  --shadow: 0 50px 120px -50px rgba(0, 0, 0, 0.95);
+  --glow: 0 30px 80px -40px rgba(254, 207, 67, 0.45);
 
-  /* Type */
-  --font-head: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display',
-    sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text',
-    sans-serif;
+  /* Type — Luxury Editorial Serif for Headings & Clean Grotesque for Body */
+  --font-head: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
   /* Motion */
@@ -55,7 +53,7 @@
 
   /* Atmosphere */
   --grain: 0.035;
-  --vignette: rgba(0, 0, 0, 0.22);
+  --vignette: rgba(0, 0, 0, 0.28);
 
   /* Focus & Accessibility (UI/UX Pro Max) */
   --focus-ring: 0 0 0 2px var(--bg), 0 0 0 4px var(--primary);

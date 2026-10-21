@@ -336,9 +336,9 @@ export default function Deck({ children }: { children: ReactNode }) {
     };
   }, [next, prev]);
 
-  // mouse wheel & trackpad scroll:
-  // scroll up (deltaY < 0) advances to next slide
-  // scroll down (deltaY > 0) goes back to previous slide
+  // mouse wheel & trackpad scroll (natural scrolling flow):
+  // scroll down (deltaY > 0) advances to next slide
+  // scroll up (deltaY < 0) goes back to previous slide
   const nextRef = useRef(next);
   nextRef.current = next;
   const prevRef = useRef(prev);
@@ -371,7 +371,7 @@ export default function Deck({ children }: { children: ReactNode }) {
           if (style.overflowY === 'auto' || style.overflowY === 'scroll') {
             const atTop = el.scrollTop <= 0;
             const atBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 1;
-            if ((e.deltaY < 0 && !atTop) || (e.deltaY > 0 && !atBottom)) {
+            if ((e.deltaY > 0 && !atBottom) || (e.deltaY < 0 && !atTop)) {
               return;
             }
           }
@@ -384,9 +384,9 @@ export default function Deck({ children }: { children: ReactNode }) {
 
       if (Math.abs(e.deltaY) >= threshold) {
         lastWheelTime.current = now;
-        if (e.deltaY < 0) {
+        if (e.deltaY > 0) {
           nextRef.current();
-        } else if (e.deltaY > 0) {
+        } else if (e.deltaY < 0) {
           prevRef.current();
         }
       }

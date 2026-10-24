@@ -23,13 +23,15 @@ export default function App() {
           SLIDE 1: COVER HERO (E1 WebGL 3D Network Scene)
           ────────────────────────────────────────────────────────────────── */}
       <Slide
+        full
         center
         nav="Cover"
         notes="Good day to the honorable members of the panel, our adviser Dr. Cris Norman Olipas, and faculty-in-charge Professor Alexander Cochanco. We are Group 1, and today we present our final capstone defense: A Web-Based AI-Assisted Ordinance Information System for Cabanatuan City."
+        style={{ overflow: 'hidden' }}
       >
         <OrdinanceNetworkScene isActive={true} />
 
-        <div style={{ position: 'relative', zIndex: 1, maxWidth: 960, marginInline: 'auto' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 1, maxWidth: 960, marginInline: 'auto', padding: 'clamp(24px, 5vh, 60px) 24px' }}>
           <Reveal>
             <div
               style={{

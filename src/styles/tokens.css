@@ -1,14 +1,13 @@
 /* ===================================================================
-   THEME TOKENS — edit ONLY this :root block to re-theme the whole deck.
-   The SAME token vocabulary as the `slides` (Slidev) and `webdeck` skills,
-   so a brand looks identical across all of them. The values below are a
-   "dark product" default — REPLACE them to match the brief or the brand.
+   THEME TOKENS — Cabanatuan City Ordinance Hub Brand Identity
+   Cabanatuan Official Seal Emerald (#059669 / #10b981) + Civic Gold (#f59e0b)
+   Matched to Capstone Project v2 Design System
    =================================================================== */
 :root {
-  /* Surfaces — Scentala Midnight Obsidian & Sapphire */
-  --bg: #040810;
-  --bg-grad-1: rgba(23, 103, 180, 0.16);
-  --bg-grad-2: rgba(254, 207, 67, 0.10);
+  /* Surfaces — Deep Obsidian Emerald & Charcoal Slate */
+  --bg: #060907;
+  --bg-grad-1: rgba(5, 150, 105, 0.14);
+  --bg-grad-2: rgba(245, 158, 11, 0.08);
   --surface: rgba(255, 255, 255, 0.04);
   --surface-2: rgba(255, 255, 255, 0.07);
 
@@ -18,48 +17,49 @@
   --fg-faint: #64748b;
 
   /* Hairlines */
-  --hair: rgba(254, 207, 67, 0.18);
+  --hair: rgba(16, 185, 129, 0.18);
   --hair-2: rgba(255, 255, 255, 0.08);
 
-  /* Accent — Scentala Luminous Warm Gold */
-  --primary: #fecf43;
+  /* Accent — Cabanatuan LGU Emerald & Civic Gold */
+  --primary: #10b981;
   --accent: linear-gradient(
-    115deg,
-    #fff3b0 0%,
-    #fecf43 38%,
-    #e5b026 72%,
-    #b8860b 100%
+    135deg,
+    #34d399 0%,
+    #10b981 40%,
+    #059669 75%,
+    #047857 100%
   );
-  --accent-ink: #040810;
+  --accent-gold: #f59e0b;
+  --accent-ink: #060907;
 
   /* Radius */
-  --radius: 20px;
-  --radius-sm: 12px;
-  --radius-lg: 26px;
+  --radius: 16px;
+  --radius-sm: 8px;
+  --radius-lg: 24px;
 
   /* Depth */
-  --shadow: 0 50px 120px -50px rgba(0, 0, 0, 0.95);
-  --glow: 0 30px 80px -40px rgba(254, 207, 67, 0.45);
+  --shadow: 0 40px 100px -30px rgba(0, 0, 0, 0.9);
+  --glow: 0 25px 60px -25px rgba(16, 185, 129, 0.4);
 
-  /* Type — Luxury Editorial Serif for Headings & Clean Grotesque for Body */
-  --font-head: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+  /* Type — Modern Civic Tech Typography */
+  --font-head: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
   /* Motion */
-  --dur: 0.4s;
-  --ease: cubic-bezier(0.32, 0.72, 0, 1);
+  --dur: 0.35s;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
 
   /* Atmosphere */
-  --grain: 0.035;
-  --vignette: rgba(0, 0, 0, 0.28);
+  --grain: 0.025;
+  --vignette: rgba(0, 0, 0, 0.35);
 
   /* Focus & Accessibility (UI/UX Pro Max) */
   --focus-ring: 0 0 0 2px var(--bg), 0 0 0 4px var(--primary);
   --touch-target-min: 44px;
 
   /* Responsive gutter — fluid side / vertical padding */
-  --gutter: clamp(28px, 6vw, 120px);
-  --gutter-y: clamp(40px, 8vh, 96px);
+  --gutter: clamp(24px, 5vw, 96px);
+  --gutter-y: clamp(32px, 6vh, 80px);
 }

@@ -1,1794 +1,1538 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Deck from './deck/Deck';
 import Slide from './deck/Slide';
+import Build from './deck/Build';
 import Reveal from './deck/Reveal';
-import TiltCard from './components/TiltCard';
-import StarField from './components/StarField';
-import Marquee from './components/Marquee';
-import Comparison from './components/Comparison';
+import BrowserFrame from './components/BrowserFrame';
 import CountUp from './components/CountUp';
-import EditorialBar from './components/EditorialBar';
-import LogoAnatomy from './components/LogoAnatomy';
+import OrdinanceNetworkScene from './components/OrdinanceNetworkScene';
+import PresenterTeam from './components/PresenterTeam';
+import PaperToDigital from './components/PaperToDigital';
+import ModuleBento from './components/ModuleBento';
+import CivicChatReplay from './components/CivicChatReplay';
+import RoleMatrixTable from './components/RoleMatrixTable';
+import IsoQualityChart from './components/IsoQualityChart';
+import SusGauge from './components/SusGauge';
+import WcagComparisonChart from './components/WcagComparisonChart';
+import RecommendationsTimeline from './components/RecommendationsTimeline';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'all' | 'pt1' | 'ct1' | 'ct2' | 'ct3'>('all');
-
-  useEffect(() => {
-    // Keep ambient atmosphere subtle
-  }, []);
-
-  const cardBaseStyle = {
-    background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%)',
-    borderRadius: 'var(--radius)',
-    border: '1px solid var(--hair-2)',
-    boxShadow: '0 25px 50px -15px rgba(0, 0, 0, 0.8)',
-    padding: 'clamp(18px, 2.2vw, 26px)',
-  };
-
   return (
-    <>
-      <StarField count={45} />
-      <Deck>
-        {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 1: COVER / KEYNOTE HERO (Inspired by Image 3 - GOODEST Keynote)
-            ────────────────────────────────────────────────────────────────── */}
-        <Slide nav="Cover" notes="Welcome to our brand presentation for SCENTALA. Today, we are presenting our complete semester journey across Performance Task 1 and Creative Tasks 1 through 4, formulated as a luxury fragrance brand pitch deck.">
-          <div style={{ maxWidth: 1180, width: '100%', marginInline: 'auto' }}>
-            <EditorialBar category="Creative Task #4 · Brand Presentation" page="01 / 16" />
-            
+    <Deck>
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 1: COVER HERO (E1 WebGL 3D Network Scene)
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="Cover"
+        notes="Good day to the honorable members of the panel, our adviser Dr. Cris Norman Olipas, and faculty-in-charge Professor Alexander Cochanco. We are Group 1, and today we present our final capstone defense: A Web-Based AI-Assisted Ordinance Information System for Cabanatuan City."
+      >
+        <OrdinanceNetworkScene isActive={true} />
+
+        <div style={{ position: 'relative', zIndex: 1, maxWidth: 960, marginInline: 'auto' }}>
+          <Reveal>
             <div
               style={{
-                display: 'grid',
-                gridTemplateColumns: '1.15fr 0.85fr',
-                gap: 'clamp(24px, 4vw, 54px)',
+                display: 'inline-flex',
                 alignItems: 'center',
+                gap: '8px',
+                padding: '6px 16px',
+                borderRadius: '999px',
+                background: 'rgba(16, 185, 129, 0.12)',
+                border: '1px solid rgba(16, 185, 129, 0.3)',
+                color: 'var(--primary)',
+                fontSize: '12.5px',
+                fontWeight: 700,
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                marginBottom: '20px',
               }}
             >
-              {/* Left Column: Massive Editorial Typography */}
-              <div>
-                <Reveal>
-                  <div
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: 8,
-                      padding: '5px 14px',
-                      borderRadius: 999,
-                      border: '1px solid var(--hair)',
-                      background: 'rgba(254, 207, 67, 0.08)',
-                      marginBottom: 16,
-                    }}
-                  >
-                    <span style={{ color: 'var(--primary)', fontSize: 13 }}>✦</span>
-                    <span
-                      style={{
-                        fontFamily: 'var(--font-mono)',
-                        fontSize: 11.5,
-                        letterSpacing: '0.12em',
-                        textTransform: 'uppercase',
-                        color: 'var(--primary)',
-                      }}
-                    >
-                      Haute Parfumerie · Manila
-                    </span>
-                  </div>
-
-                  <h1
-                    className="display"
-                    style={{
-                      fontSize: 'clamp(42px, 5.8vw, 82px)',
-                      lineHeight: 1.02,
-                      letterSpacing: '-0.04em',
-                      marginBottom: 20,
-                    }}
-                  >
-                    The Scent of <br />
-                    <span className="accent-text">Self-Expression.</span>
-                  </h1>
-
-                  <p
-                    className="lead"
-                    style={{
-                      fontSize: 'clamp(16px, 1.8vw, 22px)',
-                      color: 'var(--fg-muted)',
-                      maxWidth: '34ch',
-                      lineHeight: 1.5,
-                      marginBottom: 28,
-                    }}
-                  >
-                    Crafted for the tropical climate. Engineered with 20–25% Eau de Parfum oil concentration to outshine the rest.
-                  </p>
-                </Reveal>
-
-                <Reveal delay={0.12}>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-                    <span className="chip" style={{ color: 'var(--primary)', borderColor: 'var(--hair)' }}>
-                      50ML EXTRAIT DE PARFUM
-                    </span>
-                    <span className="chip" style={{ color: 'var(--fg-faint)', borderColor: 'var(--hair-2)' }}>
-                      10ML TALA POCKET-PUFF
-                    </span>
-                    <span className="chip" style={{ color: 'var(--fg-faint)', borderColor: 'var(--hair-2)' }}>
-                      BSIT 4-C · CICT
-                    </span>
-                  </div>
-                </Reveal>
-              </div>
-
-              {/* Right Column: Hero Generated Bottle on Volcanic Basalt */}
-              <Reveal delay={0.16}>
-                <TiltCard>
-                  <div
-                    className="editorial-frame"
-                    style={{
-                      aspectRatio: '16/10',
-                      maxHeight: 460,
-                      position: 'relative',
-                      border: '1px solid rgba(254, 207, 67, 0.25)',
-                    }}
-                  >
-                    <img
-                      src="/brand/generated-hero-bottle.jpg"
-                      alt="SCENTALA Signature Sapphire Bottle on Volcanic Basalt"
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    />
-                    <div
-                      style={{
-                        position: 'absolute',
-                        inset: 0,
-                        background: 'linear-gradient(180deg, transparent 65%, rgba(4,8,16,0.85) 100%)',
-                        pointerEvents: 'none',
-                      }}
-                    />
-                    <div
-                      style={{
-                        position: 'absolute',
-                        bottom: 14,
-                        left: 18,
-                        right: 18,
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                        alignItems: 'center',
-                      }}
-                    >
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--fg-muted)' }}>
-                        FIGURE 01 · SIGNATURE FLACON
-                      </span>
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--primary)' }}>
-                        20–25% OIL PURITY
-                      </span>
-                    </div>
-                  </div>
-                </TiltCard>
-              </Reveal>
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#10b981' }} />
+              Group 1 · Final Capstone Defense · October 2026
             </div>
-          </div>
-        </Slide>
+          </Reveal>
 
-        {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 2: THE 4 MILESTONES (Inspired by Image 2 - 3-Card Architecture)
-            ────────────────────────────────────────────────────────────────── */}
-        <Slide nav="Architecture" notes="Here is the structural framework of our semester presentation. None of these tasks existed in a silo: PT-1 analyzed the commuter market problem; CT-1 shaped our S+T flacon hallmark; CT-2 established our social narrative; and CT-3 delivered our tactile retail activation.">
-          <div style={{ maxWidth: 1180, width: '100%', marginInline: 'auto' }}>
-            <EditorialBar category="Executive Synthesis · Creative Roadmap" page="02 / 16" />
-
-            <Reveal>
-              <div style={{ marginBottom: 'clamp(18px, 2.5vh, 32px)' }}>
-                <div className="kicker" style={{ marginBottom: 6 }}>
-                  Integrated Creative Pipeline
-                </div>
-                <h2
-                  className="headline"
-                  style={{
-                    fontSize: 'clamp(28px, 3.8vw, 48px)',
-                    maxWidth: '32ch',
-                    margin: 0,
-                  }}
-                >
-                  Four Milestones, One Cohesive Brand Architecture
-                </h2>
-              </div>
-            </Reveal>
-
-            <div
+          <Reveal delay={0.08}>
+            <h1
+              className="display"
               style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(4, 1fr)',
-                gap: 'clamp(12px, 1.6vw, 20px)',
+                fontSize: 'clamp(32px, 4.4vw, 56px)',
+                fontWeight: 800,
+                lineHeight: 1.15,
+                margin: '0 0 18px 0',
+                letterSpacing: '-0.02em',
+                color: '#f8fafc',
               }}
             >
-              {/* Card 1: PT #1 */}
-              <Reveal delay={0.08}>
-                <div className="editorial-card-tall" style={{ minHeight: 320 }}>
-                  <div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
-                      <span className="chip" style={{ color: 'var(--primary)', borderColor: 'var(--hair)' }}>
-                        PT #1
-                      </span>
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--fg-faint)' }}>01</span>
-                    </div>
-                    <h3 style={{ fontSize: 'clamp(18px, 1.6vw, 22px)', color: 'var(--fg)', fontFamily: 'var(--font-head)', margin: '0 0 8px' }}>
-                      Concept Architecture
-                    </h3>
-                    <p className="foot" style={{ color: 'var(--fg-muted)', lineHeight: 1.6, margin: 0, fontSize: '0.9em' }}>
-                      Market gap diagnosis, 18–35 demographic profiling, climate formulation, and 50ml + 10ml product matrix.
-                    </p>
-                  </div>
-                  <div style={{ borderTop: '1px solid var(--hair-2)', paddingTop: 10, marginTop: 14 }}>
-                    <span style={{ fontSize: 11, fontFamily: 'var(--font-mono)', color: 'var(--primary)' }}>
-                      FOUNDATION & ETHOS
-                    </span>
-                  </div>
-                </div>
-              </Reveal>
+              A Web-Based AI-Assisted Ordinance Information System for{' '}
+              <span className="accent-text" style={{ color: '#10b981' }}>
+                Cabanatuan City
+              </span>
+            </h1>
+          </Reveal>
 
-              {/* Card 2: CT #1 */}
-              <Reveal delay={0.16}>
-                <div className="editorial-card-tall" style={{ minHeight: 320 }}>
-                  <div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
-                      <span className="chip" style={{ color: 'var(--primary)', borderColor: 'var(--hair)' }}>
-                        CT #1
-                      </span>
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--fg-faint)' }}>02</span>
-                    </div>
-                    <h3 style={{ fontSize: 'clamp(18px, 1.6vw, 22px)', color: 'var(--fg)', fontFamily: 'var(--font-head)', margin: '0 0 8px' }}>
-                      Visual Identity
-                    </h3>
-                    <p className="foot" style={{ color: 'var(--fg-muted)', lineHeight: 1.6, margin: 0, fontSize: '0.9em' }}>
-                      Pencil draft sketch, S+T flacon monogram, Gestalt Closure & Continuation, and royal color theory.
-                    </p>
-                  </div>
-                  <div style={{ borderTop: '1px solid var(--hair-2)', paddingTop: 10, marginTop: 14 }}>
-                    <span style={{ fontSize: 11, fontFamily: 'var(--font-mono)', color: 'var(--primary)' }}>
-                      HALLMARK EMBLEM
-                    </span>
-                  </div>
-                </div>
-              </Reveal>
+          <Reveal delay={0.16}>
+            <p
+              className="lead"
+              style={{
+                fontSize: 'clamp(15px, 1.35vw, 19px)',
+                color: 'var(--fg-muted)',
+                lineHeight: 1.6,
+                maxWidth: 780,
+                marginInline: 'auto',
+                marginBottom: '32px',
+              }}
+            >
+              A centralized municipal governance platform unifying legislative management across 89 barangays with automated multimodal OCR ingestion, bilingual Gemini RAG inquiry, and structured community reporting.
+            </p>
+          </Reveal>
 
-              {/* Card 3: CT #2 */}
-              <Reveal delay={0.24}>
-                <div className="editorial-card-tall" style={{ minHeight: 320 }}>
-                  <div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
-                      <span className="chip" style={{ color: 'var(--primary)', borderColor: 'var(--hair)' }}>
-                        CT #2
-                      </span>
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--fg-faint)' }}>03</span>
-                    </div>
-                    <h3 style={{ fontSize: 'clamp(18px, 1.6vw, 22px)', color: 'var(--fg)', fontFamily: 'var(--font-head)', margin: '0 0 8px' }}>
-                      Digital Voice
-                    </h3>
-                    <p className="foot" style={{ color: 'var(--fg-muted)', lineHeight: 1.6, margin: 0, fontSize: '0.9em' }}>
-                      Overhead chiaroscuro lighting, raw volcanic stone base, faceted crystal cap, and provocative launch copy.
-                    </p>
-                  </div>
-                  <div style={{ borderTop: '1px solid var(--hair-2)', paddingTop: 10, marginTop: 14 }}>
-                    <span style={{ fontSize: 11, fontFamily: 'var(--font-mono)', color: 'var(--primary)' }}>
-                      SOCIAL DEBUT
-                    </span>
-                  </div>
-                </div>
-              </Reveal>
-
-              {/* Card 4: CT #3 */}
-              <Reveal delay={0.32}>
-                <div className="editorial-card-tall" style={{ minHeight: 320 }}>
-                  <div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
-                      <span className="chip" style={{ color: 'var(--primary)', borderColor: 'var(--hair)' }}>
-                        CT #3
-                      </span>
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--fg-faint)' }}>04</span>
-                    </div>
-                    <h3 style={{ fontSize: 'clamp(18px, 1.6vw, 22px)', color: 'var(--fg)', fontFamily: 'var(--font-head)', margin: '0 0 8px' }}>
-                      Retail Activation
-                    </h3>
-                    <p className="foot" style={{ color: 'var(--fg-muted)', lineHeight: 1.6, margin: 0, fontSize: '0.9em' }}>
-                      Signature Launch campaign at SM Cabanatuan City, high-contrast typography, and complementary harmony.
-                    </p>
-                  </div>
-                  <div style={{ borderTop: '1px solid var(--hair-2)', paddingTop: 10, marginTop: 14 }}>
-                    <span style={{ fontSize: 11, fontFamily: 'var(--font-mono)', color: 'var(--primary)' }}>
-                      TACTILE POP-UP
-                    </span>
-                  </div>
-                </div>
-              </Reveal>
-            </div>
-          </div>
-        </Slide>
-
-        {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 3: THE $90B+ INDUSTRY & MARKET OPPORTUNITY (Inspired by Image 1)
-            ────────────────────────────────────────────────────────────────── */}
-        <Slide nav="Market" notes="Looking at the macro landscape, fragrance is experiencing an explosive global boom. Consumers no longer buy scents merely to mask odors; fragrance is now an intimate pillar of personal brand and identity. In the Philippines, commuters demand longevity that imported brands fail to deliver at reasonable prices.">
-          <div style={{ maxWidth: 1180, width: '100%', marginInline: 'auto' }}>
-            <EditorialBar category="PT #1 · The Fragrance Industry" page="03 / 16" />
-
+          <Reveal delay={0.24}>
             <div
               style={{
-                display: 'grid',
-                gridTemplateColumns: '1.1fr 0.9fr',
-                gap: 'clamp(24px, 4vw, 50px)',
+                display: 'inline-flex',
                 alignItems: 'center',
+                gap: '14px',
+                padding: '12px 24px',
+                borderRadius: 'var(--radius)',
+                background: 'rgba(255, 255, 255, 0.03)',
+                border: '1px solid var(--hair-2)',
+                fontSize: '13px',
+                color: 'var(--fg-muted)',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
               }}
             >
-              <div>
-                <Reveal>
-                  <div className="kicker" style={{ marginBottom: 6 }}>
-                    Global Industry Dynamics &amp; Opportunity
-                  </div>
-                  <h2
-                    className="headline"
-                    style={{
-                      fontSize: 'clamp(26px, 3.4vw, 44px)',
-                      lineHeight: 1.08,
-                      marginBottom: 20,
-                    }}
-                  >
-                    Fragrance is now a key part of personal identity, powering a $90B+ market.
-                  </h2>
-                </Reveal>
+              <span style={{ fontWeight: 600, color: '#f8fafc' }}>
+                Nueva Ecija University of Science and Technology
+              </span>
+              <span>·</span>
+              <span>College of Information and Communications Technology</span>
+              <span>·</span>
+              <span style={{ color: 'var(--accent-gold)', fontWeight: 600 }}>BSIT Web Systems</span>
+            </div>
+          </Reveal>
+        </div>
+      </Slide>
 
-                <Reveal delay={0.1}>
-                  <div
-                    style={{
-                      display: 'grid',
-                      gridTemplateColumns: '1fr 1fr',
-                      gap: 16,
-                      marginBottom: 20,
-                    }}
-                  >
-                    <div style={cardBaseStyle}>
-                      <div className="editorial-stat-hero shimmer-gold">
-                        $90B+
-                      </div>
-                      <div className="editorial-stat-label">
-                        Global Fragrance Market
-                      </div>
-                      <p className="foot" style={{ margin: 0, fontSize: '0.86em', color: 'var(--fg-muted)' }}>
-                        Growing 5–7% annually with niche artisanal brands outpacing designer conglomerates.
-                      </p>
-                    </div>
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 2: THE TEAM & LEADERSHIP
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="The Team"
+        notes="Our development team comprises four researchers specializing in Web Systems Technology. This capstone endeavor was conducted under the direct guidance of our Capstone Adviser and Research Editor, Dr. Cris Norman P. Olipas, and our Faculty-in-Charge, Professor Alexander S. Cochanco."
+      >
+        <div style={{ maxWidth: 1180, marginInline: 'auto' }}>
+          <div style={{ marginBottom: 'clamp(20px, 3vh, 32px)' }}>
+            <span className="kicker" style={{ color: 'var(--primary)' }}>Group 1 · Research & Development</span>
+            <h2 className="headline" style={{ margin: '6px 0 0 0' }}>
+              Capstone Team & Academic Leadership
+            </h2>
+          </div>
 
-                    <div style={cardBaseStyle}>
-                      <div className="editorial-stat-hero" style={{ color: 'var(--primary)' }}>
-                        20–25%
-                      </div>
-                      <div className="editorial-stat-label">
-                        Extrait de Parfum Grade
-                      </div>
-                      <p className="foot" style={{ margin: 0, fontSize: '0.86em', color: 'var(--fg-muted)' }}>
-                        High-concentration oil purity vs. 3–5% mass colognes that fade in Philippine humidity.
-                      </p>
-                    </div>
-                  </div>
-                </Reveal>
+          <PresenterTeam showAdvisers={true} />
+        </div>
+      </Slide>
 
-                <Reveal delay={0.16}>
-                  <p className="foot" style={{ color: 'var(--fg-muted)', lineHeight: 1.6, margin: 0, fontSize: '0.94em' }}>
-                    Consumers are increasingly seeking niche brands that combine authentic formulation with emotional storytelling. Scentala bridges this exact gap: offering extrait-grade luxury sillage tailored to Philippine commutes.
-                  </p>
-                </Reveal>
-              </div>
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 3: PURPOSE OF THE SYSTEM
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="System Purpose"
+        notes="The primary purpose of the system is to establish a unified, centralized web platform modernizing legislative management for Cabanatuan City. It enables barangays to draft and manage local ordinances, allows the City LGU to review and enact them, and empowers citizens to understand policies through an AI assistant, with supplementary community reporting."
+      >
+        <div style={{ maxWidth: 1140, marginInline: 'auto' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Project Purpose & Scope</span>
+          <h2 className="headline" style={{ margin: '6px 0 24px 0' }}>
+            Modernizing Municipal Legislative Governance
+          </h2>
 
-              {/* Right: Formulation Lab Macro Shot */}
-              <Reveal delay={0.18}>
-                <TiltCard>
-                  <div className="editorial-frame" style={{ aspectRatio: '4/3', border: '1px solid var(--hair-2)' }}>
-                    <img
-                      src="/brand/generated-perfume-lab.jpg"
-                      alt="Artisanal perfume formulation with amber oil and pipette"
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    />
-                    <div
-                      style={{
-                        position: 'absolute',
-                        bottom: 0,
-                        insetInline: 0,
-                        background: 'linear-gradient(180deg, transparent 40%, rgba(4,8,16,0.9) 100%)',
-                        padding: '16px 20px',
-                      }}
-                    >
-                      <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.12em' }}>
-                        PRECISION OLFACTORY CRAFTSMANSHIP
-                      </div>
-                      <div style={{ fontSize: 13, color: 'var(--fg-muted)', marginTop: 2 }}>
-                        Original bespoke accords engineered for tropical skin evaporation rates.
-                      </div>
-                    </div>
-                  </div>
-                </TiltCard>
-              </Reveal>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(260px, 100%), 1fr))',
+              gap: '18px',
+              textAlign: 'left',
+            }}
+          >
+            <div
+              style={{
+                background: 'linear-gradient(180deg, rgba(16, 185, 129, 0.08) 0%, rgba(6, 9, 7, 0.7) 100%)',
+                border: '1px solid rgba(16, 185, 129, 0.25)',
+                borderRadius: 'var(--radius)',
+                padding: '22px',
+              }}
+            >
+              <div style={{ fontSize: '24px', marginBottom: '12px' }}>🏛️</div>
+              <h3 style={{ fontSize: '17px', fontWeight: 700, color: '#f8fafc', margin: '0 0 8px 0' }}>
+                Centralized Ordinance Hub
+              </h3>
+              <p style={{ fontSize: '13.5px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                Unifies legislative archives across all 89 barangays and City Hall into one accessible, 24/7 searchable digital repository.
+              </p>
+            </div>
+
+            <div
+              style={{
+                background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(6, 9, 7, 0.7) 100%)',
+                border: '1px solid var(--hair-2)',
+                borderRadius: 'var(--radius)',
+                padding: '22px',
+              }}
+            >
+              <div style={{ fontSize: '24px', marginBottom: '12px' }}>⚖️</div>
+              <h3 style={{ fontSize: '17px', fontWeight: 700, color: '#f8fafc', margin: '0 0 8px 0' }}>
+                Decentralized Drafting & Review
+              </h3>
+              <p style={{ fontSize: '13.5px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                Barangay officials draft and submit proposed measures, while the City LGU maintains final enactment and publishing oversight.
+              </p>
+            </div>
+
+            <div
+              style={{
+                background: 'linear-gradient(180deg, rgba(245, 158, 11, 0.08) 0%, rgba(6, 9, 7, 0.7) 100%)',
+                border: '1px solid rgba(245, 158, 11, 0.25)',
+                borderRadius: 'var(--radius)',
+                padding: '22px',
+              }}
+            >
+              <div style={{ fontSize: '24px', marginBottom: '12px' }}>🤖</div>
+              <h3 style={{ fontSize: '17px', fontWeight: 700, color: '#f8fafc', margin: '0 0 8px 0' }}>
+                Civic AI Inquiries (RAG)
+              </h3>
+              <p style={{ fontSize: '13.5px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                Plain-language conversational search in Tagalog, English, and Taglish with precise ordinance citations and penalty breakdowns.
+              </p>
+            </div>
+
+            <div
+              style={{
+                background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(6, 9, 7, 0.7) 100%)',
+                border: '1px solid var(--hair-2)',
+                borderRadius: 'var(--radius)',
+                padding: '22px',
+              }}
+            >
+              <div style={{ fontSize: '24px', marginBottom: '12px' }}>📢</div>
+              <h3 style={{ fontSize: '17px', fontWeight: 700, color: '#f8fafc', margin: '0 0 8px 0' }}>
+                Supplementary Incident Triage
+              </h3>
+              <p style={{ fontSize: '13.5px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                Citizens report local concerns (waste burning, noise, road obstruction) with photo proof, routing instantly to the assigned barangay.
+              </p>
             </div>
           </div>
-        </Slide>
+        </div>
+      </Slide>
 
-        {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 4: THE TROPICAL DILEMMA (Inspired by Image 1 & 4)
-            ────────────────────────────────────────────────────────────────── */}
-        <Slide nav="The Dilemma" notes="Our business concept originated from an unfair compromise in Philippine daily life. Commuters must choose between cheap body sprays that disappear after 45 minutes, or imported designer perfumes that cost half a month's allowance. Scentala was created to eliminate this compromise completely.">
-          <div style={{ maxWidth: 1180, width: '100%', marginInline: 'auto' }}>
-            <EditorialBar category="PT #1 · Business Concept Development" page="04 / 16" />
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 4: PROBLEM & NEEDS ASSESSMENT (E2 Paper-to-Digital)
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="Needs Assessment"
+        notes="Our needs assessment revealed severe bottlenecks in traditional paper management: records are vulnerable to ink fading and physical loss; searches require manual catalog browsing; and access is limited strictly to office hours. As Batacandolo and colleagues established in 2024, limited access causes low compliance, which our digital portal directly overcomes."
+      >
+        <div style={{ maxWidth: 1140, marginInline: 'auto' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Empirical Problem Statement</span>
+          <h2 className="headline" style={{ margin: '6px 0 24px 0' }}>
+            From Paper Vulnerability to Digital Governance
+          </h2>
 
-            <Reveal>
-              <div style={{ textAlign: 'center', marginBottom: 'clamp(20px, 3vh, 32px)' }}>
-                <div className="kicker" style={{ marginBottom: 6 }}>
-                  The Core Market Problem
+          <PaperToDigital showDigital={true} />
+        </div>
+      </Slide>
+
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 5: INTENDED USERS & BENEFICIARIES
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="Beneficiaries"
+        notes="The platform serves four primary stakeholder groups: residents who gain continuous 24/7 access to laws; barangay personnel who accelerate legislative work; city administrators who gain city-wide visibility; and future researchers studying Philippine civic digital transformation."
+      >
+        <div style={{ maxWidth: 1160, marginInline: 'auto' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Municipal Stakeholders</span>
+          <h2 className="headline" style={{ margin: '6px 0 24px 0' }}>
+            Designed for Every Level of Civic Governance
+          </h2>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(260px, 100%), 1fr))',
+              gap: '18px',
+              textAlign: 'left',
+            }}
+          >
+            <div
+              style={{
+                background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(6, 9, 7, 0.7) 100%)',
+                border: '1px solid var(--hair-2)',
+                borderRadius: 'var(--radius)',
+                padding: '24px',
+              }}
+            >
+              <div style={{ fontSize: '11px', textTransform: 'uppercase', color: 'var(--primary)', fontWeight: 700, letterSpacing: '0.06em' }}>
+                Beneficiary Group 01
+              </div>
+              <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#f8fafc', margin: '8px 0 10px 0' }}>
+                Cabanatuan Residents
+              </h3>
+              <p style={{ fontSize: '13.5px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                Instant 24/7 online access from any smartphone or PC; plain-language AI search for rights and penalties; transparent community reporting without physical office visits.
+              </p>
+            </div>
+
+            <div
+              style={{
+                background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(6, 9, 7, 0.7) 100%)',
+                border: '1px solid var(--hair-2)',
+                borderRadius: 'var(--radius)',
+                padding: '24px',
+              }}
+            >
+              <div style={{ fontSize: '11px', textTransform: 'uppercase', color: 'var(--accent-gold)', fontWeight: 700, letterSpacing: '0.06em' }}>
+                Beneficiary Group 02
+              </div>
+              <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#f8fafc', margin: '8px 0 10px 0' }}>
+                Barangay Officials & Staff
+              </h3>
+              <p style={{ fontSize: '13.5px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                Rapid digitization of legacy paper ordinances via multimodal OCR (~85% time reduction); structured proposal submission; and localized incident report triage.
+              </p>
+            </div>
+
+            <div
+              style={{
+                background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(6, 9, 7, 0.7) 100%)',
+                border: '1px solid var(--hair-2)',
+                borderRadius: 'var(--radius)',
+                padding: '24px',
+              }}
+            >
+              <div style={{ fontSize: '11px', textTransform: 'uppercase', color: 'var(--primary)', fontWeight: 700, letterSpacing: '0.06em' }}>
+                Beneficiary Group 03
+              </div>
+              <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#f8fafc', margin: '8px 0 10px 0' }}>
+                City LGU Administration
+              </h3>
+              <p style={{ fontSize: '13.5px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                Unified legislative enactment console; central 89-barangay accreditation roster; role-based account administration; and city-wide incident compliance analytics.
+              </p>
+            </div>
+
+            <div
+              style={{
+                background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(6, 9, 7, 0.7) 100%)',
+                border: '1px solid var(--hair-2)',
+                borderRadius: 'var(--radius)',
+                padding: '24px',
+              }}
+            >
+              <div style={{ fontSize: '11px', textTransform: 'uppercase', color: '#38bdf8', fontWeight: 700, letterSpacing: '0.06em' }}>
+                Beneficiary Group 04
+              </div>
+              <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#f8fafc', margin: '8px 0 10px 0' }}>
+                Researchers & IT Students
+              </h3>
+              <p style={{ fontSize: '13.5px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                An empirical reference architecture demonstrating cost-effective containerized PaaS, SQLite WAL relational design, and civic Retrieval-Augmented Generation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Slide>
+
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 6: MAJOR SYSTEM FUNCTIONS (E3 Bento / Real Screenshots)
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="System Modules"
+        notes="The system is structured into six core operational modules: public legislative exploration, an AI legal assistant, automated multimodal OCR document extraction, citizen reporting, a barangay-level administrative console, and a central municipal LGU governance suite."
+      >
+        <div style={{ maxWidth: 1180, marginInline: 'auto' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Core Functional Modules</span>
+          <h2 className="headline" style={{ margin: '6px 0 20px 0' }}>
+            Six Integrated Municipal Governance Modules
+          </h2>
+
+          <ModuleBento />
+        </div>
+      </Slide>
+
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 7: CIVIC AI ASSISTANT IN ACTION (E5 Chat Replay)
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="AI Assistant"
+        notes="Here we demonstrate the Civic AI Assistant responding to a resident in Tagalog regarding waste burning penalties. Notice how the system cites both the specific City Ordinance and Barangay Ordinance with exact penalty tiers, bounded strictly to municipal records with no legal hallucinations."
+      >
+        <div style={{ maxWidth: 980, marginInline: 'auto' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Retrieval-Augmented Generation</span>
+          <h2 className="headline" style={{ margin: '6px 0 20px 0' }}>
+            Bilingual Civic AI Inquiries with Exact Legal Citations
+          </h2>
+
+          <CivicChatReplay />
+        </div>
+      </Slide>
+
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 8: USER ROLES & SYSTEM ACTORS
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="User Roles"
+        notes="The system architecture enforces three distinct database roles: Citizen for public access, Barangay Admin scoped strictly to local barangay data, and LGU Admin possessing city-wide governance authority, with Google Gemini acting as an external API service actor."
+      >
+        <div style={{ maxWidth: 1160, marginInline: 'auto' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Role-Based Access Control</span>
+          <h2 className="headline" style={{ margin: '6px 0 20px 0' }}>
+            Three Primary User Roles & External AI Actor
+          </h2>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'minmax(320px, 1.2fr) minmax(280px, 1fr)',
+              gap: 'clamp(20px, 3vw, 36px)',
+              alignItems: 'center',
+            }}
+          >
+            {/* Use Case Diagram */}
+            <BrowserFrame url="ordinance.cabanatuan.gov.ph/architecture/use-case">
+              <div style={{ background: '#ffffff', padding: '12px', display: 'flex', justifyContent: 'center' }}>
+                <img
+                  src="/figures/figure-14-use-case.png"
+                  alt="Use Case Diagram"
+                  style={{ maxHeight: '340px', width: 'auto', objectFit: 'contain' }}
+                />
+              </div>
+            </BrowserFrame>
+
+            {/* Role Breakdown */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', textAlign: 'left' }}>
+              <div style={{ padding: '14px 18px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                  <span style={{ padding: '2px 8px', borderRadius: '4px', background: 'rgba(16, 185, 129, 0.15)', color: '#10b981', fontSize: '11px', fontWeight: 700 }}>
+                    CITIZEN
+                  </span>
+                  <span style={{ fontSize: '14px', fontWeight: 700, color: '#f8fafc' }}>Resident / Citizen</span>
                 </div>
-                <h2
-                  className="headline"
-                  style={{
-                    fontSize: 'clamp(26px, 3.4vw, 44px)',
-                    maxWidth: '38ch',
-                    marginInline: 'auto',
-                    textAlign: 'center',
-                  }}
-                >
-                  The Tropical Dilemma:<br />
-                  Fading Scents vs. Costly Designer Imports
-                </h2>
+                <p style={{ margin: 0, fontSize: '12.5px', color: 'var(--fg-muted)', lineHeight: 1.45 }}>
+                  Public exploration, bilingual AI inquiries, and community concern submission. Requires zero authentication or account setup.
+                </p>
               </div>
-            </Reveal>
 
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                gap: 'clamp(16px, 2.2vw, 28px)',
-              }}
-            >
-              {/* Left Panel: Commuter Dilemma */}
-              <Reveal delay={0.1}>
-                <div
-                  style={{
-                    ...cardBaseStyle,
-                    background: 'rgba(255, 255, 255, 0.02)',
-                    borderColor: 'rgba(255, 255, 255, 0.08)',
-                    height: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
-                      <span className="chip" style={{ alignSelf: 'flex-start', color: 'var(--fg-faint)', borderColor: 'var(--hair-2)' }}>
-                        THE COMMUTER DILEMMA
-                      </span>
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--fg-faint)' }}>BEFORE</span>
-                    </div>
-                    <h3 style={{ fontSize: 'clamp(20px, 2vw, 26px)', color: 'var(--fg)', fontFamily: 'var(--font-head)', margin: '0 0 14px' }}>
-                      Tropical Disappointment
-                    </h3>
-                    <ul style={{ paddingLeft: 18, margin: 0, display: 'flex', flexDirection: 'column', gap: 10, color: 'var(--fg-muted)', fontSize: '0.94em', lineHeight: 1.5 }}>
-                      <li>Budget colognes &amp; body sprays evaporate in high tropical humidity in under 45 minutes.</li>
-                      <li>Imported luxury perfumes cost ₱6,000 to ₱15,000+, far too expensive for daily student wear.</li>
-                      <li>Crowded MRT/LRT transit, jeepneys, and sweat dissolve low-oil alcohol formulas immediately.</li>
-                      <li>Students and young commuters are forced to carry bulky decants or settle for smelling flat.</li>
-                    </ul>
-                  </div>
-                  <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: 12, marginTop: 18, color: 'var(--fg-faint)', fontSize: 12, fontFamily: 'var(--font-mono)' }}>
-                    ✕ STATUS QUO MARKET INEFFICIENCY
-                  </div>
+              <div style={{ padding: '14px 18px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                  <span style={{ padding: '2px 8px', borderRadius: '4px', background: 'rgba(245, 158, 11, 0.15)', color: 'var(--accent-gold)', fontSize: '11px', fontWeight: 700 }}>
+                    BARANGAY_ADMIN
+                  </span>
+                  <span style={{ fontSize: '14px', fontWeight: 700, color: '#f8fafc' }}>Barangay Official / Staff</span>
                 </div>
-              </Reveal>
+                <p style={{ margin: 0, fontSize: '12.5px', color: 'var(--fg-muted)', lineHeight: 1.45 }}>
+                  Authenticated; strictly isolated to their assigned barangay. Drafts local ordinances, uploads PDFs for AI OCR extraction, and resolves incident reports.
+                </p>
+              </div>
 
-              {/* Right Panel: The SCENTALA Answer */}
-              <Reveal delay={0.18}>
-                <div
-                  style={{
-                    ...cardBaseStyle,
-                    background: 'linear-gradient(180deg, rgba(23,103,180,0.18) 0%, rgba(4,8,16,0.8) 100%)',
-                    borderColor: 'rgba(254, 207, 67, 0.35)',
-                    boxShadow: '0 30px 60px -20px rgba(0,0,0,0.9), 0 0 35px rgba(254,207,67,0.15)',
-                    height: '100%',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
-                      <span className="chip" style={{ alignSelf: 'flex-start', color: 'var(--primary)', borderColor: 'var(--hair)' }}>
-                        THE SCENTALA ANSWER
-                      </span>
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 12, color: 'var(--primary)' }}>INNOVATION</span>
-                    </div>
-                    <h3 style={{ fontSize: 'clamp(20px, 2vw, 26px)', color: 'var(--fg)', fontFamily: 'var(--font-head)', margin: '0 0 14px' }}>
-                      Climate-Resilient Luxury
-                    </h3>
-                    <ul style={{ paddingLeft: 18, margin: 0, display: 'flex', flexDirection: 'column', gap: 10, color: 'var(--fg)', fontSize: '0.94em', lineHeight: 1.5 }}>
-                      <li>High oil concentration Eau de Parfum (20% to 25%) engineered specifically for Philippine heat.</li>
-                      <li>Enduring 8+ hour sillage and projection tested to withstand sweat, humidity, and long commutes.</li>
-                      <li>Accessible, honest pricing structured realistically for students and young professionals (₱499–₱1,499).</li>
-                      <li>Original, bespoke olfactory formulations with memorable presence, never synthetic dupes.</li>
-                    </ul>
-                  </div>
-                  <div style={{ borderTop: '1px solid rgba(254,207,67,0.2)', paddingTop: 12, marginTop: 18, color: 'var(--primary)', fontSize: 12, fontFamily: 'var(--font-mono)' }}>
-                    ✓ FORMULATED TO OUTSHINE THE REST
-                  </div>
+              <div style={{ padding: '14px 18px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+                  <span style={{ padding: '2px 8px', borderRadius: '4px', background: 'rgba(16, 185, 129, 0.25)', color: '#34d399', fontSize: '11px', fontWeight: 700 }}>
+                    LGU_ADMIN
+                  </span>
+                  <span style={{ fontSize: '14px', fontWeight: 700, color: '#f8fafc' }}>City LGU Administrator</span>
                 </div>
-              </Reveal>
+                <p style={{ margin: 0, fontSize: '12.5px', color: 'var(--fg-muted)', lineHeight: 1.45 }}>
+                  City-wide sovereign governance. Enacts or rejects proposed ordinances with remarks, publishes city-wide laws, oversees all reports, and manages user RBAC.
+                </p>
+              </div>
             </div>
           </div>
-        </Slide>
+        </div>
+      </Slide>
 
-        {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 5: TARGET DEMOGRAPHIC & COMMUTER INSIGHT (Inspired by Image 1 & 2)
-            ────────────────────────────────────────────────────────────────── */}
-        <Slide nav="Target Market" notes="Our demographic research reveals that young urban Filipinos spend 2 to 4 hours in daily transit. Our core audience of 18 to 35 demands high-impact olfactory presence that lasts from morning classes to evening social gatherings.">
-          <div style={{ maxWidth: 1180, width: '100%', marginInline: 'auto' }}>
-            <EditorialBar category="PT #1 · Target Audience & Lifestyle" page="05 / 16" />
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 9: ROLE RESPONSIBILITIES & ACCESS BOUNDARIES
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="Access Levels"
+        notes="Access levels are architecturally isolated: Citizens require no credentials for public exploration and reporting; Barangay Admins are authenticated to their own barangay jurisdiction; while LGU Admins possess full sovereign authority across all 89 barangays."
+      >
+        <div style={{ maxWidth: 1140, marginInline: 'auto' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Access Boundary Matrix</span>
+          <h2 className="headline" style={{ margin: '6px 0 24px 0' }}>
+            Responsibilities, Authentication & Data Scopes
+          </h2>
 
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(320px, 100%), 1fr))',
+              gap: '20px',
+              textAlign: 'left',
+            }}
+          >
             <div
               style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                gap: 'clamp(24px, 4vw, 54px)',
-                alignItems: 'center',
+                background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(6, 9, 7, 0.7) 100%)',
+                border: '1px solid var(--hair-2)',
+                borderRadius: 'var(--radius)',
+                padding: '24px',
               }}
             >
-              <div>
-                <Reveal>
-                  <div className="kicker" style={{ marginBottom: 6 }}>
-                    Demographic Architecture
-                  </div>
-                  <h2
-                    className="headline"
-                    style={{
-                      fontSize: 'clamp(26px, 3.4vw, 44px)',
-                      marginBottom: 16,
-                      maxWidth: '28ch',
-                    }}
-                  >
-                    Formulated for the Fast-Paced Filipino Commute
-                  </h2>
-                  <p className="foot" style={{ color: 'var(--fg-muted)', lineHeight: 1.6, marginBottom: 20, fontSize: '0.94em' }}>
-                    Designed for everyday strivers: college students navigating humid campuses, young corporate associates, and creative freelancers in major growth hubs across Metro Manila, Cabanatuan City, and Central Luzon.
-                  </p>
-                </Reveal>
-
-                {/* 3 Metric Cards matching Image 1 */}
-                <Reveal delay={0.12}>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12 }}>
-                    <div style={{ ...cardBaseStyle, padding: 14 }}>
-                      <div className="editorial-stat-hero" style={{ fontSize: 'clamp(28px, 3.2vw, 42px)' }}>
-                        18–35
-                      </div>
-                      <div className="editorial-stat-label" style={{ fontSize: 10 }}>
-                        CORE AGE
-                      </div>
-                      <div style={{ fontSize: 11.5, color: 'var(--fg-muted)' }}>
-                        Students &amp; Associates
-                      </div>
-                    </div>
-
-                    <div style={{ ...cardBaseStyle, padding: 14 }}>
-                      <div className="editorial-stat-hero" style={{ fontSize: 'clamp(28px, 3.2vw, 42px)', color: 'var(--primary)' }}>
-                        <CountUp to={8} suffix="+ Hrs" duration={1200} />
-                      </div>
-                      <div className="editorial-stat-label" style={{ fontSize: 10 }}>
-                        LONGEVITY
-                      </div>
-                      <div style={{ fontSize: 11.5, color: 'var(--fg-muted)' }}>
-                        Commute Projection
-                      </div>
-                    </div>
-
-                    <div style={{ ...cardBaseStyle, padding: 14 }}>
-                      <div className="editorial-stat-hero" style={{ fontSize: 'clamp(28px, 3.2vw, 42px)' }}>
-                        100%
-                      </div>
-                      <div className="editorial-stat-label" style={{ fontSize: 10 }}>
-                        RESILIENT
-                      </div>
-                      <div style={{ fontSize: 11.5, color: 'var(--fg-muted)' }}>
-                        PH Climate Tested
-                      </div>
-                    </div>
-                  </div>
-                </Reveal>
-              </div>
-
-              {/* Right: Editorial Brand Muse Photography */}
-              <Reveal delay={0.16}>
-                <TiltCard>
-                  <div className="editorial-frame" style={{ aspectRatio: '4/3', border: '1px solid var(--hair-2)' }}>
-                    <img
-                      src="/brand/generated-editorial-model.jpg"
-                      alt="SCENTALA Filipino Editorial Muse in Quiet Luxury Portrait"
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    />
-                    <div
-                      style={{
-                        position: 'absolute',
-                        inset: 0,
-                        background: 'linear-gradient(180deg, transparent 65%, rgba(4,8,16,0.85) 100%)',
-                        pointerEvents: 'none',
-                      }}
-                    />
-                    <div style={{ position: 'absolute', bottom: 12, left: 16, right: 16, display: 'flex', justifyContent: 'space-between' }}>
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--fg-muted)' }}>
-                        CAMPAIGN MUSE · QUIET LUXURY
-                      </span>
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--primary)' }}>
-                        DAILY ELEGANCE
-                      </span>
-                    </div>
-                  </div>
-                </TiltCard>
-              </Reveal>
-            </div>
-          </div>
-        </Slide>
-
-        {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 6: BRAND FOUNDATION, ETYMOLOGY & VALUES (Inspired by Image 2 & 3)
-            ────────────────────────────────────────────────────────────────── */}
-        <Slide nav="Brand Ethos" notes="The name SCENTALA embraces Filipino cultural pride: 'Tala' is the star that guided our ancestors through the archipelago at night. Our values commit to authentic quality rather than predatory luxury markups.">
-          <div style={{ maxWidth: 1180, width: '100%', marginInline: 'auto' }}>
-            <EditorialBar category="PT #1 · Brand Foundation & Philosophy" page="06 / 16" />
-
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '0.85fr 1.15fr',
-                gap: 'clamp(20px, 3.5vw, 44px)',
-                alignItems: 'center',
-              }}
-            >
-              {/* Left Column: Editorial Philosophy */}
-              <div>
-                <Reveal>
-                  <div className="kicker" style={{ marginBottom: 6 }}>
-                    PT #1 · Heritage &amp; Philosophy
-                  </div>
-                  <h2
-                    className="headline"
-                    style={{
-                      fontSize: 'clamp(28px, 3.6vw, 46px)',
-                      lineHeight: 1.05,
-                      marginBottom: 18,
-                    }}
-                  >
-                    Designed to Be Remembered
-                  </h2>
-                  <p
-                    style={{
-                      color: 'var(--fg-muted)',
-                      lineHeight: 1.6,
-                      fontSize: 'clamp(14px, 1.4vw, 16px)',
-                      marginBottom: 20,
-                    }}
-                  >
-                    While many commercial brands compete for fleeting attention, SCENTALA focuses on creating lasting, indelible impressions. Through climate-resilient oil formulation, authentic ingredients, and cultural pride, we transform everyday fragrance into an unmistakable personal signature.
-                  </p>
-                </Reveal>
-
-                <Reveal delay={0.1}>
-                  <div
-                    style={{
-                      padding: '14px 18px',
-                      borderRadius: 'var(--radius-sm)',
-                      background: 'linear-gradient(135deg, rgba(254, 207, 67, 0.1) 0%, rgba(23, 103, 180, 0.1) 100%)',
-                      border: '1px solid var(--hair)',
-                      marginBottom: 16,
-                    }}
-                  >
-                    <div style={{ fontSize: 11, fontFamily: 'var(--font-mono)', color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 4 }}>
-                      ETYMOLOGY: SCENT + TALA (STAR)
-                    </div>
-                    <div style={{ fontStyle: 'italic', color: 'var(--fg)', fontSize: 14, fontFamily: 'var(--font-head)' }}>
-                      “A scent that outshines the rest.”
-                    </div>
-                  </div>
-                </Reveal>
-              </div>
-
-              {/* Right Column: 3 Vertical Pillars matching Reference Image 3 */}
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(3, 1fr)',
-                  gap: 'clamp(10px, 1.4vw, 16px)',
-                }}
-              >
-                {/* Pillar 1: Premium Positioning (Dark Gradient) */}
-                <Reveal delay={0.08}>
-                  <div
-                    className="editorial-card-tall"
-                    style={{
-                      minHeight: 330,
-                      background: 'linear-gradient(180deg, rgba(23,103,180,0.25) 0%, rgba(4,8,16,0.95) 100%)',
-                      border: '1px solid rgba(254,207,67,0.3)',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'space-between',
-                      padding: 18,
-                    }}
-                  >
-                    <div>
-                      <div className="chip" style={{ color: 'var(--primary)', borderColor: 'var(--hair)', marginBottom: 12 }}>
-                        01
-                      </div>
-                      <h3 style={{ fontSize: 18, color: 'var(--fg)', fontFamily: 'var(--font-head)', margin: '0 0 8px' }}>
-                        Premium Positioning
-                      </h3>
-                    </div>
-                    <p className="foot" style={{ color: 'var(--fg-muted)', fontSize: 12, lineHeight: 1.5, margin: 0 }}>
-                      Crafted for commuters and young professionals who value exclusivity, sophistication, and elevated everyday confidence.
-                    </p>
-                  </div>
-                </Reveal>
-
-                {/* Pillar 2: Timeless Design (Presence Sand Photo) */}
-                <Reveal delay={0.16}>
-                  <div
-                    className="editorial-card-tall"
-                    style={{
-                      minHeight: 330,
-                      position: 'relative',
-                      overflow: 'hidden',
-                      border: '1px solid var(--hair-2)',
-                      padding: 0,
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'space-between',
-                    }}
-                  >
-                    <div style={{ position: 'relative', width: '100%', height: 160, overflow: 'hidden' }}>
-                      <img
-                        src="/brand/scentala-presence-sand.jpg"
-                        alt="SCENTALA Timeless Design"
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                      />
-                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 50%, rgba(4,8,16,0.85) 100%)' }} />
-                    </div>
-                    <div style={{ padding: '14px 16px' }}>
-                      <h3 style={{ fontSize: 17, color: 'var(--fg)', fontFamily: 'var(--font-head)', margin: '0 0 6px' }}>
-                        Timeless Design
-                      </h3>
-                      <p className="foot" style={{ color: 'var(--fg-muted)', fontSize: 11.5, lineHeight: 1.5, margin: 0 }}>
-                        A refined visual identity designed to remain elegant, relevant, and desirable over time.
-                      </p>
-                    </div>
-                  </div>
-                </Reveal>
-
-                {/* Pillar 3: Collectible Presentation (Unboxing Photo) */}
-                <Reveal delay={0.24}>
-                  <div
-                    className="editorial-card-tall"
-                    style={{
-                      minHeight: 330,
-                      position: 'relative',
-                      overflow: 'hidden',
-                      border: '1px solid var(--hair-2)',
-                      padding: 0,
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'space-between',
-                    }}
-                  >
-                    <div style={{ position: 'relative', width: '100%', height: 160, overflow: 'hidden' }}>
-                      <img
-                        src="/brand/scentala-unboxing-presentation.jpg"
-                        alt="SCENTALA Collectible Presentation"
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                      />
-                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 50%, rgba(4,8,16,0.85) 100%)' }} />
-                    </div>
-                    <div style={{ padding: '14px 16px' }}>
-                      <h3 style={{ fontSize: 17, color: 'var(--fg)', fontFamily: 'var(--font-head)', margin: '0 0 6px' }}>
-                        Collectible Presentation
-                      </h3>
-                      <p className="foot" style={{ color: 'var(--fg-muted)', fontSize: 11.5, lineHeight: 1.5, margin: 0 }}>
-                        Thoughtfully designed packaging and details that transform each flacon into a lasting keepsake.
-                      </p>
-                    </div>
-                  </div>
-                </Reveal>
-              </div>
-            </div>
-          </div>
-        </Slide>
-
-        {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 7: DUAL PRODUCT LINEUP & COMPETITIVE MATRIX (PT #1)
-            ────────────────────────────────────────────────────────────────── */}
-        <Slide nav="Products" notes="Here is our physical SKU architecture: the 50ml Signature Flacon designed for home dressing tables, and the 10ml Tala Pocket-Puff Atomizer built for on-the-go mobility. Our competitive matrix illustrates our unfair advantage over cheap dupes and luxury boutiques.">
-          <div style={{ maxWidth: 1180, width: '100%', marginInline: 'auto' }}>
-            <EditorialBar category="PT #1 · Product Lineup & Competitive Matrix" page="07 / 16" />
-
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '0.95fr 1.05fr',
-                gap: 'clamp(20px, 3.5vw, 44px)',
-                alignItems: 'center',
-              }}
-            >
-              {/* Left: Generated Photorealistic Still Life on Travertine */}
-              <Reveal>
-                <TiltCard>
-                  <div className="editorial-frame" style={{ aspectRatio: '16/11', border: '1px solid var(--hair-2)' }}>
-                    <img
-                      src="/brand/generated-product-lineup.jpg"
-                      alt="SCENTALA 50ml Bottle and 10ml Tala Pocket-Puff Atomizer on Travertine"
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    />
-                    <div
-                      style={{
-                        position: 'absolute',
-                        bottom: 0,
-                        insetInline: 0,
-                        background: 'linear-gradient(180deg, transparent 40%, rgba(4,8,16,0.9) 100%)',
-                        padding: '12px 18px',
-                        display: 'flex',
-                        justifyContent: 'space-between',
-                      }}
-                    >
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--primary)' }}>
-                        50ML SIGNATURE EDP
-                      </span>
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--fg-muted)' }}>
-                        10ML TALA POCKET-PUFF
-                      </span>
-                    </div>
-                  </div>
-                </TiltCard>
-              </Reveal>
-
-              {/* Right: Headline & Luxury Competitive Table */}
-              <div>
-                <Reveal delay={0.08}>
-                  <div className="kicker" style={{ marginBottom: 6 }}>
-                    Dual SKU Strategy &amp; Advantage
-                  </div>
-                  <h2
-                    className="headline"
-                    style={{
-                      fontSize: 'clamp(24px, 3vw, 38px)',
-                      lineHeight: 1.08,
-                      marginBottom: 16,
-                    }}
-                  >
-                    50ml Signature Flacon &amp; 10ml Tala Pocket-Puff
-                  </h2>
-                </Reveal>
-
-                <Reveal delay={0.14}>
-                  <Comparison
-                    cols={['Feature / Metric', 'SCENTALA', 'Alcohol Dupes', 'Niche Boutiques']}
-                    highlight={0}
-                    rows={[
-                      {
-                        label: 'Fragrance Oil Concentration',
-                        values: ['Eau de Parfum (20–25%)', 'Cologne (3–8%)', 'Parfum (20–30%)'],
-                      },
-                      { label: 'Tropical Heat & Sweat Sillage', values: [true, false, false] },
-                      { label: 'Student-Accessible Pricing', values: [true, true, false] },
-                      { label: 'Original Bespoke Olfactory Accords', values: [true, false, true] },
-                      { label: '10ml Pocket-Puff Travel Atomizer', values: [true, false, false] },
-                    ]}
-                  />
-                </Reveal>
-              </div>
-            </div>
-          </div>
-        </Slide>
-
-        {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 8: TACTILE CUSTOMER EXPERIENCE (Inspired by GOODIEST Image 2)
-            ────────────────────────────────────────────────────────────────── */}
-        <Slide nav="Experience" notes="Luxury extends far beyond the bottle itself. Every touchpoint—from our leakproof pocket atomizers to our bespoke fragrance sillage—is thoughtfully designed to transform a daily commute into an elevated personal experience.">
-          <div style={{ maxWidth: 1180, width: '100%', marginInline: 'auto' }}>
-            <EditorialBar category="PT #1 · Tactile Customer Experience" page="08 / 17" />
-
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '1.05fr 0.95fr',
-                gap: 'clamp(24px, 4vw, 54px)',
-                alignItems: 'center',
-              }}
-            >
-              {/* Left Column: Hand Holding Flacon Editorial Shot */}
-              <Reveal>
-                <TiltCard>
-                  <div
-                    className="editorial-frame"
-                    style={{
-                      aspectRatio: '4/3',
-                      border: '1px solid var(--hair-2)',
-                      maxHeight: 460,
-                    }}
-                  >
-                    <img
-                      src="/brand/scentala-hand-flacon.jpg"
-                      alt="SCENTALA Flacon Held in Hand · Tactile Luxury"
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    />
-                    <div
-                      style={{
-                        position: 'absolute',
-                        inset: 0,
-                        background: 'linear-gradient(180deg, transparent 65%, rgba(4,8,16,0.85) 100%)',
-                        pointerEvents: 'none',
-                      }}
-                    />
-                    <div style={{ position: 'absolute', bottom: 12, left: 16, right: 16, display: 'flex', justifyContent: 'space-between' }}>
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--fg-muted)' }}>
-                        TACTILE TOUCHPOINT · INTIMATE SCALE
-                      </span>
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--primary)' }}>
-                        DAILY CONFIDENCE
-                      </span>
-                    </div>
-                  </div>
-                </TiltCard>
-              </Reveal>
-
-              {/* Right Column: Experience Pillars */}
-              <div>
-                <Reveal delay={0.08}>
-                  <div className="kicker" style={{ marginBottom: 6 }}>
-                    Customer Journey &amp; Touchpoints
-                  </div>
-                  <h2
-                    className="headline"
-                    style={{
-                      fontSize: 'clamp(26px, 3.4vw, 44px)',
-                      lineHeight: 1.06,
-                      marginBottom: 16,
-                      maxWidth: '26ch',
-                    }}
-                  >
-                    Luxury Extends Beyond the Bottle Itself
-                  </h2>
-                  <p
-                    className="foot"
-                    style={{
-                      color: 'var(--fg-muted)',
-                      lineHeight: 1.6,
-                      marginBottom: 20,
-                      fontSize: '0.94em',
-                    }}
-                  >
-                    Every detail—from the weight of the faceted cap in your palm to the leakproof atomizer in your pocket—is engineered to create an elevated, enduring sensory ritual.
-                  </p>
-                </Reveal>
-
-                <Reveal delay={0.14}>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                    <div style={cardBaseStyle}>
-                      <strong style={{ color: 'var(--primary)', fontFamily: 'var(--font-head)', fontSize: 17 }}>
-                        Elevated Packaging &amp; Ergonomics
-                      </strong>
-                      <p className="foot" style={{ color: 'var(--fg-muted)', margin: '4px 0 0', lineHeight: 1.5 }}>
-                        High-density glass and precision fine-mist pumps ensure each spray dispenses an even, micronized cloud that adheres flawlessly to skin.
-                      </p>
-                    </div>
-
-                    <div style={cardBaseStyle}>
-                      <strong style={{ color: 'var(--primary)', fontFamily: 'var(--font-head)', fontSize: 17 }}>
-                        Thoughtful Daily Mobility
-                      </strong>
-                      <p className="foot" style={{ color: 'var(--fg-muted)', margin: '4px 0 0', lineHeight: 1.5 }}>
-                        The 10ml Tala Pocket-Puff slides seamlessly into bags and pockets, empowering instant confidence boosts during hot commutes and sudden meetings.
-                      </p>
-                    </div>
-                  </div>
-                </Reveal>
-              </div>
-            </div>
-          </div>
-        </Slide>
-
-        {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 9: LOGO DESIGN IDEATION & DRAFT SKETCH (CT #1)
-            ────────────────────────────────────────────────────────────────── */}
-        <Slide nav="Logo Sketch" notes="Before moving to vector illustration software, our design team grounded the identity in manual sketching. On the left is our authentic Creative Task 1 submission sketch, illustrating how the initial letters S and T naturally form the body and nozzle of a perfume bottle.">
-          <div style={{ maxWidth: 1180, width: '100%', marginInline: 'auto' }}>
-            <EditorialBar category="CT #1 · Visual Identity & Logo Process" page="08 / 16" />
-
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '0.9fr 1.1fr',
-                gap: 'clamp(24px, 4vw, 54px)',
-                alignItems: 'center',
-              }}
-            >
-              {/* Left: Authentic Student Draft Sketch */}
-              <Reveal>
-                <TiltCard>
-                  <div
-                    className="editorial-frame"
-                    style={{
-                      aspectRatio: '1/1',
-                      maxHeight: 440,
-                      background: 'radial-gradient(circle, rgba(23,103,180,0.15) 0%, rgba(4,8,16,0.8) 80%)',
-                      border: '1px solid var(--hair)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      padding: 18,
-                    }}
-                  >
-                    <img
-                      src="/brand/CT-1-Sketch-Draft-Logo.png"
-                      alt="SCENTALA Authentic Hand-Drawn Logo Sketch and Ideation Draft"
-                      style={{ maxHeight: '92%', maxWidth: '92%', objectFit: 'contain' }}
-                    />
-                  </div>
-                </TiltCard>
-              </Reveal>
-
-              {/* Right: Design Ideation Principles */}
-              <div>
-                <Reveal delay={0.08}>
-                  <div className="kicker" style={{ marginBottom: 6 }}>
-                    Design Ideation &amp; Drafting
-                  </div>
-                  <h2
-                    className="headline"
-                    style={{
-                      fontSize: 'clamp(26px, 3.4vw, 44px)',
-                      lineHeight: 1.08,
-                      marginBottom: 18,
-                    }}
-                  >
-                    From Hand-Drawn Sketch to Regal Brand Hallmark
-                  </h2>
-                </Reveal>
-
-                <Reveal delay={0.14}>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-                    <div style={cardBaseStyle}>
-                      <strong style={{ color: 'var(--primary)', fontFamily: 'var(--font-head)', fontSize: 18 }}>
-                        01 · Typographic Convergence
-                      </strong>
-                      <p className="foot" style={{ color: 'var(--fg-muted)', margin: '4px 0 0', lineHeight: 1.5 }}>
-                        The initials <strong>S</strong> and <strong>T</strong> from SCENTALA merge into an organic, unbroken contour.
-                      </p>
-                    </div>
-
-                    <div style={cardBaseStyle}>
-                      <strong style={{ color: 'var(--primary)', fontFamily: 'var(--font-head)', fontSize: 18 }}>
-                        02 · Contouring the Glass Flacon
-                      </strong>
-                      <p className="foot" style={{ color: 'var(--fg-muted)', margin: '4px 0 0', lineHeight: 1.5 }}>
-                        The sweeping stroke of <strong>S</strong> forms the curving body, while the stem and crossbar of <strong>T</strong> build the structural nozzle and cap.
-                      </p>
-                    </div>
-
-                    <div style={cardBaseStyle}>
-                      <strong style={{ color: 'var(--primary)', fontFamily: 'var(--font-head)', fontSize: 18 }}>
-                        03 · The Guiding Tala Star
-                      </strong>
-                      <p className="foot" style={{ color: 'var(--fg-muted)', margin: '4px 0 0', lineHeight: 1.5 }}>
-                        Resting at the zenith is the 4-point Tala star, representing radiant personal allure and Filipino heritage.
-                      </p>
-                    </div>
-                  </div>
-                </Reveal>
-              </div>
-            </div>
-          </div>
-        </Slide>
-
-        {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 9: LOGO ANATOMY & DECONSTRUCTION (Directly Inspired by Image 5)
-            ────────────────────────────────────────────────────────────────── */}
-        <Slide nav="Logo Anatomy" notes="Directly inspired by the luxury brand deconstruction in our reference materials, this slide breaks our emblem down into its 3 fundamental layers: the letterforms, the flacon closure silhouette, and the Tala star crown.">
-          <div style={{ maxWidth: 1180, width: '100%', marginInline: 'auto' }}>
-            <EditorialBar category="CT #1 · Visual Identity & Emblem Anatomy" page="09 / 16" />
-
-            <Reveal>
-              <div style={{ textAlign: 'center', marginBottom: 'clamp(20px, 3vh, 32px)' }}>
-                <div className="kicker" style={{ marginBottom: 6 }}>
-                  Symbol Anatomy &amp; Deconstruction
-                </div>
-                <h2
-                  className="headline"
-                  style={{
-                    fontSize: 'clamp(26px, 3.4vw, 44px)',
-                    maxWidth: '32ch',
-                    marginInline: 'auto',
-                    textAlign: 'center',
-                  }}
-                >
-                  The Anatomy of an Emblem: Typographic Evolution
-                </h2>
-              </div>
-            </Reveal>
-
-            {/* The 3-Stage Evolutionary Layout matching Reference Image 5 */}
-            <LogoAnatomy />
-          </div>
-        </Slide>
-
-        {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 10: PRIMARY MONOGRAM & SECONDARY MASTER LOCKUP (CT #1)
-            ────────────────────────────────────────────────────────────────── */}
-        <Slide nav="Logo System" notes="Here is our finalized digital identity system. On the left is our Primary Monogram Badge: a gold emblem engineered for social avatars, app icons, and bottle embossing. On the right is our Secondary Master Lockup: combining the monogram with our editorial serif wordmark and official brand tagline.">
-          <div style={{ maxWidth: 1180, width: '100%', marginInline: 'auto' }}>
-            <EditorialBar category="CT #1 · Visual Identity Architecture" page="10 / 16" />
-
-            <Reveal>
-              <div style={{ textAlign: 'center', marginBottom: 'clamp(20px, 3vh, 32px)' }}>
-                <div className="kicker" style={{ marginBottom: 6 }}>
-                  Dual Hallmark System
-                </div>
-                <h2
-                  className="headline"
-                  style={{
-                    fontSize: 'clamp(26px, 3.4vw, 44px)',
-                    maxWidth: '32ch',
-                    marginInline: 'auto',
-                    textAlign: 'center',
-                  }}
-                >
-                  Primary Monogram &amp;<br />
-                  Secondary Master Lockup
-                </h2>
-              </div>
-            </Reveal>
-
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                gap: 'clamp(18px, 2.5vw, 36px)',
-              }}
-            >
-              <Reveal delay={0.08}>
-                <TiltCard>
-                  <div style={{ ...cardBaseStyle, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <div
-                      style={{
-                        width: '100%',
-                        height: 230,
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        background: 'radial-gradient(circle, rgba(23,103,180,0.25) 0%, rgba(0,0,0,0.6) 80%)',
-                        borderRadius: 'var(--radius-sm)',
-                        padding: 16,
-                        marginBottom: 16,
-                        border: '1px solid var(--hair-2)',
-                      }}
-                    >
-                      <img
-                        src="/brand/ST-ORIGINAL-LOGO-TRANSPARENT.png"
-                        alt="SCENTALA Gold Monogram"
-                        className="float-3d shimmer-gold"
-                        style={{ maxHeight: '85%', maxWidth: '85%', objectFit: 'contain' }}
-                      />
-                    </div>
-                    <h3 style={{ fontSize: 20, color: 'var(--fg)', marginBottom: 6, fontFamily: 'var(--font-head)' }}>
-                      Primary Tala Monogram Emblem
-                    </h3>
-                    <p className="foot" style={{ textAlign: 'center', lineHeight: 1.5, margin: 0 }}>
-                      Transparent gold emblem engineered for social media avatars, mobile app icons, flacon cap engravings, and wax packaging seals.
-                    </p>
-                  </div>
-                </TiltCard>
-              </Reveal>
-
-              <Reveal delay={0.16}>
-                <TiltCard>
-                  <div style={{ ...cardBaseStyle, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <div
-                      style={{
-                        width: '100%',
-                        height: 230,
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        background: 'radial-gradient(circle, rgba(23,103,180,0.25) 0%, rgba(0,0,0,0.6) 80%)',
-                        borderRadius: 'var(--radius-sm)',
-                        padding: 16,
-                        marginBottom: 16,
-                        border: '1px solid var(--hair-2)',
-                      }}
-                    >
-                      <img
-                        src="/brand/CT-1-Secondary-Logo-Final.png"
-                        alt="SCENTALA Secondary Logo Lockup"
-                        style={{ maxHeight: '90%', maxWidth: '90%', objectFit: 'contain' }}
-                      />
-                    </div>
-                    <h3 style={{ fontSize: 20, color: 'var(--fg)', marginBottom: 6, fontFamily: 'var(--font-head)' }}>
-                      Secondary Master Lockup
-                    </h3>
-                    <p className="foot" style={{ textAlign: 'center', lineHeight: 1.5, margin: 0 }}>
-                      The definitive brand signature pairing the ST emblem with the high-contrast serif wordmark SCENTALA and the tagline: “A SCENT THAT OUTSHINES THE REST”.
-                    </p>
-                  </div>
-                </TiltCard>
-              </Reveal>
-            </div>
-          </div>
-        </Slide>
-
-        {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 11: GESTALT PRINCIPLES & COLOR PSYCHOLOGY (CT #1)
-            ────────────────────────────────────────────────────────────────── */}
-        <Slide nav="Gestalt Theory" notes="Our emblem incorporates two foundational Gestalt principles: Closure and Continuation. Closure invites the viewer to mentally complete the bottle silhouette, increasing brand retention. Continuation guides the gaze upward into the Tala star.">
-          <div style={{ maxWidth: 1180, width: '100%', marginInline: 'auto' }}>
-            <EditorialBar category="CT #1 · Design Psychology & Gestalt Principles" page="11 / 16" />
-
-            <Reveal>
-              <div style={{ textAlign: 'center', marginBottom: 'clamp(20px, 3vh, 32px)' }}>
-                <div className="kicker" style={{ marginBottom: 6 }}>
-                  Cognitive Design Theory
-                </div>
-                <h2
-                  className="headline"
-                  style={{
-                    fontSize: 'clamp(26px, 3.4vw, 44px)',
-                    maxWidth: '32ch',
-                    marginInline: 'auto',
-                    textAlign: 'center',
-                  }}
-                >
-                  Closure, Continuation &amp;<br />
-                  Royal Color Psychology
-                </h2>
-              </div>
-            </Reveal>
-
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(4, 1fr)',
-                gap: 'clamp(14px, 1.8vw, 22px)',
-              }}
-            >
-              <Reveal delay={0.08}>
-                <div className="editorial-card-tall" style={{ minHeight: 280 }}>
-                  <div className="kicker" style={{ color: 'var(--primary)', marginBottom: 6 }}>
-                    Gestalt 01
-                  </div>
-                  <h3 style={{ fontSize: 20, color: 'var(--fg)', fontFamily: 'var(--font-head)', margin: '0 0 8px' }}>
-                    Law of Closure
-                  </h3>
-                  <p className="foot" style={{ color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0, fontSize: '0.88em' }}>
-                    The logo contains no explicit bottle perimeter. The human eye bridges the negative space between S and T, perceiving a whole perfume flacon.
-                  </p>
-                </div>
-              </Reveal>
-
-              <Reveal delay={0.16}>
-                <div className="editorial-card-tall" style={{ minHeight: 280 }}>
-                  <div className="kicker" style={{ color: 'var(--primary)', marginBottom: 6 }}>
-                    Gestalt 02
-                  </div>
-                  <h3 style={{ fontSize: 20, color: 'var(--fg)', fontFamily: 'var(--font-head)', margin: '0 0 8px' }}>
-                    Law of Continuation
-                  </h3>
-                  <p className="foot" style={{ color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0, fontSize: '0.88em' }}>
-                    Ascending curves propel the visual gaze upward through the vertical shaft of T, directly directing focus to the radiant Tala star at the zenith.
-                  </p>
-                </div>
-              </Reveal>
-
-              <Reveal delay={0.24}>
-                <div
-                  className="editorial-card-tall"
-                  style={{
-                    minHeight: 280,
-                    background: 'rgba(254, 207, 67, 0.08)',
-                    borderColor: 'rgba(254, 207, 67, 0.35)',
-                  }}
-                >
-                  <div className="kicker" style={{ color: 'var(--primary)', marginBottom: 6 }}>
-                    Color Theory
-                  </div>
-                  <h3 style={{ fontSize: 20, color: 'var(--primary)', fontFamily: 'var(--font-head)', margin: '0 0 8px' }}>
-                    Royal Gold (#FECF43)
-                  </h3>
-                  <p className="foot" style={{ color: 'var(--fg)', lineHeight: 1.5, margin: 0, fontSize: '0.88em' }}>
-                    Gold communicates prestige, solar warmth, and high-fashion luxury. It directly embodies our promise of elevated daily presence.
-                  </p>
-                </div>
-              </Reveal>
-
-              <Reveal delay={0.32}>
-                <div className="editorial-card-tall" style={{ minHeight: 280 }}>
-                  <div className="kicker" style={{ color: 'var(--fg-faint)', marginBottom: 6 }}>
-                    Surface Contrast
-                  </div>
-                  <h3 style={{ fontSize: 20, color: 'var(--fg)', fontFamily: 'var(--font-head)', margin: '0 0 8px' }}>
-                    Midnight Obsidian (#010204)
-                  </h3>
-                  <p className="foot" style={{ color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0, fontSize: '0.88em' }}>
-                    Deep obsidian navy creates dramatic contrast, projecting depth, intimacy, and nocturnal allure across physical packaging and screens.
-                  </p>
-                </div>
-              </Reveal>
-            </div>
-          </div>
-        </Slide>
-
-        {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 12: FIRST EVER BRAND POST (CT #2)
-            ────────────────────────────────────────────────────────────────── */}
-        <Slide nav="Social Debut" notes="For Creative Task 2, we debuted SCENTALA to the world on social media. The visual features dramatic chiaroscuro lighting on raw volcanic stone. Our caption bypasses dry chemical talk and speaks directly to emotion: that exact moment someone pauses to ask, 'What are you wearing?'">
-          <div style={{ maxWidth: 1180, width: '100%', marginInline: 'auto' }}>
-            <EditorialBar category="CT #2 · Social Media Launch Campaign" page="12 / 16" />
-
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '0.9fr 1.1fr',
-                gap: 'clamp(24px, 4vw, 54px)',
-                alignItems: 'center',
-              }}
-            >
-              {/* Left: Authentic Social Debut Visual */}
-              <Reveal>
-                <TiltCard>
-                  <div className="editorial-frame" style={{ aspectRatio: '1/1', maxHeight: 440, border: '1px solid var(--hair)' }}>
-                    <img
-                      src="/brand/CT-2-First-Ever-Brand-Post.png"
-                      alt="SCENTALA First Ever Brand Post Visual"
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    />
-                  </div>
-                </TiltCard>
-              </Reveal>
-
-              {/* Right: Caption & Art Direction Breakdown */}
-              <div>
-                <Reveal delay={0.08}>
-                  <div className="kicker" style={{ marginBottom: 6 }}>
-                    CT #2 · Social Media Debut
-                  </div>
-                  <h2
-                    className="headline"
-                    style={{
-                      fontSize: 'clamp(24px, 3vw, 40px)',
-                      lineHeight: 1.08,
-                      marginBottom: 16,
-                    }}
-                  >
-                    The Official Debut: A Scent That Outshines the Rest
-                  </h2>
-                </Reveal>
-
-                <Reveal delay={0.14}>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                    <div
-                      style={{
-                        ...cardBaseStyle,
-                        background: 'rgba(254, 207, 67, 0.06)',
-                        borderColor: 'rgba(254, 207, 67, 0.25)',
-                      }}
-                    >
-                      <div className="chip" style={{ width: 'fit-content', color: 'var(--primary)', marginBottom: 8 }}>
-                        OFFICIAL LAUNCH POST &amp; CAPTION
-                      </div>
-                      <p style={{ fontStyle: 'italic', color: 'var(--fg)', fontSize: 'clamp(14px, 1.4vw, 17px)', lineHeight: 1.5, margin: 0 }}>
-                        “SCENTALA IS HERE. And we did not create it for you to simply smell good. We created it for the moment someone catches your scent and thinks: <em>‘What are you wearing?’</em>”
-                      </p>
-                    </div>
-
-                    <div style={cardBaseStyle}>
-                      <strong style={{ color: 'var(--primary)', fontFamily: 'var(--font-head)', fontSize: 17 }}>
-                        Visual Art Direction
-                      </strong>
-                      <p className="foot" style={{ color: 'var(--fg-muted)', margin: '4px 0 0', lineHeight: 1.5 }}>
-                        Overhead chiaroscuro lighting cutting through deep shadow, illuminating sapphire glass resting upon raw volcanic obsidian stone.
-                      </p>
-                    </div>
-
-                    <div style={cardBaseStyle}>
-                      <strong style={{ color: 'var(--primary)', fontFamily: 'var(--font-head)', fontSize: 17 }}>
-                        Emotional Copy Strategy
-                      </strong>
-                      <p className="foot" style={{ color: 'var(--fg-muted)', margin: '4px 0 0', lineHeight: 1.5 }}>
-                        Focuses on personal magnetism, presence, and lasting distinction rather than transactional marketing jargon.
-                      </p>
-                    </div>
-                  </div>
-                </Reveal>
-              </div>
-            </div>
-          </div>
-        </Slide>
-
-        {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 13: PROMOTIONAL EVENT POSTER (CT #3)
-            ────────────────────────────────────────────────────────────────── */}
-        <Slide nav="Event Poster" notes="For Creative Task 3, our thought process bridged digital storytelling into physical sensory reality. A perfume must be experienced on warm skin. We conceived the Signature Launch pop-up at SM Cabanatuan City, the commercial crossroads of Central Luzon.">
-          <div style={{ maxWidth: 1180, width: '100%', marginInline: 'auto' }}>
-            <EditorialBar category="CT #3 · Promotional Event Poster" page="13 / 16" />
-
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '0.9fr 1.1fr',
-                gap: 'clamp(24px, 4vw, 54px)',
-                alignItems: 'center',
-              }}
-            >
-              {/* Left: Authentic Poster Visual */}
-              <Reveal>
-                <TiltCard>
-                  <div className="editorial-frame" style={{ aspectRatio: '1/1', maxHeight: 440, border: '1px solid var(--hair)' }}>
-                    <img
-                      src="/brand/CT-3-Promotional-Event-Poster.png"
-                      alt="SCENTALA Promotional Event Poster"
-                      style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#010204' }}
-                    />
-                  </div>
-                </TiltCard>
-              </Reveal>
-
-              {/* Right: Event Concept & Visual Hierarchy */}
-              <div>
-                <Reveal delay={0.08}>
-                  <div className="kicker" style={{ marginBottom: 6 }}>
-                    CT #3 · Retail Activation
-                  </div>
-                  <h2
-                    className="headline"
-                    style={{
-                      fontSize: 'clamp(24px, 3vw, 40px)',
-                      lineHeight: 1.08,
-                      marginBottom: 16,
-                    }}
-                  >
-                    Signature Launch: Tactile Retail Experience
-                  </h2>
-                </Reveal>
-
-                <Reveal delay={0.14}>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                    <div style={cardBaseStyle}>
-                      <strong style={{ color: 'var(--primary)', fontFamily: 'var(--font-head)', fontSize: 17 }}>
-                        Tactile Retail Concept
-                      </strong>
-                      <p className="foot" style={{ color: 'var(--fg-muted)', margin: '4px 0 0', lineHeight: 1.5 }}>
-                        While social media drives curiosity, fragrance is an intimate sensory art that demands live skin testing. The pop-up brings our digital ethos into physical reality.
-                      </p>
-                    </div>
-
-                    <div style={cardBaseStyle}>
-                      <strong style={{ color: 'var(--primary)', fontFamily: 'var(--font-head)', fontSize: 17 }}>
-                        Venue Strategy · SM Cabanatuan City
-                      </strong>
-                      <p className="foot" style={{ color: 'var(--fg-muted)', margin: '4px 0 0', lineHeight: 1.5 }}>
-                        Scheduled for <strong>October 02, 2026</strong> at the commercial and academic crossroads of Nueva Ecija, highly accessible to daily commuter students and young professionals.
-                      </p>
-                    </div>
-
-                    <div style={cardBaseStyle}>
-                      <strong style={{ color: 'var(--primary)', fontFamily: 'var(--font-head)', fontSize: 17 }}>
-                        Typographic Hierarchy
-                      </strong>
-                      <p className="foot" style={{ color: 'var(--fg-muted)', margin: '4px 0 0', lineHeight: 1.5 }}>
-                        High-fashion editorial serif headlines "SIGNATURE LAUNCH", condensed sans details the date, and the action callout "MAKE YOUR PRESENCE FELT" drives trial.
-                      </p>
-                    </div>
-                  </div>
-                </Reveal>
-              </div>
-            </div>
-          </div>
-        </Slide>
-
-        {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 14: POSTER COLOR HARMONY & THEORY (CT #3)
-            ────────────────────────────────────────────────────────────────── */}
-        <Slide nav="Color Harmony" notes="Here we analyze the precise color harmony behind the poster. By pairing cool sapphire blue against warm gold across the traditional color wheel, we produce optical vibration that commands immediate visual attention amidst busy mall foot traffic.">
-          <div style={{ maxWidth: 1180, width: '100%', marginInline: 'auto' }}>
-            <EditorialBar category="CT #3 · Color Theory & Visual Harmony" page="14 / 16" />
-
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                gap: 'clamp(24px, 4vw, 54px)',
-                alignItems: 'center',
-              }}
-            >
-              <div>
-                <Reveal>
-                  <div className="kicker" style={{ marginBottom: 6 }}>
-                    Complementary Color Architecture
-                  </div>
-                  <h2
-                    className="headline"
-                    style={{
-                      fontSize: 'clamp(24px, 3.2vw, 42px)',
-                      lineHeight: 1.08,
-                      marginBottom: 16,
-                    }}
-                  >
-                    Complementary Color Scheme:<br />
-                    Sapphire &amp; Gold
-                  </h2>
-                  <p className="foot" style={{ color: 'var(--fg-muted)', lineHeight: 1.6, marginBottom: 16, fontSize: '0.94em' }}>
-                    The poster layout is anchored on opposing poles of the traditional color wheel: pairing the tranquil depth of ocean sapphire against the solar warmth of radiant gold.
-                  </p>
-                </Reveal>
-
-                {/* 5 Complete Color Chips */}
-                <Reveal delay={0.12}>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 18 }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(23,103,180,0.22)', padding: '6px 12px', borderRadius: 8, border: '1px solid #1767B4' }}>
-                      <span style={{ width: 12, height: 12, borderRadius: '50%', background: '#1767B4' }} />
-                      <span style={{ fontSize: 12, fontFamily: 'var(--font-mono)' }}>#1767B4 · Sapphire</span>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(10,45,85,0.3)', padding: '6px 12px', borderRadius: 8, border: '1px solid #0A2D55' }}>
-                      <span style={{ width: 12, height: 12, borderRadius: '50%', background: '#0A2D55' }} />
-                      <span style={{ fontSize: 12, fontFamily: 'var(--font-mono)' }}>#0A2D55 · Midnight</span>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(254,207,67,0.22)', padding: '6px 12px', borderRadius: 8, border: '1px solid #FECF43' }}>
-                      <span style={{ width: 12, height: 12, borderRadius: '50%', background: '#FECF43' }} />
-                      <span style={{ fontSize: 12, fontFamily: 'var(--font-mono)', color: 'var(--primary)' }}>#FECF43 · Gold</span>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(199,202,207,0.15)', padding: '6px 12px', borderRadius: 8, border: '1px solid #C7CACF' }}>
-                      <span style={{ width: 12, height: 12, borderRadius: '50%', background: '#C7CACF' }} />
-                      <span style={{ fontSize: 12, fontFamily: 'var(--font-mono)' }}>#C7CACF · Platinum</span>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, background: 'rgba(1,2,4,0.65)', padding: '6px 12px', borderRadius: 8, border: '1px solid rgba(255,255,255,0.16)' }}>
-                      <span style={{ width: 12, height: 12, borderRadius: '50%', background: '#010204', border: '1px solid rgba(255,255,255,0.35)' }} />
-                      <span style={{ fontSize: 12, fontFamily: 'var(--font-mono)' }}>#010204 · Obsidian Black</span>
-                    </div>
-                  </div>
-                </Reveal>
-
-                <Reveal delay={0.18}>
-                  <div style={cardBaseStyle}>
-                    <strong style={{ color: 'var(--fg)', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-                      Mall Environment Readability
-                    </strong>
-                    <p className="foot" style={{ color: 'var(--fg-muted)', margin: '4px 0 0', lineHeight: 1.5 }}>
-                      Obsidian Black and Platinum Silver act as extreme contrast anchors (exceeding 10:1 ratio), guaranteeing crystal-clear legibility amidst the ambient visual noise of department store traffic.
-                    </p>
-                  </div>
-                </Reveal>
-              </div>
-
-              {/* Right: Poster with Color Scheme Diagram */}
-              <Reveal delay={0.16}>
-                <TiltCard>
-                  <div className="editorial-frame" style={{ aspectRatio: '1/1', maxHeight: 440, border: '1px solid var(--hair)' }}>
-                    <img
-                      src="/brand/CT-3-Promotional-Event-Poster-With-Color-Scheme.png"
-                      alt="SCENTALA Promotional Event Poster with Complementary Color Scheme Diagram"
-                      style={{ width: '100%', height: '100%', objectFit: 'contain', background: '#010204' }}
-                    />
-                  </div>
-                </TiltCard>
-              </Reveal>
-            </div>
-          </div>
-        </Slide>
-
-        {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 15: THE CREATORS / PROJECT CREDITS (CT #4)
-            ────────────────────────────────────────────────────────────────── */}
-        <Slide nav="Project Team" notes="This project represents the dedicated collaborative work of our group from BSIT 4-C: Kerby Bautista on brand strategy, John Carlo Lemence on visual graphics, Eiron Jaynald Mendoza on copywriting and concept architecture, and John Mathew Ramoso on digital production.">
-          <div style={{ maxWidth: 1180, width: '100%', marginInline: 'auto' }}>
-            <EditorialBar category="College of Information and Communications Technology · IT-WS-06" page="15 / 16" />
-
-            <Reveal>
-              <div style={{ textAlign: 'center', marginBottom: 'clamp(20px, 3vh, 32px)' }}>
-                <div className="kicker" style={{ marginBottom: 6 }}>
-                  Student Creative Collective
-                </div>
-                <h2
-                  className="headline"
-                  style={{
-                    fontSize: 'clamp(26px, 3.4vw, 44px)',
-                    maxWidth: '34ch',
-                    marginInline: 'auto',
-                    textAlign: 'center',
-                  }}
-                >
-                  The Creators Behind SCENTALA · <span style={{ whiteSpace: 'nowrap' }}>BSIT 4‑C</span>
-                </h2>
-              </div>
-            </Reveal>
-
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(4, 1fr)',
-                gap: 'clamp(14px, 1.8vw, 22px)',
-                marginBottom: 24,
-              }}
-            >
-              {[
-                { name: 'Kerby S. Bautista', role: 'Brand Strategy & Creative Direction', initial: 'KB' },
-                { name: 'John Carlo D.G. Lemence', role: 'Visual Identity & Graphic Design', initial: 'JL' },
-                { name: 'Eiron Jaynald P. Mendoza', role: 'Copywriting & Concept Architecture', initial: 'EM' },
-                { name: 'John Mathew T. Ramoso', role: 'Production & Digital Media Management', initial: 'JR' },
-              ].map((p, i) => (
-                <Reveal key={i} delay={0.08 * (i + 1)}>
-                  <div
-                    style={{
-                      ...cardBaseStyle,
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'center',
-                      textAlign: 'center',
-                      minHeight: 220,
-                      justifyContent: 'center',
-                    }}
-                  >
-                    <div
-                      style={{
-                        width: 58,
-                        height: 58,
-                        borderRadius: '50%',
-                        background: 'linear-gradient(135deg, rgba(254,207,67,0.25), rgba(23,103,180,0.3))',
-                        border: '1px solid var(--hair)',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontFamily: 'var(--font-head)',
-                        fontSize: 22,
-                        fontWeight: 600,
-                        color: 'var(--primary)',
-                        marginBottom: 14,
-                      }}
-                    >
-                      {p.initial}
-                    </div>
-                    <h3 style={{ fontSize: 18, color: 'var(--fg)', fontFamily: 'var(--font-head)', margin: '0 0 6px' }}>
-                      {p.name}
-                    </h3>
-                    <p className="foot" style={{ color: 'var(--fg-muted)', fontSize: '0.86em', margin: 0, lineHeight: 1.4 }}>
-                      {p.role}
-                    </p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-
-            <Reveal delay={0.35}>
-              <div
-                style={{
-                  textAlign: 'center',
-                  padding: '12px 24px',
-                  background: 'rgba(255, 255, 255, 0.02)',
-                  borderRadius: 'var(--radius-sm)',
-                  border: '1px solid var(--hair-2)',
-                  maxWidth: 680,
-                  marginInline: 'auto',
-                }}
-              >
-                <span style={{ fontSize: 12, fontFamily: 'var(--font-mono)', color: 'var(--fg-faint)', letterSpacing: '0.08em' }}>
-                  COLLEGE OF INFORMATION AND COMMUNICATIONS TECHNOLOGY · 1ST SEMESTER 2026
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                <span style={{ fontSize: '13px', fontWeight: 700, color: '#34d399' }}>Public Tier</span>
+                <span style={{ fontSize: '11px', padding: '2px 8px', borderRadius: '4px', background: 'rgba(255, 255, 255, 0.06)', color: 'var(--fg-muted)' }}>
+                  No Login Required
                 </span>
               </div>
-            </Reveal>
+              <h3 style={{ fontSize: '19px', fontWeight: 700, color: '#f8fafc', margin: '0 0 10px 0' }}>
+                Resident / Citizen
+              </h3>
+              <ul style={{ margin: 0, paddingLeft: '18px', fontSize: '13px', color: 'var(--fg-muted)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <li>Read and search enacted city and barangay ordinances.</li>
+                <li>Inquire via the bilingual Civic AI Assistant with legal citations.</li>
+                <li>View official PDF text and civic news advisories.</li>
+                <li>Submit incident reports with photo proof and optional anonymity.</li>
+              </ul>
+            </div>
+
+            <div
+              style={{
+                background: 'linear-gradient(180deg, rgba(245, 158, 11, 0.06) 0%, rgba(6, 9, 7, 0.7) 100%)',
+                border: '1px solid rgba(245, 158, 11, 0.3)',
+                borderRadius: 'var(--radius)',
+                padding: '24px',
+              }}
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                <span style={{ fontSize: '13px', fontWeight: 700, color: 'var(--accent-gold)' }}>Barangay Scoped</span>
+                <span style={{ fontSize: '11px', padding: '2px 8px', borderRadius: '4px', background: 'rgba(245, 158, 11, 0.15)', color: 'var(--accent-gold)' }}>
+                  Authenticated
+                </span>
+              </div>
+              <h3 style={{ fontSize: '19px', fontWeight: 700, color: '#f8fafc', margin: '0 0 10px 0' }}>
+                Barangay Admin
+              </h3>
+              <ul style={{ margin: 0, paddingLeft: '18px', fontSize: '13px', color: 'var(--fg-muted)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <li>Draft, upload, and submit proposed ordinances for LGU review.</li>
+                <li>Run multimodal AI OCR to auto-structure scanned PDF files.</li>
+                <li>Triage and update resolution statuses of local community reports.</li>
+                <li>Generate localized barangay compliance PDF reports.</li>
+              </ul>
+            </div>
+
+            <div
+              style={{
+                background: 'linear-gradient(180deg, rgba(16, 185, 129, 0.14) 0%, rgba(6, 9, 7, 0.8) 100%)',
+                border: '1px solid rgba(16, 185, 129, 0.4)',
+                borderRadius: 'var(--radius)',
+                padding: '24px',
+                boxShadow: '0 0 40px -15px rgba(16, 185, 129, 0.2)',
+              }}
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                <span style={{ fontSize: '13px', fontWeight: 700, color: '#34d399' }}>City-Wide Sovereign</span>
+                <span style={{ fontSize: '11px', padding: '2px 8px', borderRadius: '4px', background: 'rgba(16, 185, 129, 0.25)', color: '#34d399', fontWeight: 700 }}>
+                  Municipal Admin
+                </span>
+              </div>
+              <h3 style={{ fontSize: '19px', fontWeight: 700, color: '#f8fafc', margin: '0 0 10px 0' }}>
+                LGU Admin
+              </h3>
+              <ul style={{ margin: 0, paddingLeft: '18px', fontSize: '13px', color: 'var(--fg)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <li>Review, approve, or reject barangay submissions with audit remarks.</li>
+                <li>Enact and index official city-wide ordinances directly.</li>
+                <li>Manage user accounts, 89-barangay accreditation, and city news.</li>
+                <li>Access city-wide incident analytics and export official PDF summaries.</li>
+              </ul>
+            </div>
           </div>
-        </Slide>
+        </div>
+      </Slide>
 
-        {/* ──────────────────────────────────────────────────────────────────
-            SLIDE 16: GRAND KEYNOTE FINALE & INTERACTIVE Q&A
-            ────────────────────────────────────────────────────────────────── */}
-        <Slide center nav="Conclusion" notes="We would like to express our deepest gratitude to our professors, mentors, and fellow students for your time and attention today. We now warmly open the floor to any questions, comments, or feedback from the panel.">
-          <div style={{ maxWidth: 960, width: '100%', marginInline: 'auto', textAlign: 'center' }}>
-            <EditorialBar category="Creative Task #4 · Conclusion & Discussion" page="16 / 16" />
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 10: ROLE MATRIX (E4 Row-by-Row Reveal & Glow)
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="Role Matrix"
+        notes="As requested by the panel, this feature-by-role matrix illustrates access boundaries across all 14 core system capabilities. Notice the highlighted LGU Admin column, which retains exclusive authority over final ordinance review, user management, and city-wide publication, verified directly against our codebase."
+      >
+        <div style={{ maxWidth: 1180, marginInline: 'auto' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Feature-by-Role Matrix</span>
+          <h2 className="headline" style={{ margin: '6px 0 16px 0' }}>
+            System Capabilities by User Role
+          </h2>
 
-            <Reveal>
-              <div className="float-3d" style={{ marginBottom: 14 }}>
-                <img
-                  src="/brand/ST-ORIGINAL-LOGO-TRANSPARENT.png"
-                  alt="SCENTALA Tala Monogram Emblem"
-                  className="shimmer-gold"
-                  style={{
-                    width: 'clamp(85px, 8vw, 115px)',
-                    height: 'clamp(85px, 8vw, 115px)',
-                    objectFit: 'contain',
-                    marginInline: 'auto',
-                  }}
-                />
-              </div>
+          <RoleMatrixTable highlightAdmin={true} />
+        </div>
+      </Slide>
 
-              <div className="kicker" style={{ textAlign: 'center', marginBottom: 8 }}>
-                Haute Parfumerie · Creative Task #4
-              </div>
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 11: TRANSITION TO SYSTEM DEMO
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="System Demo"
+        notes="We now transition to the recorded demonstration of the working system. The walkthrough presents the Administrator flow first—covering LGU enactment and barangay triage—followed by the End-User flow demonstrating public exploration and AI interaction."
+      >
+        <div style={{ maxWidth: 1040, marginInline: 'auto' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Live Operational Walkthrough</span>
+          <h2 className="headline" style={{ margin: '6px 0 12px 0' }}>
+            Demonstration of the Working System
+          </h2>
+          <p className="lead" style={{ maxWidth: 760, marginInline: 'auto', marginBottom: '24px', fontSize: '16px' }}>
+            A structured operational walkthrough showcasing administrative oversight followed by citizen engagement.
+          </p>
 
-              <h1
-                className="display"
-                style={{
-                  fontSize: 'clamp(32px, 4.8vw, 62px)',
-                  lineHeight: 1.08,
-                  marginBottom: 16,
-                  textWrap: 'balance',
-                }}
-              >
-                A Scent That <span className="accent-text">Outshines</span> The Rest.
-              </h1>
-            </Reveal>
-
-            <Reveal delay={0.08}>
-              <p
-                className="lead"
-                style={{
-                  marginInline: 'auto',
-                  marginBottom: 22,
-                  maxWidth: '38ch',
-                }}
-              >
-                Thank you for exploring our brand journey. We now enthusiastically open the floor for questions, panel feedback, and fragrance discussion.
-              </p>
-            </Reveal>
-
-            {/* Luxury Continuous Marquee Ribbon */}
-            <Reveal delay={0.14}>
-              <div style={{ marginBlock: 16 }}>
-                <Marquee
-                  items={[
-                    'SCENTALA HAUTE PARFUMERIE',
-                    '50ML SIGNATURE FLACON',
-                    '10ML TALA POCKET-PUFF',
-                    'OCTOBER 02, 2026',
-                    'SM CABANATUAN CITY',
-                    'EAU DE PARFUM 20-25%',
-                    'FILIPINO HERITAGE',
-                    'BSIT 4-C',
-                  ]}
-                  duration={24}
-                />
-              </div>
-            </Reveal>
-
-            {/* Verified Netlify Badge */}
-            <Reveal delay={0.2}>
+          <BrowserFrame url="ordinance.cabanatuan.gov.ph">
+            <div
+              style={{
+                width: '100%',
+                height: 'clamp(260px, 44vh, 440px)',
+                background: '#070b09',
+                display: 'grid',
+                gridTemplateColumns: '1fr 1fr',
+                gap: '12px',
+                padding: '16px',
+                boxSizing: 'border-box',
+              }}
+            >
+              {/* Flow 1: Admin */}
               <div
                 style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: 20,
-                  padding: '12px 28px',
-                  borderRadius: 'var(--radius)',
-                  background: 'linear-gradient(180deg, var(--surface-2), var(--surface))',
-                  border: '1px solid var(--hair)',
-                  boxShadow: '0 20px 40px -10px rgba(0,0,0,0.7)',
+                  borderRadius: '12px',
+                  border: '1px solid rgba(16, 185, 129, 0.3)',
+                  overflow: 'hidden',
+                  position: 'relative',
+                  display: 'flex',
+                  flexDirection: 'column',
                 }}
               >
-                <a
-                  href="https://scentala.netlify.app"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: 8,
-                    color: 'inherit',
-                    textDecoration: 'none',
-                  }}
-                >
-                  <span style={{ color: 'var(--primary)', fontSize: 16 }}>✦</span>
-                  <span style={{ fontSize: 14, fontWeight: 600, color: 'var(--fg)', fontFamily: 'var(--font-mono)' }}>
-                    scentala.netlify.app
+                <div style={{ padding: '8px 12px', background: 'rgba(16, 185, 129, 0.15)', color: '#34d399', fontSize: '12px', fontWeight: 700 }}>
+                  Flow A: Administrator Walkthrough (LGU & Barangay)
+                </div>
+                <img
+                  src="/screenshots/c17-lgu-dashboard.png"
+                  alt="LGU Executive Dashboard"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </div>
+
+              {/* Flow 2: End-User */}
+              <div
+                style={{
+                  borderRadius: '12px',
+                  border: '1px solid rgba(245, 158, 11, 0.3)',
+                  overflow: 'hidden',
+                  position: 'relative',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+              >
+                <div style={{ padding: '8px 12px', background: 'rgba(245, 158, 11, 0.15)', color: 'var(--accent-gold)', fontSize: '12px', fontWeight: 700 }}>
+                  Flow B: End-User Walkthrough (Public & Chatbot)
+                </div>
+                <img
+                  src="/screenshots/c01-welcome.png"
+                  alt="Public Welcome Portal"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </div>
+            </div>
+          </BrowserFrame>
+        </div>
+      </Slide>
+
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 12: RESEARCH PROBLEMS (PART B)
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="Research Problems"
+        notes="Part B presents our empirical research results addressing our four core research problems: system development through Agile, technical software quality under ISO 25010, end-user usability via SUS, and web accessibility compliance under WCAG 2.2."
+      >
+        <div style={{ maxWidth: 1140, marginInline: 'auto' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Part B · Research Results & Evaluation</span>
+          <h2 className="headline" style={{ margin: '6px 0 24px 0' }}>
+            Statement of Research Problems
+          </h2>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(260px, 100%), 1fr))',
+              gap: '18px',
+              textAlign: 'left',
+            }}
+          >
+            <div style={{ padding: '22px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+              <span style={{ fontSize: '12px', fontWeight: 800, color: 'var(--primary)' }}>RP 01</span>
+              <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#f8fafc', margin: '8px 0 10px 0' }}>
+                Agile Development
+              </h3>
+              <p style={{ fontSize: '13px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                How can the system be developed across the Agile phases (Planning & Requirements, Design & Prototyping, Implementation, and Testing & Deployment)?
+              </p>
+            </div>
+
+            <div style={{ padding: '22px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+              <span style={{ fontSize: '12px', fontWeight: 800, color: 'var(--accent-gold)' }}>RP 02</span>
+              <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#f8fafc', margin: '8px 0 10px 0' }}>
+                Technical Quality
+              </h3>
+              <p style={{ fontSize: '13px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                How do IT experts evaluate the platform using the ISO/IEC 25010:2023 Software Product Quality Model across its nine software characteristics?
+              </p>
+            </div>
+
+            <div style={{ padding: '22px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+              <span style={{ fontSize: '12px', fontWeight: 800, color: '#34d399' }}>RP 03</span>
+              <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#f8fafc', margin: '8px 0 10px 0' }}>
+                End-User Usability
+              </h3>
+              <p style={{ fontSize: '13px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                How do end-users (residents, barangay officials, and LGU staff) evaluate the usability of the platform using the standardized System Usability Scale (SUS)?
+              </p>
+            </div>
+
+            <div style={{ padding: '22px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+              <span style={{ fontSize: '12px', fontWeight: 800, color: '#38bdf8' }}>RP 04</span>
+              <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#f8fafc', margin: '8px 0 10px 0' }}>
+                Web Accessibility
+              </h3>
+              <p style={{ fontSize: '13px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                How do IT experts and end-users evaluate accessibility using the four Web Content Accessibility Guidelines (WCAG 2.2) principles?
+              </p>
+            </div>
+          </div>
+        </div>
+      </Slide>
+
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 13: METHOD & RESPONDENTS (E6 CountUp)
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="Methodology"
+        notes="The study employed a developmental-quantitative research design using purposive sampling. We gathered empirical evaluations from 110 total respondents: 10 IT professionals who evaluated technical quality and accessibility, and 100 end-users across residents, barangay officials, and city administrators."
+      >
+        <div style={{ maxWidth: 1140, marginInline: 'auto' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Research Design & Sample</span>
+          <h2 className="headline" style={{ margin: '6px 0 24px 0' }}>
+            Developmental-Quantitative Method & 110 Respondents
+          </h2>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'minmax(280px, 1fr) minmax(340px, 1.4fr)',
+              gap: 'clamp(20px, 3vw, 40px)',
+              alignItems: 'center',
+            }}
+          >
+            {/* Big CountUp Card */}
+            <div
+              style={{
+                background: 'linear-gradient(180deg, rgba(16, 185, 129, 0.12) 0%, rgba(6, 9, 7, 0.7) 100%)',
+                border: '1px solid rgba(16, 185, 129, 0.35)',
+                borderRadius: 'var(--radius)',
+                padding: 'clamp(24px, 4vh, 36px)',
+                textAlign: 'center',
+              }}
+            >
+              <div style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--primary)', fontWeight: 700 }}>
+                Total Research Respondents
+              </div>
+              <div
+                style={{
+                  fontSize: 'clamp(54px, 6vw, 80px)',
+                  fontWeight: 800,
+                  color: '#f8fafc',
+                  lineHeight: 1,
+                  margin: '8px 0',
+                  fontFeatureSettings: '"tnum" 1',
+                }}
+              >
+                <CountUp to={110} duration={1200} />
+              </div>
+              <div style={{ fontSize: '13px', color: 'var(--fg-muted)' }}>
+                Purposive Sampling Across Cabanatuan City
+              </div>
+            </div>
+
+            {/* Respondent Breakdown */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', textAlign: 'left' }}>
+              <div style={{ padding: '14px 18px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: '14px', fontWeight: 700, color: 'var(--fg)' }}>
+                    IT Experts (N = 10)
                   </span>
-                </a>
-                <span style={{ color: 'var(--hair)' }}>|</span>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <span style={{ fontSize: 13, color: 'var(--fg-muted)' }}>
-                    BSIT 4-C · 1st Semester · CICT
+                  <span style={{ fontSize: '16px', fontWeight: 800, color: '#10b981' }}>
+                    <CountUp to={10} duration={900} />
                   </span>
                 </div>
+                <p style={{ margin: '4px 0 0 0', fontSize: '12px', color: 'var(--fg-muted)' }}>
+                  Software engineers, system architects, and technical analysts evaluating ISO 25010 & WCAG.
+                </p>
               </div>
-            </Reveal>
+
+              <div style={{ padding: '14px 18px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: '14px', fontWeight: 700, color: 'var(--fg)' }}>
+                    Cabanatuan Residents (N = 72)
+                  </span>
+                  <span style={{ fontSize: '16px', fontWeight: 800, color: 'var(--accent-gold)' }}>
+                    <CountUp to={72} duration={1100} />
+                  </span>
+                </div>
+                <p style={{ margin: '4px 0 0 0', fontSize: '12px', color: 'var(--fg-muted)' }}>
+                  Citizens across diverse barangays testing public exploration, AI chat, and reporting.
+                </p>
+              </div>
+
+              <div style={{ padding: '14px 18px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: '14px', fontWeight: 700, color: 'var(--fg)' }}>
+                    Barangay Officials & Staff (N = 18)
+                  </span>
+                  <span style={{ fontSize: '16px', fontWeight: 800, color: '#34d399' }}>
+                    <CountUp to={18} duration={1000} />
+                  </span>
+                </div>
+                <p style={{ margin: '4px 0 0 0', fontSize: '12px', color: 'var(--fg-muted)' }}>
+                  Captains and administrative personnel representing 9 purposively selected barangays.
+                </p>
+              </div>
+
+              <div style={{ padding: '14px 18px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: '14px', fontWeight: 700, color: 'var(--fg)' }}>
+                    City LGU Officials (N = 10)
+                  </span>
+                  <span style={{ fontSize: '16px', fontWeight: 800, color: '#38bdf8' }}>
+                    <CountUp to={10} duration={900} />
+                  </span>
+                </div>
+                <p style={{ margin: '4px 0 0 0', fontSize: '12px', color: 'var(--fg-muted)' }}>
+                  Municipal administrators evaluating enactment, account management, and city analytics.
+                </p>
+              </div>
+            </div>
           </div>
-        </Slide>
-      </Deck>
-    </>
+        </div>
+      </Slide>
+
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 14: KEY FINDINGS: RP1 — DEVELOPMENT & DEPLOYMENT COST
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="RP1: Development"
+        notes="For Research Problem 1, all four Agile phases were successfully completed. Crucially, our deployment costing analysis proved that the platform can operate for as low as ₱436.58 monthly during pilot operations, and approximately ₱1,614.98 monthly for full city-wide scale on Railway Pro, overcoming the financial barriers typical of municipal IT projects."
+      >
+        <div style={{ maxWidth: 1140, marginInline: 'auto' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Research Problem 1 Findings</span>
+          <h2 className="headline" style={{ margin: '6px 0 20px 0' }}>
+            Agile Development Lifecycle & Municipal Hosting Feasibility
+          </h2>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'minmax(320px, 1.15fr) minmax(320px, 1.25fr)',
+              gap: 'clamp(20px, 3vw, 36px)',
+              alignItems: 'stretch',
+              textAlign: 'left',
+            }}
+          >
+            {/* Four Agile Sprints */}
+            <div
+              style={{
+                background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(6, 9, 7, 0.7) 100%)',
+                border: '1px solid var(--hair-2)',
+                borderRadius: 'var(--radius)',
+                padding: '24px',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '12px',
+              }}
+            >
+              <div style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--primary)', fontWeight: 700 }}>
+                Four Agile Iterations Completed
+              </div>
+
+              <div style={{ padding: '10px 14px', background: 'rgba(255, 255, 255, 0.02)', borderRadius: '8px', borderLeft: '3px solid #10b981' }}>
+                <div style={{ fontSize: '13px', fontWeight: 700, color: '#f8fafc' }}>Phase 1: Planning & Requirements</div>
+                <div style={{ fontSize: '12px', color: 'var(--fg-muted)' }}>Cabanatuan legal scope, needs assessment, and user stories.</div>
+              </div>
+
+              <div style={{ padding: '10px 14px', background: 'rgba(255, 255, 255, 0.02)', borderRadius: '8px', borderLeft: '3px solid var(--accent-gold)' }}>
+                <div style={{ fontSize: '13px', fontWeight: 700, color: '#f8fafc' }}>Phase 2: Design & Prototyping</div>
+                <div style={{ fontSize: '12px', color: 'var(--fg-muted)' }}>Use Case (Fig 14), DFD Level 0/1 (Fig 15-16), ERD (Fig 25), and wireframes.</div>
+              </div>
+
+              <div style={{ padding: '10px 14px', background: 'rgba(255, 255, 255, 0.02)', borderRadius: '8px', borderLeft: '3px solid #34d399' }}>
+                <div style={{ fontSize: '13px', fontWeight: 700, color: '#f8fafc' }}>Phase 3: Development & Implementation</div>
+                <div style={{ fontSize: '12px', color: 'var(--fg-muted)' }}>Next.js 16, React 19, TypeScript, Prisma, SQLite WAL, Gemini 3.5 Flash-Lite.</div>
+              </div>
+
+              <div style={{ padding: '10px 14px', background: 'rgba(255, 255, 255, 0.02)', borderRadius: '8px', borderLeft: '3px solid #38bdf8' }}>
+                <div style={{ fontSize: '13px', fontWeight: 700, color: '#f8fafc' }}>Phase 4: Testing & Deployment</div>
+                <div style={{ fontSize: '12px', color: 'var(--fg-muted)' }}>Unit testing, RBAC security verification, and 110-respondent UAT.</div>
+              </div>
+            </div>
+
+            {/* Deployment Costing Analysis (Table 19) */}
+            <div
+              style={{
+                background: 'linear-gradient(180deg, rgba(16, 185, 129, 0.1) 0%, rgba(6, 9, 7, 0.7) 100%)',
+                border: '1px solid rgba(16, 185, 129, 0.35)',
+                borderRadius: 'var(--radius)',
+                padding: '24px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+              }}
+            >
+              <div>
+                <div style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--primary)', fontWeight: 700 }}>
+                  Empirical Deployment Costing (Table 19)
+                </div>
+                <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#f8fafc', margin: '6px 0 14px 0' }}>
+                  Low-Cost Municipal PaaS Architecture
+                </h3>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '13px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '6px', borderBottom: '1px solid rgba(255, 255, 255, 0.06)' }}>
+                    <span style={{ color: 'var(--fg-muted)' }}>Option A: Pilot Baseline (Railway Hobby)</span>
+                    <span style={{ fontWeight: 700, color: '#34d399' }}>₱436.58 – ₱976.59 / mo</span>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '6px', borderBottom: '1px solid rgba(255, 255, 255, 0.06)' }}>
+                    <span style={{ color: 'var(--fg-muted)' }}>Option B: City-Wide Scale (Railway Pro)</span>
+                    <span style={{ fontWeight: 700, color: 'var(--accent-gold)' }}>₱1,614.98 – ₱1,867.27 / mo</span>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '6px', borderBottom: '1px solid rgba(255, 255, 255, 0.06)' }}>
+                    <span style={{ color: 'var(--fg-muted)' }}>Embedded SQLite WAL Persistent Volume</span>
+                    <span style={{ fontWeight: 700, color: '#f8fafc' }}>Included in credit (₱0.00)</span>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '6px', borderBottom: '1px solid rgba(255, 255, 255, 0.06)' }}>
+                    <span style={{ color: 'var(--fg-muted)' }}>Cloudflare DDoS & Manila CDN Edge</span>
+                    <span style={{ fontWeight: 700, color: '#f8fafc' }}>Free Plan (₱0.00)</span>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <span style={{ color: 'var(--fg-muted)' }}>Gemini AI Cost per Civic Inquiry</span>
+                    <span style={{ fontWeight: 700, color: '#34d399' }}>~₱0.0528 / query</span>
+                  </div>
+                </div>
+              </div>
+
+              <div style={{ marginTop: '14px', padding: '10px 14px', background: 'rgba(16, 185, 129, 0.12)', borderRadius: '8px', fontSize: '11.5px', color: '#f8fafc', lineHeight: 1.4 }}>
+                <strong>Key Governance Impact:</strong> First-year operational expenditure is estimated at only ₱5,238.96 to ₱11,719.08 under baseline, establishing practical financial sustainability for Philippine LGUs.
+              </div>
+            </div>
+          </div>
+        </div>
+      </Slide>
+
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 15: KEY FINDINGS: RP2 — TECHNICAL QUALITY (ISO 25010)
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="RP2: ISO 25010"
+        notes="For Research Problem 2, IT experts evaluated the platform using ISO/IEC 25010:2023, yielding an overall weighted mean of 4.28, interpreted as Highly Suitable. Compatibility and Functional Suitability led the evaluation, while Recoverability and Audit Logging were pinpointed as areas for technical hardening."
+      >
+        <div style={{ maxWidth: 1160, marginInline: 'auto' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Research Problem 2 Findings</span>
+          <h2 className="headline" style={{ margin: '6px 0 20px 0' }}>
+            ISO/IEC 25010:2023 Software Product Quality (Mean: 4.28)
+          </h2>
+
+          <IsoQualityChart />
+        </div>
+      </Slide>
+
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 16: KEY FINDINGS: RP3 — USABILITY (SUS)
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="RP3: SUS Usability"
+        notes="For Research Problem 3, end-user usability measured via the System Usability Scale achieved an outstanding score of 80.22 out of 100, surpassing the 68.0 benchmark by 12.22 points. Respondents expressed high willingness to use the platform frequently and praised its seamless feature integration."
+      >
+        <div style={{ maxWidth: 1120, marginInline: 'auto' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Research Problem 3 Findings</span>
+          <h2 className="headline" style={{ margin: '6px 0 20px 0' }}>
+            System Usability Scale: 80.22 / 100 ("Good" / Acceptable)
+          </h2>
+
+          <SusGauge score={80.22} benchmark={68.0} />
+        </div>
+      </Slide>
+
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 17: KEY FINDINGS: RP4 — ACCESSIBILITY (WCAG 2.2)
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="RP4: WCAG"
+        notes="For Research Problem 4, accessibility was evaluated under the four WCAG principles, yielding 4.19 from IT experts and 4.26 from end-users. Visual contrast and keyboard navigation scored exceptionally high, while screen-reader announcements were identified for future engineering enhancements."
+      >
+        <div style={{ maxWidth: 1140, marginInline: 'auto' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Research Problem 4 Findings</span>
+          <h2 className="headline" style={{ margin: '6px 0 20px 0' }}>
+            WCAG 2.2 Accessibility: 4.19 (Experts) & 4.26 (End-Users)
+          </h2>
+
+          <WcagComparisonChart />
+        </div>
+      </Slide>
+
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 18: SUMMARY OF FINDINGS
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="Summary"
+        notes="In summary, our empirical findings confirm that the system successfully completed all Agile phases with low hosting overhead, met high technical standards under ISO 25010, achieved excellent usability well above benchmark, and complied solidly with WCAG accessibility standards."
+      >
+        <div style={{ maxWidth: 1140, marginInline: 'auto' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Synthesis of Evaluation</span>
+          <h2 className="headline" style={{ margin: '6px 0 24px 0' }}>
+            Comprehensive Summary of Findings
+          </h2>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(260px, 100%), 1fr))',
+              gap: '18px',
+              textAlign: 'left',
+            }}
+          >
+            <div style={{ padding: '22px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+              <div style={{ fontSize: '11px', textTransform: 'uppercase', color: 'var(--primary)', fontWeight: 700 }}>Pillar 01</div>
+              <h3 style={{ fontSize: '17px', fontWeight: 700, color: '#f8fafc', margin: '6px 0 8px 0' }}>
+                Agile & Cost Feasibility
+              </h3>
+              <p style={{ fontSize: '13px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                Successfully delivered across 4 Agile iterations with low operational overhead (₱436.58 to ₱1,867.27/mo), proving high municipal sustainability.
+              </p>
+            </div>
+
+            <div style={{ padding: '22px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+              <div style={{ fontSize: '11px', textTransform: 'uppercase', color: 'var(--accent-gold)', fontWeight: 700 }}>Pillar 02</div>
+              <h3 style={{ fontSize: '17px', fontWeight: 700, color: '#f8fafc', margin: '6px 0 8px 0' }}>
+                Technical Quality (4.28)
+              </h3>
+              <p style={{ fontSize: '13px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                Rated "Strongly Agree" under ISO 25010 by 10 IT experts. High scores in Compatibility (4.55) and Functional Suitability (4.50).
+              </p>
+            </div>
+
+            <div style={{ padding: '22px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+              <div style={{ fontSize: '11px', textTransform: 'uppercase', color: '#34d399', fontWeight: 700 }}>Pillar 03</div>
+              <h3 style={{ fontSize: '17px', fontWeight: 700, color: '#f8fafc', margin: '6px 0 8px 0' }}>
+                Usability (80.22 SUS)
+              </h3>
+              <p style={{ fontSize: '13px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                Surpassed the 68.0 industry benchmark by +12.22 points (Grade B+, "Good"), led by frequent user willingness (4.30).
+              </p>
+            </div>
+
+            <div style={{ padding: '22px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+              <div style={{ fontSize: '11px', textTransform: 'uppercase', color: '#38bdf8', fontWeight: 700 }}>Pillar 04</div>
+              <h3 style={{ fontSize: '17px', fontWeight: 700, color: '#f8fafc', margin: '6px 0 8px 0' }}>
+                Accessibility (4.19 & 4.26)
+              </h3>
+              <p style={{ fontSize: '13px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                Strong WCAG 2.2 compliance confirmed across both expert and citizen groups, with screen-reader optimizations identified for future iterations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Slide>
+
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 19: CONCLUSIONS
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="Conclusions"
+        notes="We conclude that an AI-assisted web ordinance platform is technically feasible, usable, and economically viable for local government units in the Philippines. By keeping recurring hosting costs under ₱1,900 monthly, the platform offers a sustainable model for municipal digital transformation."
+      >
+        <div style={{ maxWidth: 1140, marginInline: 'auto' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Academic & Practical Implications</span>
+          <h2 className="headline" style={{ margin: '6px 0 24px 0' }}>
+            Conclusions of the Study
+          </h2>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(320px, 100%), 1fr))',
+              gap: '18px',
+              textAlign: 'left',
+            }}
+          >
+            <div style={{ padding: '22px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+              <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#f8fafc', margin: '0 0 8px 0' }}>
+                1. Technical & Functional Feasibility
+              </h3>
+              <p style={{ fontSize: '13px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                Combining multimodal OCR digitization, SQLite WAL relational indexing, and Gemini RAG is technically sound and highly acceptable for municipal governance.
+              </p>
+            </div>
+
+            <div style={{ padding: '22px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+              <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#f8fafc', margin: '0 0 8px 0' }}>
+                2. Resolving Archive Vulnerabilities
+              </h3>
+              <p style={{ fontSize: '13px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                Digital persistence and 24/7 web access eliminate the physical deterioration, binder misfiling, and office-hour restrictions that previously hindered compliance.
+              </p>
+            </div>
+
+            <div style={{ padding: '22px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+              <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#f8fafc', margin: '0 0 8px 0' }}>
+                3. Economic Viability for Philippine LGUs
+              </h3>
+              <p style={{ fontSize: '13px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                Operating within ₱436.58 to ₱1,867.27 monthly demonstrates that modern cloud AI governance does not require capital-intensive infrastructure procurement.
+              </p>
+            </div>
+
+            <div style={{ padding: '22px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+              <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#f8fafc', margin: '0 0 8px 0' }}>
+                4. Scope Delimitation & Next Steps
+              </h3>
+              <p style={{ fontSize: '13px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
+                Findings represent controlled evaluations across 110 purposive respondents, supporting a phased 2-to-3 barangay live operational pilot rollout.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Slide>
+
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 20: RECOMMENDATIONS (E8 Timeline)
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="Recommendations"
+        notes="Our recommendations span three strategic tracks: technical hardening targeting recoverability and screen readers; a phased municipal rollout beginning with a 2-to-3 barangay pilot; and future longitudinal research measuring compliance impact across other local government units."
+      >
+        <div style={{ maxWidth: 1180, marginInline: 'auto' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Strategic Roadmap</span>
+          <h2 className="headline" style={{ margin: '6px 0 20px 0' }}>
+            Actionable Recommendations for System & City Rollout
+          </h2>
+
+          <RecommendationsTimeline />
+        </div>
+      </Slide>
+
+      {/* ──────────────────────────────────────────────────────────────────
+          SLIDE 21: CLOSING & Q&A
+          ────────────────────────────────────────────────────────────────── */}
+      <Slide
+        center
+        nav="Closing"
+        notes="On behalf of Group 1, we express our profound gratitude to our adviser, our faculty, and the honorable members of the panel. We now welcome your questions, critiques, and guidance."
+      >
+        <div style={{ maxWidth: 1140, marginInline: 'auto' }}>
+          <Reveal>
+            <div
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '6px 16px',
+                borderRadius: '999px',
+                background: 'rgba(16, 185, 129, 0.12)',
+                border: '1px solid rgba(16, 185, 129, 0.3)',
+                color: 'var(--primary)',
+                fontSize: '12px',
+                fontWeight: 700,
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                marginBottom: '14px',
+              }}
+            >
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#10b981' }} />
+              Final Capstone Defense · Group 1
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.08}>
+            <h1
+              className="display"
+              style={{
+                fontSize: 'clamp(32px, 4vw, 52px)',
+                fontWeight: 800,
+                color: '#f8fafc',
+                margin: '0 0 12px 0',
+                letterSpacing: '-0.02em',
+              }}
+            >
+              Maraming Salamat Po.
+            </h1>
+          </Reveal>
+
+          <Reveal delay={0.14}>
+            <p
+              className="lead"
+              style={{
+                fontSize: 'clamp(15px, 1.3vw, 18px)',
+                color: 'var(--fg-muted)',
+                marginBottom: '28px',
+              }}
+            >
+              We are now open for questions, evaluations, and panel recommendations.
+            </p>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <PresenterTeam showAdvisers={true} />
+          </Reveal>
+        </div>
+      </Slide>
+
+      {/* ──────────────────────────────────────────────────────────────────
+          BACKUP SLIDES (B1 to B7) — Reachable via Grid View (G)
+          ────────────────────────────────────────────────────────────────── */}
+
+      {/* B1. Data Gathering Evidence & Sampling */}
+      <Slide
+        center
+        nav="B1: Sampling"
+        notes="Backup slide B1 details our evaluation instruments: ISO 25010 9-characteristic rubric, 10-item System Usability Scale form, and 4-principle WCAG checklist, with purposive sampling criteria."
+      >
+        <div style={{ maxWidth: 1140, marginInline: 'auto', textAlign: 'left' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Backup Slide B1</span>
+          <h2 className="headline" style={{ margin: '6px 0 20px 0' }}>
+            Data Gathering Instruments & Sampling Matrix
+          </h2>
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+            <div style={{ padding: '20px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+              <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#f8fafc', margin: '0 0 8px 0' }}>
+                Evaluation Instruments
+              </h3>
+              <ul style={{ margin: 0, paddingLeft: '18px', fontSize: '13px', color: 'var(--fg-muted)', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <li><strong>ISO/IEC 25010:2023 Form:</strong> 9 quality characteristics, 5-point Likert scale rated by 10 IT experts.</li>
+                <li><strong>System Usability Scale (SUS):</strong> Standard 10-item alternating positive/negative instrument administered to 100 end-users.</li>
+                <li><strong>WCAG 2.2 Checklist:</strong> Evaluation across Perceivable, Operable, Understandable, and Robust principles.</li>
+              </ul>
+            </div>
+
+            <div style={{ padding: '20px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+              <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#f8fafc', margin: '0 0 8px 0' }}>
+                Purposive Sampling Criteria
+              </h3>
+              <ul style={{ margin: 0, paddingLeft: '18px', fontSize: '13px', color: 'var(--fg-muted)', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <li><strong>IT Experts (10):</strong> Minimum 2 years in software development or systems architecture.</li>
+                <li><strong>Barangay Officials (18):</strong> Incumbent legislative or administrative staff from 9 selected barangays.</li>
+                <li><strong>Residents (72):</strong> Verified Cabanatuan City residents across urban and rural barangays.</li>
+                <li><strong>LGU Officials (10):</strong> City government administrators and department officers.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </Slide>
+
+      {/* B2. Full ISO 25010 Table */}
+      <Slide
+        center
+        nav="B2: ISO Details"
+        notes="Backup slide B2 provides the complete itemized weighted means for all nine characteristics evaluated under ISO/IEC 25010:2023."
+      >
+        <div style={{ maxWidth: 1140, marginInline: 'auto', textAlign: 'left' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Backup Slide B2</span>
+          <h2 className="headline" style={{ margin: '6px 0 16px 0' }}>
+            Complete ISO/IEC 25010:2023 Evaluation Table (N = 10)
+          </h2>
+
+          <div style={{ overflowX: 'auto', borderRadius: 'var(--radius)', border: '1px solid var(--hair-2)', background: 'rgba(10, 16, 12, 0.9)' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '12.5px' }}>
+              <thead>
+                <tr style={{ borderBottom: '1px solid var(--hair-2)', background: 'rgba(255, 255, 255, 0.03)' }}>
+                  <th style={{ padding: '10px 16px', color: '#f8fafc', textAlign: 'left' }}>Quality Characteristic</th>
+                  <th style={{ padding: '10px 16px', color: '#f8fafc', textAlign: 'center' }}>Mean</th>
+                  <th style={{ padding: '10px 16px', color: '#f8fafc', textAlign: 'left' }}>Verbal Interpretation</th>
+                  <th style={{ padding: '10px 16px', color: '#f8fafc', textAlign: 'left' }}>Key Indicators</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.04)' }}><td style={{ padding: '8px 16px', fontWeight: 600 }}>Compatibility</td><td style={{ textAlign: 'center', fontWeight: 700, color: '#34d399' }}>4.55</td><td>Highly Compatible</td><td>Co-existence 4.60, Interoperability 4.50</td></tr>
+                <tr style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.04)' }}><td style={{ padding: '8px 16px', fontWeight: 600 }}>Functional Suitability</td><td style={{ textAlign: 'center', fontWeight: 700, color: '#34d399' }}>4.50</td><td>Highly Suitable</td><td>Completeness 4.80, Appropriateness 4.50, Correctness 4.20</td></tr>
+                <tr style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.04)' }}><td style={{ padding: '8px 16px', fontWeight: 700 }}>Performance Efficiency</td><td style={{ textAlign: 'center', fontWeight: 700, color: '#34d399' }}>4.40</td><td>Highly Efficient</td><td>Time Behavior 4.50, Resource Utilization 4.40, Capacity 4.30</td></tr>
+                <tr style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.04)' }}><td style={{ padding: '8px 16px', fontWeight: 600 }}>Maintainability</td><td style={{ textAlign: 'center', fontWeight: 700 }}>4.30</td><td>Highly Maintainable</td><td>Modularity 4.50, Analysability 4.30, Testability 4.20</td></tr>
+                <tr style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.04)' }}><td style={{ padding: '8px 16px', fontWeight: 600 }}>Interaction Capability</td><td style={{ textAlign: 'center', fontWeight: 700 }}>4.24</td><td>Highly Capable</td><td>Operability 4.40, Learnability 4.30, Aesthetics 4.20</td></tr>
+                <tr style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.04)' }}><td style={{ padding: '8px 16px', fontWeight: 600 }}>Security</td><td style={{ textAlign: 'center', fontWeight: 700 }}>4.17</td><td>Secure</td><td>Confidentiality 4.40, Integrity 4.20, Non-repudiation 4.00</td></tr>
+                <tr style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.04)' }}><td style={{ padding: '8px 16px', fontWeight: 600 }}>Safety</td><td style={{ textAlign: 'center', fontWeight: 700 }}>4.17</td><td>Safe</td><td>Risk Identification 4.20, Operational Constraint 4.10</td></tr>
+                <tr style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.04)' }}><td style={{ padding: '8px 16px', fontWeight: 600 }}>Reliability</td><td style={{ textAlign: 'center', fontWeight: 700 }}>4.10</td><td>Reliable</td><td>Maturity 4.40, Availability 4.40, Fault Tolerance 4.40, Recoverability 3.20</td></tr>
+                <tr style={{ borderBottom: '1px solid var(--hair-2)' }}><td style={{ padding: '8px 16px', fontWeight: 600 }}>Flexibility</td><td style={{ textAlign: 'center', fontWeight: 700 }}>4.07</td><td>Flexible</td><td>Adaptability 4.20, Scalability 4.10, Installability 3.90</td></tr>
+                <tr style={{ background: 'rgba(16, 185, 129, 0.15)', fontWeight: 800 }}>
+                  <td style={{ padding: '10px 16px', color: '#f8fafc' }}>Overall Software Quality Weighted Mean</td>
+                  <td style={{ textAlign: 'center', color: '#34d399', fontSize: '15px' }}>4.28</td>
+                  <td colSpan={2} style={{ padding: '10px 16px', color: '#f8fafc' }}>"Strongly Agree" / Highly Suitable</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </Slide>
+
+      {/* B3. SUS Item-Level Results */}
+      <Slide
+        center
+        nav="B3: SUS Items"
+        notes="Backup slide B3 presents the item-level scores of the System Usability Scale administered to 100 end-users."
+      >
+        <div style={{ maxWidth: 1140, marginInline: 'auto', textAlign: 'left' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Backup Slide B3</span>
+          <h2 className="headline" style={{ margin: '6px 0 16px 0' }}>
+            System Usability Scale: 10-Item Evaluation (N = 100)
+          </h2>
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px', fontSize: '12.5px' }}>
+            <div style={{ padding: '12px 16px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '8px', borderLeft: '3px solid #10b981' }}>
+              <div style={{ fontWeight: 700, color: '#f8fafc' }}>1. Willingness to use frequently (Positive)</div>
+              <div style={{ color: '#34d399', fontWeight: 700 }}>Mean: 4.30 / 5.00</div>
+            </div>
+            <div style={{ padding: '12px 16px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '8px', borderLeft: '3px solid var(--accent-gold)' }}>
+              <div style={{ fontWeight: 700, color: '#f8fafc' }}>2. Unnecessarily complex (Negative)</div>
+              <div style={{ color: 'var(--accent-gold)', fontWeight: 700 }}>Mean: 1.85 / 5.00 (Low is good)</div>
+            </div>
+            <div style={{ padding: '12px 16px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '8px', borderLeft: '3px solid #10b981' }}>
+              <div style={{ fontWeight: 700, color: '#f8fafc' }}>3. Thought the system was easy to use (Positive)</div>
+              <div style={{ color: '#34d399', fontWeight: 700 }}>Mean: 4.21 / 5.00</div>
+            </div>
+            <div style={{ padding: '12px 16px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '8px', borderLeft: '3px solid var(--accent-gold)' }}>
+              <div style={{ fontWeight: 700, color: '#f8fafc' }}>4. Need technical support to use (Negative)</div>
+              <div style={{ color: 'var(--accent-gold)', fontWeight: 700 }}>Mean: 1.95 / 5.00 (Low is good)</div>
+            </div>
+            <div style={{ padding: '12px 16px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '8px', borderLeft: '3px solid #10b981' }}>
+              <div style={{ fontWeight: 700, color: '#f8fafc' }}>5. Functions well integrated (Positive)</div>
+              <div style={{ color: '#34d399', fontWeight: 700 }}>Mean: 4.27 / 5.00</div>
+            </div>
+            <div style={{ padding: '12px 16px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '8px', borderLeft: '3px solid var(--accent-gold)' }}>
+              <div style={{ fontWeight: 700, color: '#f8fafc' }}>6. Too much inconsistency (Negative)</div>
+              <div style={{ color: 'var(--accent-gold)', fontWeight: 700 }}>Mean: 1.80 / 5.00 (Low is good)</div>
+            </div>
+            <div style={{ padding: '12px 16px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '8px', borderLeft: '3px solid #10b981' }}>
+              <div style={{ fontWeight: 700, color: '#f8fafc' }}>7. People learn very quickly (Positive)</div>
+              <div style={{ color: '#34d399', fontWeight: 700 }}>Mean: 4.23 / 5.00</div>
+            </div>
+            <div style={{ padding: '12px 16px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '8px', borderLeft: '3px solid var(--accent-gold)' }}>
+              <div style={{ fontWeight: 700, color: '#f8fafc' }}>8. Found system cumbersome to use (Negative)</div>
+              <div style={{ color: 'var(--accent-gold)', fontWeight: 700 }}>Mean: 1.90 / 5.00 (Low is good)</div>
+            </div>
+            <div style={{ padding: '12px 16px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '8px', borderLeft: '3px solid #10b981' }}>
+              <div style={{ fontWeight: 700, color: '#f8fafc' }}>9. Felt very confident using system (Positive)</div>
+              <div style={{ color: '#34d399', fontWeight: 700 }}>Mean: 4.18 / 5.00</div>
+            </div>
+            <div style={{ padding: '12px 16px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '8px', borderLeft: '3px solid var(--accent-gold)' }}>
+              <div style={{ fontWeight: 700, color: '#f8fafc' }}>10. Need to learn lot of things before going (Negative)</div>
+              <div style={{ color: 'var(--accent-gold)', fontWeight: 700 }}>Mean: 1.82 / 5.00 (Low is good)</div>
+            </div>
+          </div>
+          <div style={{ marginTop: '14px', padding: '12px', background: 'rgba(16, 185, 129, 0.12)', borderRadius: '8px', textAlign: 'center', fontWeight: 700, color: '#f8fafc' }}>
+            Calculated SUS Composite Score: 80.22 / 100 · Grade B+ · "Good" (Acceptable)
+          </div>
+        </div>
+      </Slide>
+
+      {/* B4. WCAG Indicator Breakdown */}
+      <Slide
+        center
+        nav="B4: WCAG Details"
+        notes="Backup slide B4 presents the indicator-level comparison between IT experts and end-users for all four WCAG 2.2 principles."
+      >
+        <div style={{ maxWidth: 1140, marginInline: 'auto', textAlign: 'left' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Backup Slide B4</span>
+          <h2 className="headline" style={{ margin: '6px 0 16px 0' }}>
+            WCAG 2.2 Indicator Breakdown (Experts vs End-Users)
+          </h2>
+
+          <div style={{ overflowX: 'auto', borderRadius: 'var(--radius)', border: '1px solid var(--hair-2)', background: 'rgba(10, 16, 12, 0.9)' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '13px' }}>
+              <thead>
+                <tr style={{ borderBottom: '1px solid var(--hair-2)', background: 'rgba(255, 255, 255, 0.03)' }}>
+                  <th style={{ padding: '12px 18px', color: '#f8fafc', textAlign: 'left' }}>WCAG 2.2 Principle</th>
+                  <th style={{ padding: '12px 18px', color: '#10b981', textAlign: 'center' }}>IT Experts (N=10)</th>
+                  <th style={{ padding: '12px 18px', color: 'var(--accent-gold)', textAlign: 'center' }}>End-Users (N=100)</th>
+                  <th style={{ padding: '12px 18px', color: '#f8fafc', textAlign: 'left' }}>Evaluation Findings</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.04)' }}>
+                  <td style={{ padding: '10px 18px', fontWeight: 700 }}>1. Perceivable</td>
+                  <td style={{ textAlign: 'center', fontWeight: 700, color: '#10b981' }}>4.13</td>
+                  <td style={{ textAlign: 'center', fontWeight: 700, color: 'var(--accent-gold)' }}>4.45</td>
+                  <td style={{ color: 'var(--fg-muted)' }}>High-contrast typography, clear hierarchy, and PDF text zoom.</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.04)' }}>
+                  <td style={{ padding: '10px 18px', fontWeight: 700 }}>2. Operable</td>
+                  <td style={{ textAlign: 'center', fontWeight: 700, color: '#10b981' }}>4.27</td>
+                  <td style={{ textAlign: 'center', fontWeight: 700, color: 'var(--accent-gold)' }}>4.43</td>
+                  <td style={{ color: 'var(--fg-muted)' }}>Full keyboard navigation, clear 2px focus rings, and responsive touch.</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.04)' }}>
+                  <td style={{ padding: '10px 18px', fontWeight: 700 }}>3. Understandable</td>
+                  <td style={{ textAlign: 'center', fontWeight: 700, color: '#10b981' }}>4.34</td>
+                  <td style={{ textAlign: 'center', fontWeight: 700, color: 'var(--accent-gold)' }}>4.32</td>
+                  <td style={{ color: 'var(--fg-muted)' }}>Bilingual chatbot interface, predictable forms, and validation alerts.</td>
+                </tr>
+                <tr style={{ borderBottom: '1px solid var(--hair-2)' }}>
+                  <td style={{ padding: '10px 18px', fontWeight: 700 }}>4. Robust</td>
+                  <td style={{ textAlign: 'center', fontWeight: 700, color: '#10b981' }}>4.03</td>
+                  <td style={{ textAlign: 'center', fontWeight: 700, color: 'var(--accent-gold)' }}>3.85</td>
+                  <td style={{ color: 'var(--fg-muted)' }}>Cross-browser stability verified; screen reader ARIA regions flagged.</td>
+                </tr>
+                <tr style={{ background: 'rgba(255, 255, 255, 0.04)', fontWeight: 800 }}>
+                  <td style={{ padding: '12px 18px', color: '#f8fafc' }}>Overall Composite Mean</td>
+                  <td style={{ textAlign: 'center', color: '#10b981', fontSize: '15px' }}>4.19 (Accessible)</td>
+                  <td style={{ textAlign: 'center', color: 'var(--accent-gold)', fontSize: '15px' }}>4.26 (Highly Accessible)</td>
+                  <td style={{ color: '#34d399' }}>Strong overall accessibility across both technical and citizen groups.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </Slide>
+
+      {/* B5. System Architecture: DFDs & ERD */}
+      <Slide
+        center
+        nav="B5: Architecture"
+        notes="Backup slide B5 provides the Data Flow Diagrams (Level 0 and Level 1) and Entity-Relationship Diagram demonstrating relational data design."
+      >
+        <div style={{ maxWidth: 1140, marginInline: 'auto', textAlign: 'left' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Backup Slide B5</span>
+          <h2 className="headline" style={{ margin: '6px 0 16px 0' }}>
+            System Architecture: Data Flow Diagrams & ERD
+          </h2>
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '16px' }}>
+            <BrowserFrame url="ordinance.cabanatuan.gov.ph/architecture/dfd-0">
+              <div style={{ background: '#ffffff', padding: '10px', height: '240px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img src="/figures/figure-15-dfd-l0.png" alt="Level 0 DFD" style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} />
+              </div>
+            </BrowserFrame>
+
+            <BrowserFrame url="ordinance.cabanatuan.gov.ph/architecture/dfd-1">
+              <div style={{ background: '#ffffff', padding: '10px', height: '240px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img src="/figures/figure-16-dfd-l1.png" alt="Level 1 DFD" style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} />
+              </div>
+            </BrowserFrame>
+
+            <BrowserFrame url="ordinance.cabanatuan.gov.ph/architecture/erd">
+              <div style={{ background: '#ffffff', padding: '10px', height: '240px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <img src="/figures/figure-25-erd.png" alt="Entity Relationship Diagram" style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} />
+              </div>
+            </BrowserFrame>
+          </div>
+          <div style={{ marginTop: '10px', fontSize: '12px', color: 'var(--fg-faint)', textAlign: 'center' }}>
+            Figures 15, 16, and 25 from Chapter 3: Context Diagram (DFD L0), Detailed Subsystems (DFD L1), and SQLite Relational Schema (ERD).
+          </div>
+        </div>
+      </Slide>
+
+      {/* B6. AI Safety, Guardrails & Token Limits */}
+      <Slide
+        center
+        nav="B6: AI Guardrails"
+        notes="Backup slide B6 explains the AI safety framework, token constraints, and prompt engineering guardrails preventing legal advice hallucination."
+      >
+        <div style={{ maxWidth: 1140, marginInline: 'auto', textAlign: 'left' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Backup Slide B6</span>
+          <h2 className="headline" style={{ margin: '6px 0 16px 0' }}>
+            AI Architecture, Guardrails & Operational Constraints
+          </h2>
+
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+            <div style={{ padding: '20px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+              <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#f8fafc', margin: '0 0 10px 0' }}>
+                Safety & Hallucination Mitigation
+              </h3>
+              <ul style={{ margin: 0, paddingLeft: '18px', fontSize: '13px', color: 'var(--fg-muted)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <li><strong>Local SQLite Keyword RAG:</strong> Answers are retrieved strictly from uploaded, enacted municipal ordinances.</li>
+                <li><strong>No Legal Advice Mandate:</strong> System prompt strictly forbids giving legal counsel; advises consulting City Legal or Barangay Hall.</li>
+                <li><strong>Out-of-Scope Redirect:</strong> Automatically declines questions regarding national criminal codes or foreign jurisdictions.</li>
+                <li><strong>Mandatory Citations:</strong> Model must cite ordinance numbers, series years, and specific article sections.</li>
+              </ul>
+            </div>
+
+            <div style={{ padding: '20px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+              <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#f8fafc', margin: '0 0 10px 0' }}>
+                Cost & Traffic Safeguards
+              </h3>
+              <ul style={{ margin: 0, paddingLeft: '18px', fontSize: '13px', color: 'var(--fg-muted)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <li><strong>Sliding-Window Rate Limiting:</strong> Enforces 20 requests per minute per IP address.</li>
+                <li><strong>Prompt Length Cap:</strong> Citizen input capped at 1,000 characters to prevent prompt injection and token flooding.</li>
+                <li><strong>Output Budget Cap:</strong> Maximum generation tokens constrained to 500 tokens (~₱0.0528 per interaction).</li>
+                <li><strong>Origin Validation:</strong> Strict Next.js API route header validation preventing cross-site scraping.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </Slide>
+
+      {/* B7. Scope, Delimitations & Municipal Context */}
+      <Slide
+        center
+        nav="B7: Scope & Limits"
+        notes="Backup slide B7 outlines the project's institutional scope, technological delimitations, and prerequisites for live deployment."
+      >
+        <div style={{ maxWidth: 1140, marginInline: 'auto', textAlign: 'left' }}>
+          <span className="kicker" style={{ color: 'var(--primary)' }}>Backup Slide B7</span>
+          <h2 className="headline" style={{ margin: '6px 0 16px 0' }}>
+            Scope, Delimitations & Municipal Deployment Conditions
+          </h2>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(320px, 100%), 1fr))', gap: '18px' }}>
+            <div style={{ padding: '20px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+              <h3 style={{ fontSize: '15px', fontWeight: 700, color: 'var(--primary)', margin: '0 0 8px 0' }}>
+                Geographic & Legislative Scope
+              </h3>
+              <p style={{ margin: 0, fontSize: '12.5px', color: 'var(--fg-muted)', lineHeight: 1.5 }}>
+                Specifically tailored to the 89 barangays and Sangguniang Panlungsod of Cabanatuan City, Nueva Ecija.
+              </p>
+            </div>
+
+            <div style={{ padding: '20px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+              <h3 style={{ fontSize: '15px', fontWeight: 700, color: 'var(--accent-gold)', margin: '0 0 8px 0' }}>
+                Platform Architecture
+              </h3>
+              <p style={{ margin: 0, fontSize: '12.5px', color: 'var(--fg-muted)', lineHeight: 1.5 }}>
+                Responsive web application (Next.js 16). Does not include native iOS/Android binary apps; accessible via any modern mobile web browser.
+              </p>
+            </div>
+
+            <div style={{ padding: '20px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
+              <h3 style={{ fontSize: '15px', fontWeight: 700, color: '#38bdf8', margin: '0 0 8px 0' }}>
+                Live Deployment Requirements
+              </h3>
+              <p style={{ margin: 0, fontSize: '12.5px', color: 'var(--fg-muted)', lineHeight: 1.5 }}>
+                Transitioning to live municipal operations requires DICT .gov.ph domain assignment, official LGU ordinance resolution, and staff onboarding.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Slide>
+    </Deck>
   );
 }

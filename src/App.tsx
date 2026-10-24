@@ -31,17 +31,33 @@ export default function App() {
       >
         <OrdinanceNetworkScene isActive={true} />
 
-        <div className="container" style={{ position: 'relative', zIndex: 1, maxWidth: 960, marginInline: 'auto', padding: 'clamp(24px, 5vh, 60px) 24px' }}>
+        <div
+          className="container"
+          style={{
+            position: 'relative',
+            zIndex: 2,
+            maxWidth: 1060,
+            marginInline: 'auto',
+            padding: 'clamp(32px, 5.5vh, 60px) clamp(24px, 4vw, 56px)',
+            background: 'radial-gradient(ellipse 95% 75% at 50% 50%, rgba(6, 9, 7, 0.94) 0%, rgba(6, 9, 7, 0.82) 55%, rgba(6, 9, 7, 0) 92%)',
+            backdropFilter: 'blur(10px)',
+            WebkitBackdropFilter: 'blur(10px)',
+            borderRadius: '32px',
+          }}
+        >
           <Reveal>
             <div
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                padding: '6px 16px',
+                padding: '6px 18px',
                 borderRadius: '999px',
-                background: 'rgba(16, 185, 129, 0.12)',
-                border: '1px solid rgba(16, 185, 129, 0.3)',
+                background: 'rgba(6, 9, 7, 0.85)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
+                border: '1px solid rgba(16, 185, 129, 0.45)',
+                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.6)',
                 color: 'var(--primary)',
                 fontSize: '12.5px',
                 fontWeight: 700,
@@ -50,7 +66,7 @@ export default function App() {
                 marginBottom: '20px',
               }}
             >
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#10b981' }} />
+              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#10b981', boxShadow: '0 0 10px #10b981' }} />
               Group 1 · Final Capstone Defense · October 2026
             </div>
           </Reveal>
@@ -64,11 +80,12 @@ export default function App() {
                 lineHeight: 1.15,
                 margin: '0 0 18px 0',
                 letterSpacing: '-0.02em',
-                color: '#f8fafc',
+                color: '#ffffff',
+                textShadow: '0 4px 28px rgba(0, 0, 0, 0.95), 0 2px 8px rgba(0, 0, 0, 0.9)',
               }}
             >
               A Web-Based AI-Assisted Ordinance Information System for{' '}
-              <span className="accent-text" style={{ color: '#10b981' }}>
+              <span className="accent-text" style={{ color: '#10b981', textShadow: '0 0 40px rgba(16, 185, 129, 0.5)' }}>
                 Cabanatuan City
               </span>
             </h1>
@@ -79,11 +96,12 @@ export default function App() {
               className="lead"
               style={{
                 fontSize: 'clamp(15px, 1.35vw, 19px)',
-                color: 'var(--fg-muted)',
+                color: '#e2e8f0',
                 lineHeight: 1.6,
-                maxWidth: 780,
+                maxWidth: 820,
                 marginInline: 'auto',
                 marginBottom: '32px',
+                textShadow: '0 2px 18px rgba(0, 0, 0, 0.95), 0 1px 4px rgba(0, 0, 0, 0.9)',
               }}
             >
               A centralized municipal governance platform unifying legislative management across 89 barangays with automated multimodal OCR ingestion, bilingual Gemini RAG inquiry, and structured community reporting.
@@ -96,12 +114,15 @@ export default function App() {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '14px',
-                padding: '12px 24px',
-                borderRadius: 'var(--radius)',
-                background: 'rgba(255, 255, 255, 0.03)',
-                border: '1px solid var(--hair-2)',
+                padding: '12px 28px',
+                borderRadius: '999px',
+                background: 'rgba(6, 9, 7, 0.85)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
+                border: '1px solid rgba(255, 255, 255, 0.14)',
+                boxShadow: '0 6px 24px rgba(0, 0, 0, 0.65)',
                 fontSize: '13px',
-                color: 'var(--fg-muted)',
+                color: '#cbd5e1',
                 flexWrap: 'wrap',
                 justifyContent: 'center',
               }}

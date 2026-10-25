@@ -78,14 +78,14 @@ const ACTORS: ActorDef[] = [
   {
     id: 'GEMINI_AI',
     name: 'External AI Service',
-    roleTag: 'GEMINI 1.5 FLASH',
+    roleTag: 'GEMINI 3.5 FLASH LITE',
     sub: 'Multimodal RAG & OCR',
     color: '#c084fc', // purple
-    x: 438,
+    x: 434,
     y: 60,
-    w: 130,
+    w: 136,
     h: 56,
-    connX: 438,
+    connX: 434,
     connY: 88,
     useCases: ['query_ai'],
   },
@@ -164,7 +164,6 @@ export default function UseCaseVisualizer({
 }: UseCaseVisualizerProps) {
   const [internalRole, setInternalRole] = useState<ActorRole>('ALL');
   const [hoveredUseCase, setHoveredUseCase] = useState<string | null>(null);
-  const [hoveredActor, setHoveredActor] = useState<ActorRole | null>(null);
 
   const currentRole = externalActiveRole !== undefined ? externalActiveRole : internalRole;
 
@@ -176,34 +175,19 @@ export default function UseCaseVisualizer({
     }
   };
 
+  // FILTERING IS STRICTLY DRIVEN BY CLICK (currentRole), NOT BY HOVER!
   const isRoleActive = (role: ActorRole) => {
-    if (hoveredActor) return hoveredActor === role;
-    if (hoveredUseCase) {
-      const uc = USE_CASES.find((u) => u.id === hoveredUseCase);
-      return uc ? uc.actors.includes(role) : false;
-    }
     if (currentRole === 'ALL') return true;
     return currentRole === role;
   };
 
   const isUseCaseActive = (ucId: string) => {
-    if (hoveredUseCase) return hoveredUseCase === ucId;
-    if (hoveredActor) {
-      const actor = ACTORS.find((a) => a.id === hoveredActor);
-      return actor ? actor.useCases.includes(ucId) : false;
-    }
     if (currentRole === 'ALL') return true;
     const actor = ACTORS.find((a) => a.id === currentRole);
     return actor ? actor.useCases.includes(ucId) : false;
   };
 
   const isConnectionActive = (actorId: ActorRole, ucId: string) => {
-    if (hoveredUseCase) {
-      return hoveredUseCase === ucId && (hoveredActor ? hoveredActor === actorId : true);
-    }
-    if (hoveredActor) {
-      return hoveredActor === actorId;
-    }
     if (currentRole === 'ALL') return true;
     return currentRole === actorId;
   };
@@ -211,14 +195,13 @@ export default function UseCaseVisualizer({
   const getActiveDescription = () => {
     if (hoveredUseCase) {
       const uc = USE_CASES.find((u) => u.id === hoveredUseCase);
-      return uc ? `${uc.label}: ${uc.note}` : '';
+      if (uc) return `${uc.label}: ${uc.note}`;
     }
-    if (hoveredActor || (currentRole !== 'ALL' && currentRole)) {
-      const roleId = hoveredActor || currentRole;
-      if (roleId === 'CITIZEN') return 'Resident Scope: 3 public use cases • 0 credentials required • Browse & Report';
-      if (roleId === 'BARANGAY_ADMIN') return 'Barangay Official: 4 localized use cases • Scoped credentials • Draft & Triage';
-      if (roleId === 'LGU_ADMIN') return 'City LGU Administrator: 4 governance use cases • City-wide authority • Enact & RBAC';
-      if (roleId === 'GEMINI_AI') return 'External AI Service: Google Gemini 1.5 Flash • Bilingual RAG inference & citations';
+    if (currentRole !== 'ALL') {
+      if (currentRole === 'CITIZEN') return 'Resident Scope: 3 public use cases • 0 credentials required • Browse & Report';
+      if (currentRole === 'BARANGAY_ADMIN') return 'Barangay Official: 4 localized use cases • Scoped credentials • Draft & Triage';
+      if (currentRole === 'LGU_ADMIN') return 'City LGU Administrator: 4 governance use cases • City-wide authority • Enact & RBAC';
+      if (currentRole === 'GEMINI_AI') return 'External AI Service: Google Gemini 3.5 Flash Lite • Bilingual RAG inference & citations';
     }
     return 'Full RBAC Architecture: 3 Human Roles, 1 External AI Actor, 8 System Use Cases';
   };
@@ -343,11 +326,12 @@ export default function UseCaseVisualizer({
 
           {/* ─────────────────────────────────────────────────────────────
               SYSTEM BOUNDARY (Cabanatuan Ordinance Platform)
+              Properly sized width="272" and bounded header to prevent overflow
               ───────────────────────────────────────────────────────────── */}
           <rect
-            x="164"
+            x="154"
             y="10"
-            width="250"
+            width="272"
             height="338"
             rx="12"
             fill="rgba(10, 16, 30, 0.72)"
@@ -355,17 +339,31 @@ export default function UseCaseVisualizer({
             strokeWidth="1.2"
             strokeDasharray="5 4"
           />
-          <text
-            x="289"
-            y="24"
-            textAnchor="middle"
-            fill="#34d399"
-            fontSize="8.5"
-            fontWeight="700"
-            letterSpacing="0.08em"
-          >
-            SYSTEM BOUNDARY: CABANATUAN ORDINANCE PORTAL
-          </text>
+
+          {/* Fully in-bounds Header Badge */}
+          <g transform="translate(170, 10)">
+            <rect
+              x="0"
+              y="0"
+              width="240"
+              height="18"
+              rx="9"
+              fill="rgba(7, 12, 22, 0.95)"
+              stroke="rgba(52, 211, 153, 0.38)"
+              strokeWidth="0.9"
+            />
+            <text
+              x="120"
+              y="12.5"
+              textAnchor="middle"
+              fill="#34d399"
+              fontSize="7.8"
+              fontWeight="700"
+              letterSpacing="0.05em"
+            >
+              SYSTEM BOUNDARY: CABANATUAN ORDINANCE PORTAL
+            </text>
+          </g>
 
           {/* ─────────────────────────────────────────────────────────────
               CONNECTOR BEZIER PATHS
@@ -465,7 +463,7 @@ export default function UseCaseVisualizer({
             {USE_CASES.filter((u) => u.actors.includes('GEMINI_AI')).map((uc) => {
               const active = isConnectionActive('GEMINI_AI', uc.id);
               const targetY = uc.y + 14;
-              const pathD = `M 438 88 C 422 88, 416 ${targetY}, 400 ${targetY}`;
+              const pathD = `M 434 88 C 420 88, 414 ${targetY}, 400 ${targetY}`;
               return (
                 <g key={`conn-ai-${uc.id}`}>
                   {active && (
@@ -489,7 +487,7 @@ export default function UseCaseVisualizer({
                   />
                   {/* UML <<include>> Label */}
                   <text
-                    x="418"
+                    x="416"
                     y="77"
                     textAnchor="middle"
                     fill={active ? '#d8b4fe' : '#64748b'}
@@ -623,23 +621,21 @@ export default function UseCaseVisualizer({
 
           {/* ─────────────────────────────────────────────────────────────
               ACTOR CARDS (Left: 3 Human Roles, Right: External AI)
+              Clicking an actor filters to that role (or toggles to ALL)
               ───────────────────────────────────────────────────────────── */}
           <g>
             {ACTORS.map((actor) => {
               const active = isRoleActive(actor.id);
-              const isHovered = hoveredActor === actor.id;
               const isAI = actor.id === 'GEMINI_AI';
 
               return (
                 <g
                   key={actor.id}
                   onClick={() => handleSelectRole(actor.id === currentRole ? 'ALL' : actor.id)}
-                  onMouseEnter={() => setHoveredActor(actor.id)}
-                  onMouseLeave={() => setHoveredActor(null)}
                   style={{ cursor: 'pointer', transition: 'all 0.18s ease' }}
                 >
                   {/* Ambient Glow */}
-                  {(active || isHovered) && (
+                  {active && currentRole !== 'ALL' && (
                     <rect
                       x={actor.x - 2}
                       y={actor.y - 2}
@@ -647,7 +643,7 @@ export default function UseCaseVisualizer({
                       height={actor.h + 4}
                       rx="10"
                       fill={actor.color}
-                      opacity={isHovered ? 0.3 : 0.14}
+                      opacity={0.25}
                       filter="url(#laser-glow)"
                     />
                   )}
@@ -661,14 +657,14 @@ export default function UseCaseVisualizer({
                     rx="8"
                     fill="rgba(15, 23, 42, 0.94)"
                     stroke={active ? actor.color : 'rgba(255, 255, 255, 0.12)'}
-                    strokeWidth={active ? (isHovered ? 2 : 1.4) : 0.8}
+                    strokeWidth={active ? (currentRole === actor.id ? 2 : 1.4) : 0.8}
                     opacity={active ? 1 : 0.32}
                   />
 
                   {/* Role Pill */}
                   <g transform={`translate(${actor.x + 8}, ${actor.y + 8})`}>
                     <rect
-                      width={isAI ? 78 : actor.id === 'CITIZEN' ? 52 : actor.id === 'BARANGAY_ADMIN' ? 84 : 70}
+                      width={isAI ? 108 : actor.id === 'CITIZEN' ? 52 : actor.id === 'BARANGAY_ADMIN' ? 84 : 70}
                       height="13"
                       rx="3"
                       fill={`${actor.color}25`}
@@ -677,9 +673,9 @@ export default function UseCaseVisualizer({
                       x="4"
                       y="9.5"
                       fill={actor.color}
-                      fontSize="7.5"
+                      fontSize="7.2"
                       fontWeight="800"
-                      letterSpacing="0.04em"
+                      letterSpacing="0.03em"
                     >
                       {actor.roleTag}
                     </text>
@@ -741,7 +737,7 @@ export default function UseCaseVisualizer({
           <span style={{ color: '#34d399', fontWeight: 700 }}>Scope:</span>
           <span style={{ color: '#e2e8f0', fontWeight: 500 }}>{getActiveDescription()}</span>
         </span>
-        <span style={{ fontSize: '10px', color: '#64748b' }}>Click any role or tab to filter</span>
+        <span style={{ fontSize: '10px', color: '#64748b' }}>Click any card or tab to filter</span>
       </div>
 
       <style>{`
@@ -803,13 +799,14 @@ const ROLE_CARDS: {
     badgeColor: '#c084fc',
     badgeBg: 'rgba(192, 132, 252, 0.15)',
     title: 'External AI Service (Google Gemini)',
-    meta: 'Cloud REST API • Multimodal RAG & OCR',
-    desc: 'External machine actor powered by Google Gemini 1.5 Flash. Executes multimodal document OCR parsing and powers bilingual conversational RAG inquiries with statutory legal citations.',
+    meta: 'Gemini 3.5 Flash Lite • Multimodal RAG',
+    desc: 'External machine actor powered by Google Gemini 3.5 Flash Lite. Executes multimodal document OCR parsing and powers bilingual conversational RAG inquiries with statutory legal citations.',
   },
 ];
 
 export function UserRolesSlideContent() {
   const [activeRole, setActiveRole] = useState<ActorRole>('ALL');
+  const [hoveredCard, setHoveredCard] = useState<ActorRole | null>(null);
 
   return (
     <div
@@ -825,33 +822,37 @@ export function UserRolesSlideContent() {
         <UseCaseVisualizer activeRole={activeRole} onSelectRole={setActiveRole} />
       </BrowserFrame>
 
-      {/* Synchronized Role Breakdown Cards */}
+      {/* Synchronized Role Breakdown Cards - CLICK TO FILTER ONLY */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '9px', textAlign: 'left' }}>
         {ROLE_CARDS.map((card) => {
           const isSelected = activeRole === card.id;
           const isDimmed = activeRole !== 'ALL' && !isSelected;
+          const isHovered = hoveredCard === card.id;
 
           return (
             <div
               key={card.id}
               onClick={() => setActiveRole(isSelected ? 'ALL' : card.id)}
-              onMouseEnter={() => {
-                if (activeRole === 'ALL') {
-                  setActiveRole(card.id);
-                }
-              }}
-              onMouseLeave={() => {
-                // Return to ALL if we were hovering while no role was pinned
-              }}
+              onMouseEnter={() => setHoveredCard(card.id)}
+              onMouseLeave={() => setHoveredCard(null)}
               style={{
                 padding: '10px 14px',
-                background: isSelected ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.025)',
-                border: `1px solid ${isSelected ? card.badgeColor : 'var(--hair-2)'}`,
+                background: isSelected
+                  ? 'rgba(255, 255, 255, 0.06)'
+                  : isHovered
+                  ? 'rgba(255, 255, 255, 0.04)'
+                  : 'rgba(255, 255, 255, 0.025)',
+                border: `1px solid ${isSelected ? card.badgeColor : isHovered ? 'rgba(255, 255, 255, 0.2)' : 'var(--hair-2)'}`,
                 borderRadius: 'var(--radius)',
                 cursor: 'pointer',
                 opacity: isDimmed ? 0.45 : 1,
-                transition: 'all 0.2s ease',
-                boxShadow: isSelected ? `0 0 16px ${card.badgeColor}22` : 'none',
+                transition: 'all 0.18s ease',
+                boxShadow: isSelected
+                  ? `0 0 16px ${card.badgeColor}25`
+                  : isHovered
+                  ? '0 4px 12px rgba(0, 0, 0, 0.25)'
+                  : 'none',
+                transform: isHovered && !isSelected ? 'translateY(-1px)' : 'none',
               }}
             >
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px', marginBottom: '3px' }}>
@@ -871,7 +872,9 @@ export function UserRolesSlideContent() {
                   </span>
                   <span style={{ fontSize: '13.5px', fontWeight: 700, color: '#f8fafc' }}>{card.title}</span>
                 </div>
-                <span style={{ fontSize: '9.5px', color: '#64748b', fontWeight: 600 }}>{card.meta}</span>
+                <span style={{ fontSize: '9.5px', color: isSelected ? card.badgeColor : '#64748b', fontWeight: 600 }}>
+                  {card.meta}
+                </span>
               </div>
               <p style={{ margin: 0, fontSize: '11.8px', color: 'var(--fg-muted)', lineHeight: 1.4 }}>
                 {card.desc}

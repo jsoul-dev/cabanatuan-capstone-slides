@@ -15,6 +15,7 @@ import IsoQualityChart from './components/IsoQualityChart';
 import SusGauge from './components/SusGauge';
 import WcagComparisonChart from './components/WcagComparisonChart';
 import RecommendationsTimeline from './components/RecommendationsTimeline';
+import { UserRolesSlideContent } from './components/UseCaseVisualizer';
 
 export default function App() {
   return (
@@ -421,64 +422,7 @@ export default function App() {
             Three Primary User Roles & External AI Actor
           </h2>
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'minmax(320px, 1.2fr) minmax(280px, 1fr)',
-              gap: 'clamp(20px, 3vw, 36px)',
-              alignItems: 'center',
-            }}
-          >
-            {/* Use Case Diagram */}
-            <BrowserFrame url="ordinance.cabanatuan.gov.ph/architecture/use-case">
-              <div style={{ background: '#ffffff', padding: '12px', display: 'flex', justifyContent: 'center' }}>
-                <img
-                  src="/figures/figure-14-use-case.png"
-                  alt="Use Case Diagram"
-                  style={{ maxHeight: '340px', width: 'auto', objectFit: 'contain' }}
-                />
-              </div>
-            </BrowserFrame>
-
-            {/* Role Breakdown */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', textAlign: 'left' }}>
-              <div style={{ padding: '14px 18px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-                  <span style={{ padding: '2px 8px', borderRadius: '4px', background: 'rgba(16, 185, 129, 0.15)', color: '#10b981', fontSize: '11px', fontWeight: 700 }}>
-                    CITIZEN
-                  </span>
-                  <span style={{ fontSize: '14px', fontWeight: 700, color: '#f8fafc' }}>Resident / Citizen</span>
-                </div>
-                <p style={{ margin: 0, fontSize: '12.5px', color: 'var(--fg-muted)', lineHeight: 1.45 }}>
-                  Public exploration, bilingual AI inquiries, and community concern submission. Requires zero authentication or account setup.
-                </p>
-              </div>
-
-              <div style={{ padding: '14px 18px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-                  <span style={{ padding: '2px 8px', borderRadius: '4px', background: 'rgba(245, 158, 11, 0.15)', color: 'var(--accent-gold)', fontSize: '11px', fontWeight: 700 }}>
-                    BARANGAY_ADMIN
-                  </span>
-                  <span style={{ fontSize: '14px', fontWeight: 700, color: '#f8fafc' }}>Barangay Official / Staff</span>
-                </div>
-                <p style={{ margin: 0, fontSize: '12.5px', color: 'var(--fg-muted)', lineHeight: 1.45 }}>
-                  Authenticated; strictly isolated to their assigned barangay. Drafts local ordinances, uploads PDFs for AI OCR extraction, and resolves incident reports.
-                </p>
-              </div>
-
-              <div style={{ padding: '14px 18px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-                  <span style={{ padding: '2px 8px', borderRadius: '4px', background: 'rgba(16, 185, 129, 0.25)', color: '#34d399', fontSize: '11px', fontWeight: 700 }}>
-                    LGU_ADMIN
-                  </span>
-                  <span style={{ fontSize: '14px', fontWeight: 700, color: '#f8fafc' }}>City LGU Administrator</span>
-                </div>
-                <p style={{ margin: 0, fontSize: '12.5px', color: 'var(--fg-muted)', lineHeight: 1.45 }}>
-                  City-wide sovereign governance. Enacts or rejects proposed ordinances with remarks, publishes city-wide laws, oversees all reports, and manages user RBAC.
-                </p>
-              </div>
-            </div>
-          </div>
+          <UserRolesSlideContent />
         </div>
       </Slide>
 

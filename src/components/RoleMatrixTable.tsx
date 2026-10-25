@@ -90,12 +90,6 @@ export const DETAILED_MATRIX: MatrixRow[] = [
     lgu: false,
   },
   {
-    feature: 'Instant dispatch notice & automated hall routing',
-    resident: true,
-    barangay: true,
-    lgu: true,
-  },
-  {
     feature: 'Secure multi-role authentication',
     resident: false,
     barangay: true,
@@ -150,7 +144,10 @@ interface RoleMatrixTableProps {
 }
 
 export default function RoleMatrixTable({ highlightAdmin = true }: RoleMatrixTableProps) {
-  const [viewMode, setViewMode] = useState<'executive' | 'detailed'>('executive');
+  // Detailed Matrix is open by default
+  const [viewMode, setViewMode] = useState<'executive' | 'detailed'>('detailed');
+  const [hoveredRow, setHoveredRow] = useState<number | null>(null);
+
   const currentData = viewMode === 'executive' ? EXECUTIVE_MATRIX : DETAILED_MATRIX;
 
   const checkIcon = (
@@ -218,6 +215,7 @@ export default function RoleMatrixTable({ highlightAdmin = true }: RoleMatrixTab
           }}
         >
           <button
+            type="button"
             onClick={() => setViewMode('executive')}
             style={{
               padding: '4px 10px',
@@ -234,6 +232,7 @@ export default function RoleMatrixTable({ highlightAdmin = true }: RoleMatrixTab
             Executive Matrix (8 Domains)
           </button>
           <button
+            type="button"
             onClick={() => setViewMode('detailed')}
             style={{
               padding: '4px 10px',
@@ -247,7 +246,7 @@ export default function RoleMatrixTable({ highlightAdmin = true }: RoleMatrixTab
               transition: 'all 0.2s ease',
             }}
           >
-            Detailed Matrix (14 Features)
+            Detailed Matrix ({DETAILED_MATRIX.length} Features)
           </button>
         </div>
       </div>
@@ -350,16 +349,31 @@ export default function RoleMatrixTable({ highlightAdmin = true }: RoleMatrixTab
           <tbody>
             {currentData.map((row, idx) => {
               const isEven = idx % 2 === 0;
+              const isHovered = hoveredRow === idx;
               return (
                 <tr
                   key={idx}
+                  onMouseEnter={() => setHoveredRow(idx)}
+                  onMouseLeave={() => setHoveredRow(null)}
                   style={{
                     borderBottom: '1px solid rgba(255, 255, 255, 0.04)',
-                    backgroundColor: isEven ? 'rgba(255, 255, 255, 0.015)' : 'transparent',
-                    transition: 'background-color 0.2s ease',
+                    backgroundColor: isHovered
+                      ? 'rgba(16, 185, 129, 0.09)'
+                      : isEven
+                      ? 'rgba(255, 255, 255, 0.015)'
+                      : 'transparent',
+                    transition: 'all 0.16s ease',
+                    cursor: 'default',
                   }}
                 >
-                  <td style={{ padding: 'clamp(5px, 0.8vh, 8px) 16px', color: 'var(--fg)', fontWeight: 500 }}>
+                  <td
+                    style={{
+                      padding: 'clamp(5px, 0.8vh, 8px) 16px',
+                      color: isHovered ? '#ffffff' : 'var(--fg)',
+                      fontWeight: isHovered ? 600 : 500,
+                      transition: 'color 0.16s ease',
+                    }}
+                  >
                     {row.feature}
                   </td>
                   <td style={{ padding: 'clamp(5px, 0.8vh, 8px) 12px', textAlign: 'center' }}>
@@ -372,9 +386,14 @@ export default function RoleMatrixTable({ highlightAdmin = true }: RoleMatrixTab
                     style={{
                       padding: 'clamp(5px, 0.8vh, 8px) 12px',
                       textAlign: 'center',
-                      background: highlightAdmin ? 'rgba(16, 185, 129, 0.06)' : 'transparent',
+                      background: highlightAdmin
+                        ? isHovered
+                          ? 'rgba(16, 185, 129, 0.14)'
+                          : 'rgba(16, 185, 129, 0.06)'
+                        : 'transparent',
                       borderLeft: highlightAdmin ? '1px solid rgba(16, 185, 129, 0.25)' : 'none',
                       borderRight: highlightAdmin ? '1px solid rgba(16, 185, 129, 0.25)' : 'none',
+                      transition: 'background 0.16s ease',
                     }}
                   >
                     {renderCell(row.lgu)}

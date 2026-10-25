@@ -546,7 +546,7 @@ export default function App() {
       <Slide
         center
         nav="Role Matrix"
-        notes="As requested by the panel, this feature-by-role matrix illustrates access boundaries across all 14 core system capabilities. Notice the highlighted LGU Admin column, which retains exclusive authority over final ordinance review, user management, and city-wide publication, verified directly against our codebase."
+        notes="As requested by the panel, this feature-by-role matrix illustrates access boundaries across all 13 core system capabilities. Notice the highlighted LGU Admin column, which retains exclusive authority over final ordinance review, user management, and city-wide publication, verified directly against our codebase."
       >
         <div style={{ maxWidth: 1180, marginInline: 'auto' }}>
           <span className="kicker" style={{ color: 'var(--primary)' }}>Feature-by-Role Matrix</span>

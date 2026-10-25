@@ -1045,7 +1045,7 @@ export default function App() {
                 Combining automated multimodal OCR ingestion, SQLite WAL relational indexing, and bilingual Gemini RAG produces a stable, unified platform proven capable of managing municipal ordinances.
               </p>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: '#34d399', fontWeight: 600 }}>
-                <span>✓</span> Verified across 4 Agile iterations & 3 administrative roles
+                <span>✓</span> Verified across 4 Agile iterations & 3 user roles
               </div>
             </div>
 
@@ -1158,7 +1158,7 @@ export default function App() {
                 3. Economic Viability for LGUs
               </h3>
               <p style={{ fontSize: 'clamp(12.5px, 1.05vw, 13.5px)', color: 'var(--fg-muted)', lineHeight: 1.5, margin: '0 0 12px 0' }}>
-                Projected monthly overhead of ₱436.58 to ₱1,867.27 proves modern AI governance can run on managed cloud PaaS without capital hardware expenses or dedicated municipal server administrators.
+                Projected monthly overhead of ₱436.58 to ₱1,867.27 indicates modern AI governance can run on managed cloud PaaS without capital hardware expenses or dedicated municipal server administrators.
               </p>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: 'var(--accent-gold)', fontWeight: 600 }}>
                 <span>✓</span> Addresses primary financial adoption barrier in Philippine LGUs
@@ -1213,13 +1213,13 @@ export default function App() {
                 </span>
               </div>
               <h3 style={{ fontSize: 'clamp(16px, 1.3vw, 18px)', fontWeight: 700, color: '#f8fafc', margin: '0 0 8px 0' }}>
-                4. Scope Delimitation & Pilot Horizon
+                4. Scope & Pilot Horizon
               </h3>
               <p style={{ fontSize: 'clamp(12.5px, 1.05vw, 13.5px)', color: 'var(--fg-muted)', lineHeight: 1.5, margin: '0 0 12px 0' }}>
-                Conclusions are bounded by controlled testing across 10 IT experts and 100 end-users in 9 barangays. This provides an empirical baseline supporting a phased 2-to-3 barangay live operational pilot.
+                These results come from a controlled evaluation by 10 IT experts and 100 end-users, including officials from 9 of 89 barangays. They show the system works in a test setting and support a phased pilot in 2 to 3 barangays before wider use.
               </p>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: '#818cf8', fontWeight: 600 }}>
-                <span>✓</span> Rigorous empirical foundation ready for live community rollout
+                <span>✓</span> Supports a phased pilot in 2 to 3 barangays
               </div>
             </div>
           </div>

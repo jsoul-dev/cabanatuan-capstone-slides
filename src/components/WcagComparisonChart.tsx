@@ -186,16 +186,17 @@ export default function WcagComparisonChart() {
             border: '1px solid var(--hair-2)',
             borderRadius: 'var(--radius)',
             padding: '16px 18px',
+            textAlign: 'left',
           }}
         >
-          <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--fg)', marginBottom: '6px' }}>
+          <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--fg)', marginBottom: '8px', textAlign: 'left' }}>
             Empirical Findings:
           </div>
-          <ul style={{ margin: 0, paddingLeft: '18px', fontSize: '12px', color: 'var(--fg-muted)', lineHeight: 1.5 }}>
-            <li>
+          <ul style={{ margin: 0, paddingLeft: '18px', fontSize: '12px', color: 'var(--fg-muted)', lineHeight: 1.55, textAlign: 'left' }}>
+            <li style={{ textAlign: 'left', marginBottom: '6px' }}>
               <strong>Perceivable & Operable:</strong> End-users awarded highest scores (4.45 & 4.43), praising visual clarity, legible PDF viewers, and mobile responsiveness.
             </li>
-            <li>
+            <li style={{ textAlign: 'left' }}>
               <strong>Robust (3.85):</strong> Screen reader compatibility (NVDA, JAWS) and dynamic ARIA live status announcements identified as key opportunities for next-stage engineering.
             </li>
           </ul>

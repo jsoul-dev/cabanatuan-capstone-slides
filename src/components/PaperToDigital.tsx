@@ -12,6 +12,7 @@ export default function PaperToDigital({ showDigital = true }: PaperToDigitalPro
         width: '100%',
         maxWidth: 1140,
         marginInline: 'auto',
+        textAlign: 'left',
       }}
     >
       {/* Traditional Physical Workflow (Problem) */}
@@ -23,9 +24,10 @@ export default function PaperToDigital({ showDigital = true }: PaperToDigitalPro
           padding: 'clamp(20px, 3vh, 30px)',
           boxShadow: '0 20px 50px -15px rgba(0, 0, 0, 0.8)',
           position: 'relative',
+          textAlign: 'left',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px', textAlign: 'left' }}>
           <span
             style={{
               display: 'inline-flex',
@@ -36,6 +38,7 @@ export default function PaperToDigital({ showDigital = true }: PaperToDigitalPro
               borderRadius: '8px',
               background: 'rgba(239, 68, 68, 0.15)',
               color: '#ef4444',
+              flexShrink: 0,
             }}
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -46,36 +49,36 @@ export default function PaperToDigital({ showDigital = true }: PaperToDigitalPro
               <polyline points="10 9 9 9 8 9" />
             </svg>
           </span>
-          <div>
+          <div style={{ textAlign: 'left' }}>
             <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.08em', color: '#ef4444', fontWeight: 700 }}>
               Status Quo Vulnerability
             </div>
-            <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#f8fafc', margin: 0 }}>
+            <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#f8fafc', margin: 0, textAlign: 'left' }}>
               Physical Paper Archive Bottlenecks
             </h3>
           </div>
         </div>
 
-        <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', color: 'var(--fg-muted)' }}>
-            <span style={{ color: '#ef4444', fontWeight: 700, marginTop: '1px' }}>✕</span>
-            <span><strong>Physical Damage & Loss:</strong> Paper documents suffer ink fading, moisture damage, tears, and accidental misfiling in filing cabinets.</span>
+        <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', textAlign: 'left' }}>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', lineHeight: 1.5, textAlign: 'left', color: 'var(--fg-muted)' }}>
+            <span style={{ color: '#ef4444', fontWeight: 700, marginTop: '2px', flexShrink: 0 }}>✕</span>
+            <span style={{ textAlign: 'left' }}><strong>Physical Damage & Loss:</strong> Paper documents suffer ink fading, moisture damage, tears, and accidental misfiling in filing cabinets.</span>
           </li>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', color: 'var(--fg-muted)' }}>
-            <span style={{ color: '#ef4444', fontWeight: 700, marginTop: '1px' }}>✕</span>
-            <span><strong>Laborious Manual Search:</strong> Finding specific legislative clauses requires staff to manually flip through thick binders or storage boxes.</span>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', lineHeight: 1.5, textAlign: 'left', color: 'var(--fg-muted)' }}>
+            <span style={{ color: '#ef4444', fontWeight: 700, marginTop: '2px', flexShrink: 0 }}>✕</span>
+            <span style={{ textAlign: 'left' }}><strong>Laborious Manual Search:</strong> Finding specific legislative clauses requires staff to manually flip through thick binders or storage boxes.</span>
           </li>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', color: 'var(--fg-muted)' }}>
-            <span style={{ color: '#ef4444', fontWeight: 700, marginTop: '1px' }}>✕</span>
-            <span><strong>Restricted Physical Access:</strong> Citizens must travel to the barangay hall or City Hall strictly during municipal business hours.</span>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', lineHeight: 1.5, textAlign: 'left', color: 'var(--fg-muted)' }}>
+            <span style={{ color: '#ef4444', fontWeight: 700, marginTop: '2px', flexShrink: 0 }}>✕</span>
+            <span style={{ textAlign: 'left' }}><strong>Restricted Physical Access:</strong> Citizens must travel to the barangay hall or City Hall strictly during municipal business hours.</span>
           </li>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', color: 'var(--fg-muted)' }}>
-            <span style={{ color: '#ef4444', fontWeight: 700, marginTop: '1px' }}>✕</span>
-            <span><strong>Moderate Compliance (Batacandolo et al., 2024):</strong> Limited citizen awareness of enacted policies leads to low compliance rates.</span>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', lineHeight: 1.5, textAlign: 'left', color: 'var(--fg-muted)' }}>
+            <span style={{ color: '#ef4444', fontWeight: 700, marginTop: '2px', flexShrink: 0 }}>✕</span>
+            <span style={{ textAlign: 'left' }}><strong>Moderate Compliance (Batacandolo et al., 2024):</strong> Limited citizen awareness of enacted policies leads to low compliance rates.</span>
           </li>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', color: 'var(--fg-muted)' }}>
-            <span style={{ color: '#ef4444', fontWeight: 700, marginTop: '1px' }}>✕</span>
-            <span><strong>Verbal Incident Reports:</strong> Community complaints submitted by walk-in lack tracking codes, photographic evidence, and accountability.</span>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', lineHeight: 1.5, textAlign: 'left', color: 'var(--fg-muted)' }}>
+            <span style={{ color: '#ef4444', fontWeight: 700, marginTop: '2px', flexShrink: 0 }}>✕</span>
+            <span style={{ textAlign: 'left' }}><strong>Verbal Incident Reports:</strong> Community complaints submitted by walk-in lack tracking codes, photographic evidence, and accountability.</span>
           </li>
         </ul>
       </div>
@@ -89,12 +92,13 @@ export default function PaperToDigital({ showDigital = true }: PaperToDigitalPro
           padding: 'clamp(20px, 3vh, 30px)',
           boxShadow: '0 20px 50px -15px rgba(0, 0, 0, 0.8)',
           position: 'relative',
+          textAlign: 'left',
           opacity: showDigital ? 1 : 0.4,
           transform: showDigital ? 'translateY(0)' : 'translateY(12px)',
           transition: 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px', textAlign: 'left' }}>
           <span
             style={{
               display: 'inline-flex',
@@ -105,6 +109,7 @@ export default function PaperToDigital({ showDigital = true }: PaperToDigitalPro
               borderRadius: '8px',
               background: 'rgba(16, 185, 129, 0.2)',
               color: '#10b981',
+              flexShrink: 0,
             }}
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -113,36 +118,36 @@ export default function PaperToDigital({ showDigital = true }: PaperToDigitalPro
               <path d="M2 12l10 5 10-5" />
             </svg>
           </span>
-          <div>
+          <div style={{ textAlign: 'left' }}>
             <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--primary)', fontWeight: 700 }}>
               AI-Assisted Municipal Solution
             </div>
-            <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#f8fafc', margin: 0 }}>
+            <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#f8fafc', margin: 0, textAlign: 'left' }}>
               Centralized Legislative Governance Portal
             </h3>
           </div>
         </div>
 
-        <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', color: 'var(--fg)' }}>
-            <span style={{ color: '#10b981', fontWeight: 700, marginTop: '1px' }}>✓</span>
-            <span><strong>Immutable Cloud Archiving:</strong> SQLite WAL persistent volume stores digital ordinance copies, searchable text, and verified official PDFs.</span>
+        <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', textAlign: 'left' }}>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', lineHeight: 1.5, textAlign: 'left', color: 'var(--fg)' }}>
+            <span style={{ color: '#10b981', fontWeight: 700, marginTop: '2px', flexShrink: 0 }}>✓</span>
+            <span style={{ textAlign: 'left' }}><strong>Immutable Cloud Archiving:</strong> SQLite WAL persistent volume stores digital ordinance copies, searchable text, and verified official PDFs.</span>
           </li>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', color: 'var(--fg)' }}>
-            <span style={{ color: '#10b981', fontWeight: 700, marginTop: '1px' }}>✓</span>
-            <span><strong>Sub-Second Semantic Search:</strong> Real-time filtering by category, year, keyword, and barangay jurisdiction with high-speed indexing.</span>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', lineHeight: 1.5, textAlign: 'left', color: 'var(--fg)' }}>
+            <span style={{ color: '#10b981', fontWeight: 700, marginTop: '2px', flexShrink: 0 }}>✓</span>
+            <span style={{ textAlign: 'left' }}><strong>Sub-Second Semantic Search:</strong> Real-time filtering by category, year, keyword, and barangay jurisdiction with high-speed indexing.</span>
           </li>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', color: 'var(--fg)' }}>
-            <span style={{ color: '#10b981', fontWeight: 700, marginTop: '1px' }}>✓</span>
-            <span><strong>Civic AI Legal Assistant:</strong> Gemini RAG delivers plain-language answers in Tagalog, English, and Taglish with precise legislative citations.</span>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', lineHeight: 1.5, textAlign: 'left', color: 'var(--fg)' }}>
+            <span style={{ color: '#10b981', fontWeight: 700, marginTop: '2px', flexShrink: 0 }}>✓</span>
+            <span style={{ textAlign: 'left' }}><strong>Civic AI Legal Assistant:</strong> Gemini RAG delivers plain-language answers in Tagalog, English, and Taglish with precise legislative citations.</span>
           </li>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', color: 'var(--fg)' }}>
-            <span style={{ color: '#10b981', fontWeight: 700, marginTop: '1px' }}>✓</span>
-            <span><strong>Multimodal OCR Parser:</strong> Slashes manual legislative transcription time by ~85% through automated PDF article extraction.</span>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', lineHeight: 1.5, textAlign: 'left', color: 'var(--fg)' }}>
+            <span style={{ color: '#10b981', fontWeight: 700, marginTop: '2px', flexShrink: 0 }}>✓</span>
+            <span style={{ textAlign: 'left' }}><strong>Multimodal OCR Parser:</strong> Slashes manual legislative transcription time by ~85% through automated PDF article extraction.</span>
           </li>
-          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', color: 'var(--fg)' }}>
-            <span style={{ color: '#10b981', fontWeight: 700, marginTop: '1px' }}>✓</span>
-            <span><strong>Structured Citizen Incident Reporting:</strong> Instant local routing to the assigned Barangay Admin dashboard with photo evidence.</span>
+          <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', lineHeight: 1.5, textAlign: 'left', color: 'var(--fg)' }}>
+            <span style={{ color: '#10b981', fontWeight: 700, marginTop: '2px', flexShrink: 0 }}>✓</span>
+            <span style={{ textAlign: 'left' }}><strong>Structured Citizen Incident Reporting:</strong> Instant local routing to the assigned Barangay Admin dashboard with photo evidence.</span>
           </li>
         </ul>
       </div>

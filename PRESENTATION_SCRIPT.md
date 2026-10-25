@@ -38,7 +38,7 @@
 > 
 > **'A Web-Based AI-Assisted Ordinance Information System for Cabanatuan City.'**
 > 
-> In brief, this study addresses the persistent challenges of municipal legislative management by delivering a centralized web platform that connects all 89 barangays with City Hall, combining automated multimodal OCR document ingestion, bilingual AI-assisted legal retrieval, and structured community reporting."
+> In brief, this study addresses the persistent challenges of municipal legislative management by delivering a centralized web platform that connects all 89 barangays with City Hall, combining automated multimodal OCR document ingestion, bilingual AI-assisted ordinance retrieval, and structured community reporting."
 
 - **Slide Transition:** *"Before discussing the system in detail, allow me to introduce the team behind this development."*
 
@@ -102,7 +102,7 @@
 > - When a resident or officer needs to verify an ordinance, they must manually browse through paper archives, which is tedious and error-prone.
 > - Furthermore, access is strictly confined to physical office hours.
 > 
-> As established by **Batacandolo and colleagues in their 2024 study**, when citizens face high friction in accessing local laws, community awareness remains low, which leads directly to unintentional non-compliance. Our web-based platform resolves this problem by providing immutable digital storage, sub-second relational search, and continuous public access from any device."
+> As established by **Batacandolo and colleagues in their 2024 study**, when citizens face high friction in accessing local ordinances, community awareness remains low, which leads directly to unintentional non-compliance. Our web-based platform resolves this problem by providing persistent digital storage, fast filtered search, and continuous public access from any device."
 
 - **Slide Transition:** *"Next slide, please. Who stands to benefit from this technological transition?"*
 
@@ -206,7 +206,7 @@
 - **Slide Navigation:** `Access Levels`
 - **Visuals on Screen:** Three vertical tier cards: Public Tier (No Login Required), Barangay Scoped (Authenticated), City-Wide Sovereign (Municipal Admin).
 - **Key Talking Points:**
-  - Zero-friction public access (no registration barriers for residents searching laws).
+  - Zero-friction public access (no registration barriers for residents searching ordinances).
   - Scoped multi-tenancy for barangays (Barangay A cannot view or alter Barangay B's drafts).
   - Sovereign governance at City Hall.
 
@@ -214,7 +214,7 @@
 > 
 > "To prevent unauthorized privilege escalation, access levels are architecturally isolated into three tiers:
 > 
-> - **At the Public Tier**, residents require **no login or credentials**. This was an intentional design decision to eliminate barriers to civic participation and ensure anyone with an internet connection can read the law.
+> - **At the Public Tier**, residents require **no login or credentials**. This was an intentional design decision to eliminate barriers to civic participation and ensure anyone with an internet connection can read the ordinances.
 > - **At the Barangay-Scoped Tier**, officials must authenticate via encrypted credentials. Their data access is scoped strictly to their registered barangay, ensuring data isolation across the city's 89 communities.
 > - **At the City-Wide Sovereign Tier**, municipal administrators possess full audit capabilities, review pipelines, and system configuration access across all jurisdictions."
 
@@ -304,7 +304,7 @@
 
 > **Verbatim Spoken Script:**
 > 
-> "For **Research Problem 1**, all four Agile phases were successfully completed—from initial legal requirements gathering in Sprint 1, through wireframing and architectural modeling in Sprint 2, full-stack Next.js and Prisma implementation in Sprint 3, to comprehensive user acceptance testing in Sprint 4.
+> "For **Research Problem 1**, all four Agile phases were successfully completed—from initial legislative requirements gathering in Sprint 1, through wireframing and architectural modeling in Sprint 2, full-stack Next.js and Prisma implementation in Sprint 3, to comprehensive user acceptance testing in Sprint 4.
 > 
 > More importantly, we conducted an empirical deployment costing analysis, summarized in **Table 19** of our manuscript:
 > 
@@ -449,7 +449,7 @@
 > 
 > - **Track 1: Technical Hardening and Accessibility:** Focus immediate engineering effort on enhancing system recoverability through automated SQLite WAL snapshots, integrating detailed administrative audit logs, and refining ARIA live-region announcements for screen readers.
 > - **Track 2: Phased Municipal Rollout:** We advise the City Government of Cabanatuan to initiate a formal **two-to-three barangay live pilot** for six months. This will allow the LGU to validate operational workflows, train barangay secretaries, and monitor server resource utilization before scaling to all 89 barangays.
-> - **Track 3: Policy, Governance, and Longitudinal Research:** Local policymakers should enact an accompanying administrative ordinance recognizing digital ordinance repositories as official public records. Future researchers can then conduct longitudinal studies measuring citizen legal literacy and compliance rates before and after digital deployment."
+> - **Track 3: Policy, Governance, and Longitudinal Research:** Local policymakers should enact an accompanying administrative ordinance recognizing digital ordinance repositories as official public records. Future researchers can then conduct longitudinal studies measuring citizen civic awareness and compliance rates before and after digital deployment."
 
 - **Slide Transition:** *"Next slide, please. We now conclude our formal presentation."*
 
@@ -480,7 +480,7 @@ Here are the most likely questions the panel will ask, matched to the presenter 
 > **Panel Question:** *"How can you guarantee that your AI chatbot will not hallucinate or give misleading legal advice that could get the City Government sued?"*
 > 
 > **Defensive Answer (Speaker 2):**
-> *"Thank you for that critical question, sir/ma'am. We addressed this through strict architectural Retrieval-Augmented Generation (RAG). The LLM is never permitted to answer from general parametric knowledge. Every query performs a vector and relational similarity search against our verified municipal database. If an ordinance is not in the database, the prompt explicitly instructs the model to state that no relevant ordinance was found. Furthermore, every response is accompanied by the exact ordinance title, number, penalty tiers, and an automated statutory disclaimer that the AI provides informational guidance rather than legal representation."*
+> *"Thank you for that critical question, sir/ma'am. We addressed this through strict architectural Retrieval-Augmented Generation (RAG). The LLM is never permitted to answer from general parametric knowledge. Every query performs a keyword and relational search against our verified municipal database. If an ordinance is not in the database, the prompt explicitly instructs the model to state that no relevant ordinance was found. Furthermore, every response is accompanied by the exact ordinance title, number, penalty tiers, and an automated statutory disclaimer that the AI provides informational guidance rather than formal legal counsel."*
 
 ---
 

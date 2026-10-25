@@ -47,7 +47,7 @@ export default function CivicChatReplay() {
           }}
         >
           <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#10b981' }} />
-          Online · SQLite WAL Vector Indexed
+          Online · SQLite WAL Keyword Indexed
         </div>
       </div>
 

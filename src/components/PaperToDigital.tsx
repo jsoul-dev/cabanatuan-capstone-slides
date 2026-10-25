@@ -131,11 +131,11 @@ export default function PaperToDigital({ showDigital = true }: PaperToDigitalPro
         <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px', textAlign: 'left' }}>
           <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', lineHeight: 1.5, textAlign: 'left', color: 'var(--fg)' }}>
             <span style={{ color: '#10b981', fontWeight: 700, marginTop: '2px', flexShrink: 0 }}>✓</span>
-            <span style={{ textAlign: 'left' }}><strong>Immutable Cloud Archiving:</strong> SQLite WAL persistent volume stores digital ordinance copies, searchable text, and verified official PDFs.</span>
+            <span style={{ textAlign: 'left' }}><strong>Persistent Digital Archiving:</strong> SQLite WAL persistent volume stores digital ordinance copies, searchable text, and verified official PDFs.</span>
           </li>
           <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', lineHeight: 1.5, textAlign: 'left', color: 'var(--fg)' }}>
             <span style={{ color: '#10b981', fontWeight: 700, marginTop: '2px', flexShrink: 0 }}>✓</span>
-            <span style={{ textAlign: 'left' }}><strong>Sub-Second Semantic Search:</strong> Real-time filtering by category, year, keyword, and barangay jurisdiction with high-speed indexing.</span>
+            <span style={{ textAlign: 'left' }}><strong>Fast Filtered Search:</strong> Real-time filtering by category, year, keyword, and barangay jurisdiction with high-speed indexing.</span>
           </li>
           <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', lineHeight: 1.5, textAlign: 'left', color: 'var(--fg)' }}>
             <span style={{ color: '#10b981', fontWeight: 700, marginTop: '2px', flexShrink: 0 }}>✓</span>

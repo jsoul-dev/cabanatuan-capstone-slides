@@ -290,7 +290,7 @@ export default function App() {
       <Slide
         center
         nav="Beneficiaries"
-        notes="The platform serves four primary stakeholder groups: residents who gain continuous 24/7 access to laws; barangay personnel who accelerate legislative work; city administrators who gain city-wide visibility; and future researchers studying Philippine civic digital transformation."
+        notes="The platform serves four primary stakeholder groups: residents who gain continuous 24/7 access to ordinances; barangay personnel who accelerate legislative work; city administrators who gain city-wide visibility; and future researchers studying Philippine civic digital transformation."
       >
         <div style={{ maxWidth: 1160, marginInline: 'auto' }}>
           <span className="kicker" style={{ color: 'var(--primary)' }}>Municipal Stakeholders</span>
@@ -409,7 +409,7 @@ export default function App() {
       <Slide
         center
         nav="AI Assistant"
-        notes="Here we demonstrate the Civic AI Assistant responding to a resident in Tagalog regarding waste burning penalties. Notice how the system cites both the specific City Ordinance and Barangay Ordinance with exact penalty tiers, bounded strictly to municipal records with no legal hallucinations."
+        notes="Here we demonstrate the Civic AI Assistant responding to a resident in Tagalog regarding waste burning penalties. Notice how the system cites both the specific City Ordinance and Barangay Ordinance with exact penalty tiers, bounded strictly to municipal records with no hallucinations."
       >
         <div style={{ maxWidth: 980, marginInline: 'auto' }}>
           <span className="kicker" style={{ color: 'var(--primary)' }}>Retrieval-Augmented Generation</span>
@@ -779,7 +779,7 @@ export default function App() {
 
               <div style={{ padding: '10px 14px', background: 'rgba(255, 255, 255, 0.02)', borderRadius: '8px', borderLeft: '3px solid #10b981' }}>
                 <div style={{ fontSize: '13px', fontWeight: 700, color: '#f8fafc' }}>Phase 1: Planning & Requirements</div>
-                <div style={{ fontSize: '12px', color: 'var(--fg-muted)' }}>Cabanatuan legal scope, needs assessment, and user stories.</div>
+                <div style={{ fontSize: '12px', color: 'var(--fg-muted)' }}>Cabanatuan ordinance scope, needs assessment, and user stories.</div>
               </div>
 
               <div style={{ padding: '10px 14px', background: 'rgba(255, 255, 255, 0.02)', borderRadius: '8px', borderLeft: '3px solid var(--accent-gold)' }}>
@@ -1415,7 +1415,7 @@ export default function App() {
             </div>
             <div style={{ padding: '12px 16px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '8px', borderLeft: '3px solid var(--accent-gold)' }}>
               <div style={{ fontWeight: 700, color: '#f8fafc' }}>2. Unnecessarily complex (Negative)</div>
-              <div style={{ color: 'var(--accent-gold)', fontWeight: 700 }}>Mean: 1.85 / 5.00 (Low is good)</div>
+              <div style={{ color: 'var(--accent-gold)', fontWeight: 700 }}>Mean: 2.23 / 5.00 (Low is good)</div>
             </div>
             <div style={{ padding: '12px 16px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '8px', borderLeft: '3px solid #10b981' }}>
               <div style={{ fontWeight: 700, color: '#f8fafc' }}>3. Thought the system was easy to use (Positive)</div>
@@ -1423,7 +1423,7 @@ export default function App() {
             </div>
             <div style={{ padding: '12px 16px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '8px', borderLeft: '3px solid var(--accent-gold)' }}>
               <div style={{ fontWeight: 700, color: '#f8fafc' }}>4. Need technical support to use (Negative)</div>
-              <div style={{ color: 'var(--accent-gold)', fontWeight: 700 }}>Mean: 1.95 / 5.00 (Low is good)</div>
+              <div style={{ color: 'var(--accent-gold)', fontWeight: 700 }}>Mean: 2.27 / 5.00 (Low is good)</div>
             </div>
             <div style={{ padding: '12px 16px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '8px', borderLeft: '3px solid #10b981' }}>
               <div style={{ fontWeight: 700, color: '#f8fafc' }}>5. Functions well integrated (Positive)</div>
@@ -1431,7 +1431,7 @@ export default function App() {
             </div>
             <div style={{ padding: '12px 16px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '8px', borderLeft: '3px solid var(--accent-gold)' }}>
               <div style={{ fontWeight: 700, color: '#f8fafc' }}>6. Too much inconsistency (Negative)</div>
-              <div style={{ color: 'var(--accent-gold)', fontWeight: 700 }}>Mean: 1.80 / 5.00 (Low is good)</div>
+              <div style={{ color: 'var(--accent-gold)', fontWeight: 700 }}>Mean: 2.18 / 5.00 (Low is good)</div>
             </div>
             <div style={{ padding: '12px 16px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '8px', borderLeft: '3px solid #10b981' }}>
               <div style={{ fontWeight: 700, color: '#f8fafc' }}>7. People learn very quickly (Positive)</div>
@@ -1439,15 +1439,15 @@ export default function App() {
             </div>
             <div style={{ padding: '12px 16px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '8px', borderLeft: '3px solid var(--accent-gold)' }}>
               <div style={{ fontWeight: 700, color: '#f8fafc' }}>8. Found system cumbersome to use (Negative)</div>
-              <div style={{ color: 'var(--accent-gold)', fontWeight: 700 }}>Mean: 1.90 / 5.00 (Low is good)</div>
+              <div style={{ color: 'var(--accent-gold)', fontWeight: 700 }}>Mean: 2.20 / 5.00 (Low is good)</div>
             </div>
             <div style={{ padding: '12px 16px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '8px', borderLeft: '3px solid #10b981' }}>
               <div style={{ fontWeight: 700, color: '#f8fafc' }}>9. Felt very confident using system (Positive)</div>
-              <div style={{ color: '#34d399', fontWeight: 700 }}>Mean: 4.18 / 5.00</div>
+              <div style={{ color: '#34d399', fontWeight: 700 }}>Mean: 4.21 / 5.00</div>
             </div>
             <div style={{ padding: '12px 16px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '8px', borderLeft: '3px solid var(--accent-gold)' }}>
               <div style={{ fontWeight: 700, color: '#f8fafc' }}>10. Need to learn lot of things before going (Negative)</div>
-              <div style={{ color: 'var(--accent-gold)', fontWeight: 700 }}>Mean: 1.82 / 5.00 (Low is good)</div>
+              <div style={{ color: 'var(--accent-gold)', fontWeight: 700 }}>Mean: 2.29 / 5.00 (Low is good)</div>
             </div>
           </div>
           <div style={{ marginTop: '14px', padding: '12px', background: 'rgba(16, 185, 129, 0.12)', borderRadius: '8px', textAlign: 'center', fontWeight: 700, color: '#f8fafc' }}>

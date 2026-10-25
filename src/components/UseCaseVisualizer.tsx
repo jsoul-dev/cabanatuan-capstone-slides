@@ -98,7 +98,7 @@ const USE_CASES: UseCaseDef[] = [
     category: 'public',
     y: 34,
     actors: ['CITIZEN'],
-    note: 'Keyword search, category filtering & PDF statutory viewer',
+    note: 'Keyword search, category filtering & PDF ordinance viewer',
   },
   {
     id: 'query_ai',
@@ -106,7 +106,7 @@ const USE_CASES: UseCaseDef[] = [
     category: 'ai',
     y: 74,
     actors: ['CITIZEN', 'GEMINI_AI'],
-    note: 'Natural language bilingual RAG with strict legal citations',
+    note: 'Natural language bilingual RAG with exact ordinance citations',
   },
   {
     id: 'submit_report',
@@ -791,7 +791,7 @@ const ROLE_CARDS: {
     badgeBg: 'rgba(56, 189, 248, 0.15)',
     title: 'City LGU Administrator',
     meta: 'City-Wide Authority • Sovereign Governance',
-    desc: 'City-wide sovereign governance. Enacts or rejects proposed ordinances with remarks, publishes city-wide laws, oversees all reports, and manages user RBAC.',
+    desc: 'City-wide sovereign governance. Enacts or rejects proposed ordinances with remarks, publishes city-wide ordinances, oversees all reports, and manages user RBAC.',
   },
   {
     id: 'GEMINI_AI',
@@ -800,7 +800,7 @@ const ROLE_CARDS: {
     badgeBg: 'rgba(192, 132, 252, 0.15)',
     title: 'External AI Service (Google Gemini)',
     meta: 'Gemini 3.5 Flash Lite • Multimodal RAG',
-    desc: 'External machine actor powered by Google Gemini 3.5 Flash Lite. Executes multimodal document OCR parsing and powers bilingual conversational RAG inquiries with statutory legal citations.',
+    desc: 'External machine actor powered by Google Gemini 3.5 Flash Lite. Executes multimodal document OCR parsing and powers bilingual conversational RAG inquiries with official ordinance citations.',
   },
 ];
 

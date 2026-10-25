@@ -6,7 +6,7 @@ interface SusGaugeProps {
   benchmark?: number;
 }
 
-export default function SusGauge({ score = 80.22, benchmark = 68.0 }: SusGaugeProps) {
+export default function SusGauge({ score = 75.13, benchmark = 68.0 }: SusGaugeProps) {
   const [animatedProgress, setAnimatedProgress] = useState(0);
 
   useEffect(() => {
@@ -159,7 +159,7 @@ export default function SusGauge({ score = 80.22, benchmark = 68.0 }: SusGaugePr
               fontWeight: 700,
             }}
           >
-            +12.22 Above Benchmark (68.0)
+            +7.13 Above Benchmark (68.0)
           </span>
         </div>
       </div>

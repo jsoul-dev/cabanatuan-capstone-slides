@@ -114,7 +114,7 @@ export default function IsoQualityChart() {
             4.28
           </div>
           <div style={{ fontSize: '13px', fontWeight: 600, color: '#34d399' }}>
-            "Strongly Agree" / Highly Suitable
+            Overall mean 4.28 (Highly Suitable/Efficient)
           </div>
         </div>
 

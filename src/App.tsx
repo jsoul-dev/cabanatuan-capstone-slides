@@ -974,12 +974,12 @@ export default function App() {
       <Slide
         center
         nav="RP2: ISO 25010"
-        notes="For Research Problem 2, IT experts evaluated the platform using ISO/IEC 25010:2023, yielding an overall weighted mean of 4.28, interpreted as Highly Suitable. Compatibility and Functional Suitability led the evaluation, while Recoverability and Audit Logging were pinpointed as areas for technical hardening."
+        notes="For Research Problem 2, IT experts evaluated the platform using ISO/IEC 25010:2023, yielding an overall mean of 4.28 (Highly Suitable/Efficient). Compatibility and Functional Suitability led the highest evaluation band, while Recoverability and Audit Logging were pinpointed as areas for technical hardening."
       >
         <div style={{ maxWidth: 1160, marginInline: 'auto' }}>
           <span className="kicker" style={{ color: 'var(--primary)' }}>Research Problem 2 Findings</span>
           <h2 className="headline" style={{ margin: '6px 0 20px 0' }}>
-            ISO/IEC 25010:2023 Software Product Quality (Mean: 4.28)
+            ISO/IEC 25010:2023 Overall Mean 4.28 (Highly Suitable/Efficient)
           </h2>
 
           <IsoQualityChart />
@@ -992,15 +992,15 @@ export default function App() {
       <Slide
         center
         nav="RP3: SUS Usability"
-        notes="For Research Problem 3, end-user usability measured via the System Usability Scale achieved an outstanding score of 80.22 out of 100, surpassing the 68.0 benchmark by 12.22 points. Respondents expressed high willingness to use the platform frequently and praised its seamless feature integration."
+        notes="For Research Problem 3, end-user usability measured via the System Usability Scale achieved a score of 75.13 out of 100, surpassing the 68.0 benchmark by 7.13 points. Respondents expressed high willingness to use the platform frequently and praised its seamless feature integration."
       >
         <div style={{ maxWidth: 1120, marginInline: 'auto' }}>
           <span className="kicker" style={{ color: 'var(--primary)' }}>Research Problem 3 Findings</span>
           <h2 className="headline" style={{ margin: '6px 0 20px 0' }}>
-            System Usability Scale: 80.22 / 100 ("Good" / Acceptable)
+            System Usability Scale: 75.13 / 100 ("Good" / Acceptable)
           </h2>
 
-          <SusGauge score={80.22} benchmark={68.0} />
+          <SusGauge score={75.13} benchmark={68.0} />
         </div>
       </Slide>
 
@@ -1060,17 +1060,17 @@ export default function App() {
                 Technical Quality (4.28)
               </h3>
               <p style={{ fontSize: '13px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
-                Rated "Strongly Agree" under ISO 25010 by 10 IT experts. High scores in Compatibility (4.55) and Functional Suitability (4.50).
+                Overall mean 4.28 (Highly Suitable/Efficient) under ISO 25010 by 10 IT experts. High scores in Compatibility (4.55) and Functional Suitability (4.50).
               </p>
             </div>
 
             <div style={{ padding: '22px', background: 'rgba(255, 255, 255, 0.03)', border: '1px solid var(--hair-2)', borderRadius: 'var(--radius)' }}>
               <div style={{ fontSize: '11px', textTransform: 'uppercase', color: '#34d399', fontWeight: 700 }}>Pillar 03</div>
               <h3 style={{ fontSize: '17px', fontWeight: 700, color: '#f8fafc', margin: '6px 0 8px 0' }}>
-                Usability (80.22 SUS)
+                Usability (75.13 SUS)
               </h3>
               <p style={{ fontSize: '13px', color: 'var(--fg-muted)', lineHeight: 1.5, margin: 0 }}>
-                Surpassed the 68.0 industry benchmark by +12.22 points (Grade B+, "Good"), led by frequent user willingness (4.30).
+                Surpassed the 68.0 industry benchmark by +7.13 points (Grade B, "Good" / Acceptable), led by frequent user willingness (4.30).
               </p>
             </div>
 
@@ -1310,7 +1310,7 @@ export default function App() {
                 <tr style={{ background: 'rgba(16, 185, 129, 0.15)', fontWeight: 800 }}>
                   <td style={{ padding: '10px 16px', color: '#f8fafc' }}>Overall Software Quality Weighted Mean</td>
                   <td style={{ textAlign: 'center', color: '#34d399', fontSize: '15px' }}>4.28</td>
-                  <td colSpan={2} style={{ padding: '10px 16px', color: '#f8fafc' }}>"Strongly Agree" / Highly Suitable</td>
+                  <td colSpan={2} style={{ padding: '10px 16px', color: '#f8fafc' }}>Highly Suitable/Efficient</td>
                 </tr>
               </tbody>
             </table>
@@ -1373,7 +1373,7 @@ export default function App() {
             </div>
           </div>
           <div style={{ marginTop: '14px', padding: '12px', background: 'rgba(16, 185, 129, 0.12)', borderRadius: '8px', textAlign: 'center', fontWeight: 700, color: '#f8fafc' }}>
-            Calculated SUS Composite Score: 80.22 / 100 · Grade B+ · "Good" (Acceptable)
+            Calculated SUS Composite Score: 75.13 / 100 · Grade B · "Good" (Acceptable)
           </div>
         </div>
       </Slide>

@@ -959,13 +959,12 @@ The IT experts assessed the Web-Based AI-Assisted Ordinance Information System a
 **Table 20.**
 Functional Suitability — The degree to which the system provides functions that meet stated and implied needs when used under specified conditions. (As Rated by IT Experts, N = 10)
 
-| Item Statement | Strongly Agree (5) | Strongly Agree (5) | Agree (4) | Agree (4) | Neutral (3) | Neutral (3) | Disagree (2) | Disagree (2) | Strongly Disagree (1) | Strongly Disagree (1) | Mean | Verbal Description |
+| Item Statement | Strongly Agree (5) f | Strongly Agree (5) % | Agree (4) f | Agree (4) % | Neutral (3) f | Neutral (3) % | Disagree (2) f | Disagree (2) % | Strongly Disagree (1) f | Strongly Disagree (1) % | Mean | Verbal Description |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Item Statement | f | % | f | % | f | % | f | % | f | % | Mean | Verbal Description |
 | The system covers all specified tasks and user objectives related to ordinance management, AI-assisted chatbot inquiries, resident reporting, and administrative oversight. | 8 | 80.0% | 2 | 20.0% | 0 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.80 | Highly Suitable |
 | The system provides correct and precise results, including accurate ordinance search matches and properly cited AI chatbot responses. | 3 | 30.0% | 6 | 60.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.20 | Suitable |
 | The system functions facilitate the accomplishment of municipal governance tasks such as ordinance publishing, report triage, and city-wide analytics. | 6 | 60.0% | 3 | 30.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.50 | Highly Suitable |
-| Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | 4.50 | Highly Suitable |
+| Category Mean |  |  |  |  |  |  |  |  |  |  | 4.50 | Highly Suitable |
 
 Note. n = 10. Scale and verbal description: 4.21–5.00 = Highly Suitable (HS); 3.41–4.20 = Suitable (S); 2.61–3.40 = Somewhat Suitable (SS); 1.81–2.60 = Unsuitable (U); 1.00–1.80 = Highly Unsuitable (HU).
 As shown in Table 20, the IT experts rated Functional Suitability Highly Suitable (category mean = 4.50). The functional completeness indicator received the highest rating (4.80), with eight of the ten experts awarding the highest score. Facilitation of municipal governance tasks obtained a mean of 4.50 (Highly Suitable), while functional correctness received the relatively lowest rating within the category (4.20, Suitable).
@@ -975,13 +974,12 @@ The IT experts assessed the system as Highly Efficient in terms of Performance E
 **Table 21.**
 Performance Efficiency — Relative to the number of resources used under stated conditions. (As Rated by IT Experts, N = 10)
 
-| Item Statement | Strongly Agree (5) | Strongly Agree (5) | Agree (4) | Agree (4) | Neutral (3) | Neutral (3) | Disagree (2) | Disagree (2) | Strongly Disagree (1) | Strongly Disagree (1) | Mean | Verbal Description |
+| Item Statement | Strongly Agree (5) f | Strongly Agree (5) % | Agree (4) f | Agree (4) % | Neutral (3) f | Neutral (3) % | Disagree (2) f | Disagree (2) % | Strongly Disagree (1) f | Strongly Disagree (1) % | Mean | Verbal Description |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Item Statement | f | % | f | % | f | % | f | % | f | % | Mean | Verbal Description |
 | The system responds and processes events promptly, including ordinance searches, PDF rendering, and AI chatbot replies. | 6 | 60.0% | 3 | 30.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.50 | Highly Efficient |
 | The system utilizes information resources efficiently (Resource Allocation) | 5 | 50.0% | 4 | 40.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.40 | Highly Efficient |
 | The system parameters meet the requirements for handling simultaneous AI chat queries, ordinance indexing, and dashboard updates. | 3 | 30.0% | 7 | 70.0% | 0 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.30 | Highly Efficient |
-| Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | 4.40 | Highly Efficient |
+| Category Mean |  |  |  |  |  |  |  |  |  |  | 4.40 | Highly Efficient |
 
 Note. n = 10. Scale and verbal description: 4.21–5.00 = Highly Efficient (HE); 3.41–4.20 = Efficient (E); 2.61–3.40 = Less Efficient (LE); 1.81–2.60 = Inefficient (I); 1.00–1.80 = Highly Inefficient (HI).
 As shown in Table 21, Performance Efficiency achieved a category mean of 4.40 (Highly Efficient). Prompt event processing during ordinance searches, PDF rendering, and conversational AI replies obtained the highest evaluation (4.50), followed by resource allocation efficiency (4.40). System capacity parameters for handling concurrent queries, document indexing, and dashboard updates received a mean of 4.30.
@@ -991,12 +989,11 @@ The IT experts assessed the system as Highly Compatible in terms of Compatibilit
 **Table 22.**
 Compatibility — The degree to which a software system can exchange information with other systems whilst sharing the same software and hardware. (As Rated by IT Experts, N = 10)
 
-| Item Statement | Strongly Agree (5) | Strongly Agree (5) | Agree (4) | Agree (4) | Neutral (3) | Neutral (3) | Disagree (2) | Disagree (2) | Strongly Disagree (1) | Strongly Disagree (1) | Mean | Verbal Description |
+| Item Statement | Strongly Agree (5) f | Strongly Agree (5) % | Agree (4) f | Agree (4) % | Neutral (3) f | Neutral (3) % | Disagree (2) f | Disagree (2) % | Strongly Disagree (1) f | Strongly Disagree (1) % | Mean | Verbal Description |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Item Statement | f | % | f | % | f | % | f | % | f | % | Mean | Verbal Description |
 | The system performs its required operations efficiently while sharing its environment and resources with other browser tabs and local applications. | 5 | 50.0% | 5 | 50.0% | 0 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.50 | Highly Compatible |
 | The system interacts properly with external services such as the Google Gemini API, cloud storage endpoints, and data export formats like PDF and CSV. | 7 | 70.0% | 2 | 20.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.60 | Highly Compatible |
-| Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | 4.55 | Highly Compatible |
+| Category Mean |  |  |  |  |  |  |  |  |  |  | 4.55 | Highly Compatible |
 
 Note. n = 10. Scale and verbal description: 4.21–5.00 = Highly Compatible (HC); 3.41–4.20 = Compatible (C); 2.61–3.40 = Somewhat Compatible (SC); 1.81–2.60 = Less Compatible (LC); 1.00–1.80 = Not Compatible (NC).
 As shown in Table 22, Compatibility achieved the highest category mean among all evaluated characteristics (4.55, Highly Compatible). Interoperability with external services including the Google Gemini API, storage endpoints, and document export formats received the highest rating (4.60), with seven experts awarding the highest score. Environmental co-existence alongside other browser tabs and local applications obtained a mean of 4.50.
@@ -1006,9 +1003,8 @@ The IT experts assessed the system as Highly Interactive in terms of Interaction
 **Table 23.**
 Interaction Capability — The degree to which a system can be interacted with by specified users to exchange information through the user interface to complete the intended task. (As Rated by IT Experts, N = 10)
 
-| Item Statement | Strongly Agree (5) | Strongly Agree (5) | Agree (4) | Agree (4) | Neutral (3) | Neutral (3) | Disagree (2) | Disagree (2) | Strongly Disagree (1) | Strongly Disagree (1) | Mean | Verbal Description |
+| Item Statement | Strongly Agree (5) f | Strongly Agree (5) % | Agree (4) f | Agree (4) % | Neutral (3) f | Neutral (3) % | Disagree (2) f | Disagree (2) % | Strongly Disagree (1) f | Strongly Disagree (1) % | Mean | Verbal Description |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Item Statement | f | % | f | % | f | % | f | % | f | % | Mean | Verbal Description |
 | The system can be easily recognized by end-users as a platform to access ordinance information and report community concerns. | 7 | 70.0% | 3 | 30.0% | 0 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.70 | Highly Interactive |
 | The system can be easily learned by residents, barangay officials, and LGU administrators with minimal training. | 4 | 40.0% | 6 | 60.0% | 0 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.40 | Highly Interactive |
 | The system can be easily operated and controlled across its modules, including ordinance browsing, chatbot interaction, report submission, and admin dashboards. | 3 | 30.0% | 5 | 50.0% | 2 | 20.0% | 0 | 0.0% | 0 | 0.0% | 4.10 | Interactive |
@@ -1017,7 +1013,7 @@ Interaction Capability — The degree to which a system can be interacted with b
 | The system provides inclusive access to users with varying abilities and devices, including mobile and assistive technology users. | 3 | 30.0% | 2 | 20.0% | 5 | 50.0% | 0 | 0.0% | 0 | 0.0% | 3.80 | Interactive |
 | The system provides helpful instructions, tooltips, and contextual guidance during operations such as report filing and ordinance uploading. | 2 | 20.0% | 7 | 70.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.10 | Interactive |
 | The system promotes user engagement through interactive elements such as real-time AI response streaming, search auto-completion, and status update notifications. | 5 | 50.0% | 4 | 40.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.40 | Highly Interactive |
-| Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | 4.24 | Highly Interactive |
+| Category Mean |  |  |  |  |  |  |  |  |  |  | 4.24 | Highly Interactive |
 
 Note. n = 10. Scale and verbal description: 4.21–5.00 = Highly Interactive (HI); 3.41–4.20 = Interactive (I); 2.61–3.40 = Less Interactive (LI); 1.81–2.60 = Poorly Interactive (PI); 1.00–1.80 = Non-Interactive (NI).
 As shown in Table 23, Interaction Capability obtained a category mean of 4.24 (Highly Interactive). Appropriateness recognizability received the highest assessment (4.70), followed by learnability and user engagement (4.40 each). Module operability, user error protection, and supportability guidance each obtained ratings of 4.10 (Interactive). Inclusive access across varying abilities and assistive devices received the lowest rating within this characteristic (3.80, Interactive), with half of the experts recording a neutral response.
@@ -1027,14 +1023,13 @@ The IT experts assessed the system as Reliable in terms of Reliability. Table 24
 **Table 24.**
 Reliability — The degree to which the system performs specified functions under specified conditions for a specified period of time. (As Rated by IT Experts, N = 10)
 
-| Item Statement | Strongly Agree (5) | Strongly Agree (5) | Agree (4) | Agree (4) | Neutral (3) | Neutral (3) | Disagree (2) | Disagree (2) | Strongly Disagree (1) | Strongly Disagree (1) | Mean | Verbal Description |
+| Item Statement | Strongly Agree (5) f | Strongly Agree (5) % | Agree (4) f | Agree (4) % | Neutral (3) f | Neutral (3) % | Disagree (2) f | Disagree (2) % | Strongly Disagree (1) f | Strongly Disagree (1) % | Mean | Verbal Description |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Item Statement | f | % | f | % | f | % | f | % | f | % | Mean | Verbal Description |
 | The system meets the needs of its users under normal operations without unexpected failures. | 7 | 70.0% | 3 | 30.0% | 0 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.70 | Highly Reliable |
 | The system is accessible and operational at a time needed for use. | 3 | 30.0% | 6 | 60.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.20 | Reliable |
 | The system operates as planned despite the existence of technical anomalies such as API timeouts or invalid file uploads. | 4 | 40.0% | 5 | 50.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.30 | Highly Reliable |
 | During an unexpected disruption, the system recovers and re-establishes to its desired state, preserving user session data and draft reports. | 0 | 0.0% | 2 | 20.0% | 8 | 80.0% | 0 | 0.0% | 0 | 0.0% | 3.20 | Slightly Reliable |
-| Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | 4.10 | Reliable |
+| Category Mean |  |  |  |  |  |  |  |  |  |  | 4.10 | Reliable |
 
 Note. n = 10. Scale and verbal description: 4.21–5.00 = Highly Reliable (HR); 3.41–4.20 = Reliable (R); 2.61–3.40 = Slightly Reliable (SR); 1.81–2.60 = Unreliable (U); 1.00–1.80 = Non-Reliable (NR).
 As shown in Table 24, Reliability was rated Reliable overall (category mean = 4.10). Operational stability under normal conditions received the highest score (4.70), followed by fault tolerance during technical anomalies (4.30) and operational availability (4.20). In contrast, recoverability following unexpected disruptions received the lowest rating (3.20, Slightly Reliable), with eight of the ten experts selecting a neutral score.
@@ -1044,16 +1039,15 @@ The IT experts assessed the system as Adequate Security in terms of Security. Ta
 **Table 25.**
 Security — The degree to which a system prevents unauthorized access to, or modification of, computer programs or data. (As Rated by IT Experts, N = 10)
 
-| Item Statement | Strongly Agree (5) | Strongly Agree (5) | Agree (4) | Agree (4) | Neutral (3) | Neutral (3) | Disagree (2) | Disagree (2) | Strongly Disagree (1) | Strongly Disagree (1) | Mean | Verbal Description |
+| Item Statement | Strongly Agree (5) f | Strongly Agree (5) % | Agree (4) f | Agree (4) % | Neutral (3) f | Neutral (3) % | Disagree (2) f | Disagree (2) % | Strongly Disagree (1) f | Strongly Disagree (1) % | Mean | Verbal Description |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Item Statement | f | % | f | % | f | % | f | % | f | % | Mean | Verbal Description |
 | The system ensures that ordinance records, citizen data, and administrative functions are accessible only to those authorized through role-based access control. | 6 | 60.0% | 4 | 40.0% | 0 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.60 | Strong Security |
 | The system prevents unauthorized access to or modification of ordinance texts, report records, and audit logs. | 3 | 30.0% | 6 | 60.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.20 | Adequate Security |
 | The system can prove an action or event believed to have taken place, such as ordinance approvals, report status changes, and user login activities. | 2 | 20.0% | 5 | 50.0% | 3 | 30.0% | 0 | 0.0% | 0 | 0.0% | 3.90 | Adequate Security |
 | The system can uniquely trace or account for an action or event of an entity through comprehensive audit logging. | 2 | 20.0% | 4 | 40.0% | 2 | 20.0% | 2 | 20.0% | 0 | 0.0% | 3.60 | Adequate Security |
 | The system can properly identify and authenticate its users through secure login mechanisms and session management. | 7 | 70.0% | 2 | 20.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.60 | Strong Security |
 | The system can preserve and protect its past ordinance records, archived reports, and transaction histories for future reference. | 3 | 30.0% | 5 | 50.0% | 2 | 20.0% | 0 | 0.0% | 0 | 0.0% | 4.10 | Adequate Security |
-| Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | 4.17 | Adequate Security |
+| Category Mean |  |  |  |  |  |  |  |  |  |  | 4.17 | Adequate Security |
 
 Note. n = 10. Scale and verbal description: 4.21–5.00 = Strong Security (SS); 3.41–4.20 = Adequate Security (AS); 2.61–3.40 = Weak Security (WS); 1.81–2.60 = Very Weak Security (VWS); 1.00–1.80 = No Security (NS).
 As shown in Table 25, Security was rated Adequate Security overall (category mean = 4.17). Role-based access control and user authentication tied for the highest evaluation (4.60 each, Strong Security). Prevention of unauthorized record modifications obtained 4.20, and historical record preservation received 4.10. Non-repudiation scored 3.90, while comprehensive audit logging received the lowest rating (3.60, Adequate Security), with two experts recording disagreement ratings.
@@ -1063,15 +1057,14 @@ The IT experts assessed the system as Highly Maintainable in terms of Maintainab
 Table 26.
 Maintainability — Refers to how well a system can be modified to improve, correct or adapt to changes in the environment as well as requirements. (As Rated by IT Experts, N = 10)
 
-| Item Statement | Strongly Agree (5) | Strongly Agree (5) | Agree (4) | Agree (4) | Neutral (3) | Neutral (3) | Disagree (2) | Disagree (2) | Strongly Disagree (1) | Strongly Disagree (1) | Mean | Verbal Description |
+| Item Statement | Strongly Agree (5) f | Strongly Agree (5) % | Agree (4) f | Agree (4) % | Neutral (3) f | Neutral (3) % | Disagree (2) f | Disagree (2) % | Strongly Disagree (1) f | Strongly Disagree (1) % | Mean | Verbal Description |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Item Statement | f | % | f | % | f | % | f | % | f | % | Mean | Verbal Description |
 | The system is composed of discrete components or modules, such as ordinance management, chatbot, reporting, and admin dashboard, for easy usage and maintenance. | 8 | 80.0% | 2 | 20.0% | 0 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.80 | Highly Maintainable |
 | The modules and components of the system such as UI elements, validation utilities, and data services can be reused across different parts of the application. | 6 | 60.0% | 4 | 40.0% | 0 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.60 | Highly Maintainable |
 | The system can diagnose or troubleshoot problems quickly through clear error messages, logs, and debugging tools. | 2 | 20.0% | 3 | 30.0% | 5 | 50.0% | 0 | 0.0% | 0 | 0.0% | 3.70 | Maintainable |
 | The system can be changed or updated, such as adding new ordinance categories or modifying AI prompts, without introducing bugs or degrading existing standards. | 2 | 20.0% | 8 | 80.0% | 0 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.20 | Maintainable |
 | The system can provide test criteria for verifying certain actions or changes, including AI response accuracy, report routing, and search functionality. | 3 | 30.0% | 6 | 60.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.20 | Maintainable |
-| Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | 4.30 | Highly Maintainable |
+| Category Mean |  |  |  |  |  |  |  |  |  |  | 4.30 | Highly Maintainable |
 
 Note. n = 10. Scale and verbal description: 4.21–5.00 = Highly Maintainable (HM); 3.41–4.20 = Maintainable (M); 2.61–3.40 = Less Maintainable (LM); 1.81–2.60 = Hardly Maintainable (HM); 1.00–1.80 = Not Maintainable (NM).
 As shown in Table 26, Maintainability was evaluated as Highly Maintainable (category mean = 4.30). System modularity achieved the highest rating (4.80), with eight of the ten experts giving the highest mark, followed by module reusability (4.60). System modifiability and test criteria each received 4.20 (Maintainable). In contrast, diagnostic problem troubleshooting through error messages and logs received the lowest rating (3.70, Maintainable), with half of the experts assigning a neutral rating.
@@ -1081,13 +1074,12 @@ The IT experts assessed the system as Flexible in terms of Flexibility. Table 27
 **Table 27.**
 Flexibility — The degree to which a product can be adapted to changes in its requirements, contexts of use or system environment. (As Rated by IT Experts, N = 10)
 
-| Item Statement | Strongly Agree (5) | Strongly Agree (5) | Agree (4) | Agree (4) | Neutral (3) | Neutral (3) | Disagree (2) | Disagree (2) | Strongly Disagree (1) | Strongly Disagree (1) | Mean | Verbal Description |
+| Item Statement | Strongly Agree (5) f | Strongly Agree (5) % | Agree (4) f | Agree (4) % | Neutral (3) f | Neutral (3) % | Disagree (2) f | Disagree (2) % | Strongly Disagree (1) f | Strongly Disagree (1) % | Mean | Verbal Description |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Item Statement | f | % | f | % | f | % | f | % | f | % | Mean | Verbal Description |
 | The system can be accessed and functions reliably across different operating systems such as Windows, macOS, Android, and iOS, and modern browsers such as Chrome, Firefox, Edge, and Safari without functional degradation. | 4 | 40.0% | 5 | 50.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.30 | Highly Flexible |
 | The system can be configured and deployed easily to different hosting environments such as cloud platforms or containerized setups. | 3 | 30.0% | 2 | 20.0% | 5 | 50.0% | 0 | 0.0% | 0 | 0.0% | 3.80 | Flexible |
 | The system architecture can be scaled up to accommodate future expansion such as onboarding all 89 barangays and growing the ordinance database. | 2 | 20.0% | 7 | 70.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.10 | Flexible |
-| Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | 4.07 | Flexible |
+| Category Mean |  |  |  |  |  |  |  |  |  |  | 4.07 | Flexible |
 
 Note. n = 10. Scale and verbal description: 4.21–5.00 = Highly Flexible (HF); 3.41–4.20 = Flexible (F); 2.61–3.40 = Less Flexible (LF); 1.81–2.60 = Hardly Flexible (HF); 1.00–1.80 = Not Flexible (NF).
 As shown in Table 27, Flexibility achieved a category mean of 4.07 (Flexible). Cross-platform operating system and web browser adaptability obtained the highest rating (4.30, Highly Flexible). Architectural scalability for future expansion across Cabanatuan City's 89 barangays received 4.10, while ease of configuration and deployment across different hosting environments received the lowest rating (3.80, Flexible).
@@ -1097,13 +1089,12 @@ The IT experts assessed the system as Safe in terms of Safety. Table 28 presents
 **Table 28.**
 Safety — The degree to which a product avoids a state in which human life, health, property, or the environment is endangered. (As Rated by IT Experts, N = 10)
 
-| Item Statement | Strongly Agree (5) | Strongly Agree (5) | Agree (4) | Agree (4) | Neutral (3) | Neutral (3) | Disagree (2) | Disagree (2) | Strongly Disagree (1) | Strongly Disagree (1) | Mean | Verbal Description |
+| Item Statement | Strongly Agree (5) f | Strongly Agree (5) % | Agree (4) f | Agree (4) % | Neutral (3) f | Neutral (3) % | Disagree (2) f | Disagree (2) % | Strongly Disagree (1) f | Strongly Disagree (1) % | Mean | Verbal Description |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Item Statement | f | % | f | % | f | % | f | % | f | % | Mean | Verbal Description |
 | The system enforces operational limits such as file upload size restrictions, allowed file types, and request payload boundaries to prevent resource exhaustion. | 2 | 0.0% | 6 | 0.0% | 2 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.00 | Safe |
 | The system prevents critical user errors through confirmation dialogs and soft-deletion recovery before executing irreversible actions such as archiving ordinances or rejecting reports. | 3 | 0.0% | 7 | 0.0% | 0 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.30 | Highly Safe |
 | The system includes clear disclaimers that AI chatbot answers are informational summaries and not binding legal counsel, accompanied by exact ordinance citations for user verification. | 3 | 0.0% | 6 | 0.0% | 1 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.20 | Safe |
-| Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | 4.17 | Safe |
+| Category Mean |  |  |  |  |  |  |  |  |  |  | 4.17 | Safe |
 
 Note. n = 10. Scale and verbal description: 4.21–5.00 = Highly Safe (HS); 3.41–4.20 = Safe (S); 2.61–3.40 = Slightly Unsafe (SU); 1.81–2.60 = Unsafe (U); 1.00–1.80 = Highly Unsafe (HU).
 As shown in Table 28, Safety obtained a category mean of 4.17 (Safe). Critical error prevention through confirmation dialogs and soft-deletion mechanisms scored highest (4.30, Highly Safe). Inclusion of clear informational disclaimers and exact ordinance citations in conversational AI responses received 4.20, while enforcement of operational payload and file upload limits obtained 4.00.
@@ -1154,9 +1145,8 @@ The IT experts assessed the system as Accessible in terms of the Perceivable pri
 **Table 30**
 Perceivable — Information and user interface components must be presentable to users in ways they can perceive. (As Rated by IT Experts, N = 10)
 
-| Item Statement | Highly Accessible (5) | Highly Accessible (5) | Accessible (4) | Accessible (4) | Moderately Accessible (3) | Moderately Accessible (3) | Slightly Accessible (2) | Slightly Accessible (2) | Not Accessible (1) | Not Accessible (1) | Mean | Verbal Description |
+| Item Statement | Highly Accessible (5) f | Highly Accessible (5) % | Accessible (4) f | Accessible (4) % | Moderately Accessible (3) f | Moderately Accessible (3) % | Slightly Accessible (2) f | Slightly Accessible (2) % | Not Accessible (1) f | Not Accessible (1) % | Mean | Verbal Description |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Item Statement | f | % | f | % | f | % | f | % | f | % | Mean | Verbal Description |
 | The system provides appropriate alternative text for all non-text content. | 3 | 30.0% | 7 | 70.0% | 0 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.30 | Highly Accessible |
 | Informative images include meaningful descriptions. | 3 | 30.0% | 7 | 70.0% | 0 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.30 | Highly Accessible |
 | Complex visuals (charts, infographics) are accompanied by textual explanations. | 1 | 10.0% | 1 | 10.0% | 8 | 80.0% | 0 | 0.0% | 0 | 0.0% | 3.30 | Moderately Accessible |
@@ -1166,7 +1156,7 @@ Perceivable — Information and user interface components must be presentable to
 | Text meets recommended color contrast standards. | 1 | 10.0% | 4 | 40.0% | 4 | 40.0% | 1 | 10.0% | 0 | 0.0% | 3.50 | Accessible |
 | Information is not conveyed by color alone. | 3 | 30.0% | 5 | 50.0% | 1 | 10.0% | 1 | 10.0% | 0 | 0.0% | 4.00 | Accessible |
 | Text is readable, resizable, and clearly visible. | 5 | 50.0% | 4 | 40.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.40 | Highly Accessible |
-| Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | 4.13 | Accessible |
+| Category Mean |  |  |  |  |  |  |  |  |  |  | 4.13 | Accessible |
 
 Note. n = 10. Scale and verbal description: 4.21–5.00 = Highly Accessible (HA); 3.41–4.20 = Accessible (A); 2.61–3.40 = Moderately Accessible (MA); 1.81–2.60 = Slightly Accessible (SlA); 1.00–1.80 = Not Accessible (NA).
 As shown in Table 30, the IT experts rated the Perceivable principle Accessible (category mean = 4.13). Interface usability when zoomed to 200% received the highest rating (4.60), followed by responsive screen adaptation (4.50) and readable text (4.40). Accompanying complex visuals with text explanations received the lowest rating (3.30, Moderately Accessible), with eight of the ten experts rating it neutral.
@@ -1176,9 +1166,8 @@ The IT experts assessed the system as Highly Accessible in terms of the Operable
 **Table 31.**
 Operable — User interface components and navigation must be operable. (As Rated by IT Experts, N = 10)
 
-| Item Statement | Highly Accessible (5) | Highly Accessible (5) | Accessible (4) | Accessible (4) | Moderately Accessible (3) | Moderately Accessible (3) | Slightly Accessible (2) | Slightly Accessible (2) | Not Accessible (1) | Not Accessible (1) | Mean | Verbal Description |
+| Item Statement | Highly Accessible (5) f | Highly Accessible (5) % | Accessible (4) f | Accessible (4) % | Moderately Accessible (3) f | Moderately Accessible (3) % | Slightly Accessible (2) f | Slightly Accessible (2) % | Not Accessible (1) f | Not Accessible (1) % | Mean | Verbal Description |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Item Statement | f | % | f | % | f | % | f | % | f | % | Mean | Verbal Description |
 | All functionalities can be accessed using a keyboard. | 3 | 30.0% | 7 | 70.0% | 0 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.30 | Highly Accessible |
 | No keyboard traps are encountered. | 5 | 50.0% | 4 | 40.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.40 | Highly Accessible |
 | Navigation follows a logical tab sequence. | 4 | 40.0% | 5 | 50.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.30 | Highly Accessible |
@@ -1188,7 +1177,7 @@ Operable — User interface components and navigation must be operable. (As Rate
 | Buttons and links are easy to identify and interact with. | 4 | 40.0% | 2 | 20.0% | 4 | 40.0% | 0 | 0.0% | 0 | 0.0% | 4.00 | Accessible |
 | Click/touch targets are appropriately sized. | 2 | 20.0% | 7 | 70.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.10 | Accessible |
 | The system supports multiple input methods (mouse, keyboard, touch). | 7 | 70.0% | 2 | 20.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.60 | Highly Accessible |
-| Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | 4.27 | Highly Accessible |
+| Category Mean |  |  |  |  |  |  |  |  |  |  | 4.27 | Highly Accessible |
 
 Note. n = 10. Scale and verbal description: 4.21–5.00 = Highly Accessible (HA); 3.41–4.20 = Accessible (A); 2.61–3.40 = Moderately Accessible (MA); 1.81–2.60 = Slightly Accessible (SlA); 1.00–1.80 = Not Accessible (NA).
 As shown in Table 31, Operable achieved a category mean of 4.27 (Highly Accessible). Multi-input support for mouse, keyboard, and touch achieved the highest score (4.60), followed by absence of keyboard traps (4.40) and consistent navigation menus (4.40). Identifying buttons and links scored the lowest within the category (4.00, Accessible).
@@ -1198,9 +1187,8 @@ The IT experts assessed the system as Highly Accessible in terms of the Understa
 **Table 32.**
 Understandable — Information and the operation of the user interface must be understandable. (As Rated by IT Experts, N = 10)
 
-| Item Statement | Highly Accessible (5) | Highly Accessible (5) | Accessible (4) | Accessible (4) | Moderately Accessible (3) | Moderately Accessible (3) | Slightly Accessible (2) | Slightly Accessible (2) | Not Accessible (1) | Not Accessible (1) | Mean | Verbal Description |
+| Item Statement | Highly Accessible (5) f | Highly Accessible (5) % | Accessible (4) f | Accessible (4) % | Moderately Accessible (3) f | Moderately Accessible (3) % | Slightly Accessible (2) f | Slightly Accessible (2) % | Not Accessible (1) f | Not Accessible (1) % | Mean | Verbal Description |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Item Statement | f | % | f | % | f | % | f | % | f | % | Mean | Verbal Description |
 | Content is written in clear and simple language. | 9 | 90.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.90 | Highly Accessible |
 | Instructions are easy to understand. | 3 | 30.0% | 7 | 70.0% | 0 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.30 | Highly Accessible |
 | Terminologies are appropriate for the target users. | 7 | 70.0% | 2 | 20.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.60 | Highly Accessible |
@@ -1210,7 +1198,7 @@ Understandable — Information and the operation of the user interface must be u
 | Forms include clear labels and instructions. | 5 | 50.0% | 4 | 40.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.40 | Highly Accessible |
 | Errors are clearly identified and explained. | 1 | 10.0% | 8 | 80.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.00 | Accessible |
 | The system provides helpful suggestions for correcting errors. | 3 | 30.0% | 7 | 70.0% | 0 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.30 | Highly Accessible |
-| Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | 4.34 | Highly Accessible |
+| Category Mean |  |  |  |  |  |  |  |  |  |  | 4.34 | Highly Accessible |
 
 Note. n = 10. Scale and verbal description: 4.21–5.00 = Highly Accessible (HA); 3.41–4.20 = Accessible (A); 2.61–3.40 = Moderately Accessible (MA); 1.81–2.60 = Slightly Accessible (SlA); 1.00–1.80 = Not Accessible (NA).
 As shown in Table 32, Understandable was rated Highly Accessible (category mean = 4.34), the highest among the four accessibility principles. Content written in clear, simple language achieved the highest rating (4.90), with nine of the ten experts rating it 5. Appropriate terminology obtained 4.60, while logical action outcomes received 3.90 (Accessible).
@@ -1220,16 +1208,15 @@ The IT experts assessed the system as Accessible in terms of the Robust principl
 **Table 33.**
 Robust — Content must be robust enough to be interpreted reliably by a wide variety of user agents, including assistive technologies. (As Rated by IT Experts, N = 10)
 
-| Item Statement | Highly Accessible (5) | Highly Accessible (5) | Accessible (4) | Accessible (4) | Moderately Accessible (3) | Moderately Accessible (3) | Slightly Accessible (2) | Slightly Accessible (2) | Not Accessible (1) | Not Accessible (1) | Mean | Verbal Description |
+| Item Statement | Highly Accessible (5) f | Highly Accessible (5) % | Accessible (4) f | Accessible (4) % | Moderately Accessible (3) f | Moderately Accessible (3) % | Slightly Accessible (2) f | Slightly Accessible (2) % | Not Accessible (1) f | Not Accessible (1) % | Mean | Verbal Description |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Item Statement | f | % | f | % | f | % | f | % | f | % | Mean | Verbal Description |
 | The system works across different browsers and devices. | 8 | 80.0% | 1 | 10.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.70 | Highly Accessible |
 | Code structure follows web standards. | 2 | 20.0% | 7 | 70.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.10 | Accessible |
 | The system remains functional under different environments. | 0 | 0.0% | 8 | 80.0% | 2 | 20.0% | 0 | 0.0% | 0 | 0.0% | 3.80 | Accessible |
 | The system is compatible with screen readers. | 2 | 20.0% | 2 | 20.0% | 6 | 60.0% | 0 | 0.0% | 0 | 0.0% | 3.60 | Accessible |
 | ARIA roles and labels are properly implemented. | 5 | 50.0% | 4 | 40.0% | 1 | 10.0% | 0 | 0.0% | 0 | 0.0% | 4.40 | Highly Accessible |
 | Dynamic content updates are properly communicated to assistive tools. | 1 | 10.0% | 4 | 40.0% | 5 | 50.0% | 0 | 0.0% | 0 | 0.0% | 3.60 | Accessible |
-| Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | 4.03 | Accessible |
+| Category Mean |  |  |  |  |  |  |  |  |  |  | 4.03 | Accessible |
 
 Note. n = 10. Scale and verbal description: 4.21–5.00 = Highly Accessible (HA); 3.41–4.20 = Accessible (A); 2.61–3.40 = Moderately Accessible (MA); 1.81–2.60 = Slightly Accessible (SlA); 1.00–1.80 = Not Accessible (NA).
 As shown in Table 33, Robust was rated Accessible (category mean = 4.03). Cross-browser and device compatibility scored highest (4.70), followed by proper ARIA roles and labels (4.40). Screen reader compatibility and communicating dynamic updates to assistive tools both scored lowest (3.60 each, Accessible).
@@ -1262,9 +1249,8 @@ Table 35 presents the computed frequency distributions, percentage shares, raw w
 **Table 35**
 System Usability Scale (SUS) Item Ratings (As Rated by End-Users, N = 100)
 
-| Item Statement | Strongly Agree (5) | Strongly Agree (5) | Agree (4) | Agree (4) | Neutral (3) | Neutral (3) | Disagree (2) | Disagree (2) | Strongly Disagree (1) | Strongly Disagree (1) | Mean | Verbal Description |
+| Item Statement | Strongly Agree (5) f | Strongly Agree (5) % | Agree (4) f | Agree (4) % | Neutral (3) f | Neutral (3) % | Disagree (2) f | Disagree (2) % | Strongly Disagree (1) f | Strongly Disagree (1) % | Mean | Verbal Description |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Item Statement | f | % | f | % | f | % | f | % | f | % | Mean | Verbal Description |
 | I think that I would like to use this system frequently. | 30 | 30.0% | 70 | 70.0% | 0 | 0.0% | 0 | 0.0% | 0 | 0.0% | 4.30 | Strongly Agree |
 | I found the system unnecessarily complex. | 7 | 7.0% | 6 | 6.0% | 10 | 10.0% | 57 | 57.0% | 20 | 20.0% | 2.23 | Disagree |
 | I thought the system was easy to use. | 26 | 26.0% | 69 | 69.0% | 5 | 5.0% | 0 | 0.0% | 0 | 0.0% | 4.21 | Strongly Agree |
@@ -1282,12 +1268,12 @@ Overall System Usability Scale (SUS) Score (As Rated by End-Users, N = 100)
 
 | Measure | Value | Interpretation |
 |---|---|---|
-| Overall SUS Score (0–100) | 80.22 | Acceptable — Grade B/C (Good) |
+| Overall SUS Score (0–100) | 75.13 | Acceptable — Grade B/C (Good) |
 
 Note. SUS scores range from 0 to 100. A mean score of 68 or above is generally considered above average (Bangor, Kortum, & Miller, 2009; Brooke, 1996). Grade and adjective-rating bands follow Bangor et al. (2009), "Determining What Individual SUS Scores Mean: Adding an Adjective Rating Scale."
 The evaluation of the Web-Based AI-Assisted Ordinance Information System showed favorable responses across all usability indicators. Among the positively worded statements, willingness to use the system frequently obtained the highest mean of 4.30 (Strongly Agree), with all 100 respondents either agreeing (70%) or strongly agreeing (30%). Well-integrated functionality received a mean of 4.27 (Strongly Agree), quick learnability by most people obtained 4.23 (Strongly Agree), ease of use received 4.21 (Strongly Agree), and user confidence achieved 4.21 (Strongly Agree).
 Correspondingly, the end-users consistently disagreed with all five negatively worded statements. Disagreement was strongest regarding perceived system inconsistency (WM = 2.18, Disagree), followed by cumbersome usage (WM = 2.20, Disagree), unnecessary complexity (WM = 2.23, Disagree), the need for technical support (WM = 2.27, Disagree), and initial learning requirements (WM = 2.29, Disagree). Because these statements represent usability friction, low mean scores reflect favorable user reception.
-Based on the completed responses from all 100 end-users, the system achieved a composite mean SUS score of 80.22 out of 100, as shown in Table 36. This score surpasses the standard empirical SUS benchmark of 68.00 by 12.22 points. Under standard SUS grading scales (Bangor et al., 2008; Brooke, 1996), a score of 80.22 corresponds to a Grade B ("Good") rating and falls within the "Acceptable" usability range.
+Based on the completed responses from all 100 end-users, the system achieved a composite mean SUS score of 75.13 out of 100, as shown in Table 36. This score surpasses the standard empirical SUS benchmark of 68.00 by 7.13 points. Under standard SUS grading scales (Bangor et al., 2008; Brooke, 1996), a score of 75.13 corresponds to a Grade B ("Good") rating and falls within the "Acceptable" usability range.
 This favorable usability score indicates that residents and barangay officials found the web portal straightforward, intuitive, and easy to operate without intensive technical training. The integration of responsive search filters, PDF document inspection, and a conversational AI assistant that understands local Tagalog phrasing enabled users to locate and comprehend municipal ordinances efficiently.
 While the ratings are generally positive, responses to Item 4 (need for technical support, where 15% agreed or strongly agreed) and Item 10 (initial learning effort, where 22% were neutral) suggest that certain community members, particularly older residents with lower digital literacy, may still benefit from brief onboarding guidance. Providing short video walkthroughs and visual user guides will help ensure equitable access for all residents of Cabanatuan City.
 5. Evaluation on the Accessibility of the System Based on Web Content Accessibility Guidelines (WCAG) Made by End-Users
@@ -1298,9 +1284,8 @@ The end-users assessed the system as Highly Accessible in terms of the Perceivab
 **Table 37.**
 Perceivable — Information and user interface components must be presentable to users in ways they can perceive. (As Rated by End-Users, N = 100)
 
-| Item Statement | Highly Accessible (5) | Highly Accessible (5) | Accessible (4) | Accessible (4) | Moderately Accessible (3) | Moderately Accessible (3) | Slightly Accessible (2) | Slightly Accessible (2) | Not Accessible (1) | Not Accessible (1) | Mean | Verbal Description |
+| Item Statement | Highly Accessible (5) f | Highly Accessible (5) % | Accessible (4) f | Accessible (4) % | Moderately Accessible (3) f | Moderately Accessible (3) % | Slightly Accessible (2) f | Slightly Accessible (2) % | Not Accessible (1) f | Not Accessible (1) % | Mean | Verbal Description |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Item Statement | f | % | f | % | f | % | f | % | f | % | Mean | Verbal Description |
 | The system provides appropriate alternative text for all non-text content. | 21 | 21.0% | 75 | 75.0% | 4 | 4.0% | 0 | 0.0% | 0 | 0.0% | 4.17 | Accessible |
 | Informative images include meaningful descriptions. | 42 | 42.0% | 53 | 53.0% | 5 | 5.0% | 0 | 0.0% | 0 | 0.0% | 4.37 | Highly Accessible |
 | Complex visuals (charts, infographics) are accompanied by textual explanations. | 49 | 49.0% | 49 | 49.0% | 2 | 2.0% | 0 | 0.0% | 0 | 0.0% | 4.47 | Highly Accessible |
@@ -1310,7 +1295,7 @@ Perceivable — Information and user interface components must be presentable to
 | Text meets recommended color contrast standards. | 56 | 56.0% | 39 | 39.0% | 4 | 4.0% | 1 | 1.0% | 0 | 0.0% | 4.50 | Highly Accessible |
 | Information is not conveyed by color alone. | 59 | 59.0% | 40 | 40.0% | 1 | 1.0% | 0 | 0.0% | 0 | 0.0% | 4.58 | Highly Accessible |
 | Text is readable, resizable, and clearly visible. | 49 | 49.0% | 48 | 48.0% | 3 | 3.0% | 0 | 0.0% | 0 | 0.0% | 4.46 | Highly Accessible |
-| Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | 4.45 | Highly Accessible |
+| Category Mean |  |  |  |  |  |  |  |  |  |  | 4.45 | Highly Accessible |
 
 Note. n = 100. Scale and verbal description: 4.21–5.00 = Highly Accessible (HA); 3.41–4.20 = Accessible (A); 2.61–3.40 = Moderately Accessible (MA); 1.81–2.60 = Slightly Accessible (SlA); 1.00–1.80 = Not Accessible (NA).
 As shown in Table 37, the end-users evaluated Perceivable with a category mean of 4.45 (Highly Accessible). Information not conveyed by color alone scored highest (4.58), followed by content adaptation across screen sizes (4.51) and color contrast standards (4.50). Alternative text for non-text content received the relatively lowest mean (4.17, Accessible).
@@ -1320,9 +1305,8 @@ The end-users assessed the system as Highly Accessible in terms of the Operable 
 **Table 38.**
 Operable — User interface components and navigation must be operable. (As Rated by End-Users, N = 100)
 
-| Item Statement | Highly Accessible (5) | Highly Accessible (5) | Accessible (4) | Accessible (4) | Moderately Accessible (3) | Moderately Accessible (3) | Slightly Accessible (2) | Slightly Accessible (2) | Not Accessible (1) | Not Accessible (1) | Mean | Verbal Description |
+| Item Statement | Highly Accessible (5) f | Highly Accessible (5) % | Accessible (4) f | Accessible (4) % | Moderately Accessible (3) f | Moderately Accessible (3) % | Slightly Accessible (2) f | Slightly Accessible (2) % | Not Accessible (1) f | Not Accessible (1) % | Mean | Verbal Description |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Item Statement | f | % | f | % | f | % | f | % | f | % | Mean | Verbal Description |
 | All functionalities can be accessed using a keyboard. | 39 | 39.0% | 56 | 56.0% | 5 | 5.0% | 0 | 0.0% | 0 | 0.0% | 4.34 | Highly Accessible |
 | No keyboard traps are encountered. | 49 | 49.0% | 46 | 46.0% | 5 | 5.0% | 0 | 0.0% | 0 | 0.0% | 4.44 | Highly Accessible |
 | Navigation follows a logical tab sequence. | 49 | 49.0% | 43 | 43.0% | 8 | 8.0% | 0 | 0.0% | 0 | 0.0% | 4.41 | Highly Accessible |
@@ -1332,7 +1316,7 @@ Operable — User interface components and navigation must be operable. (As Rate
 | Buttons and links are easy to identify and interact with. | 52 | 52.0% | 44 | 44.0% | 3 | 3.0% | 1 | 1.0% | 0 | 0.0% | 4.47 | Highly Accessible |
 | Click/touch targets are appropriately sized. | 48 | 48.0% | 44 | 44.0% | 8 | 8.0% | 0 | 0.0% | 0 | 0.0% | 4.40 | Highly Accessible |
 | The system supports multiple input methods (mouse, keyboard, touch). | 50 | 50.0% | 43 | 43.0% | 6 | 6.0% | 1 | 1.0% | 0 | 0.0% | 4.42 | Highly Accessible |
-| Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | 4.43 | Highly Accessible |
+| Category Mean |  |  |  |  |  |  |  |  |  |  | 4.43 | Highly Accessible |
 
 Note. n = 100. Scale and verbal description: 4.21–5.00 = Highly Accessible (HA); 3.41–4.20 = Accessible (A); 2.61–3.40 = Moderately Accessible (MA); 1.81–2.60 = Slightly Accessible (SlA); 1.00–1.80 = Not Accessible (NA).
 As shown in Table 38, the end-users evaluated Operable with a category mean of 4.43 (Highly Accessible). Consistent navigation menus across pages received the highest rating (4.49), followed by location awareness within the system and ease of interacting with buttons and links (4.47 each). Full keyboard access scored 4.34 (Highly Accessible).
@@ -1342,9 +1326,8 @@ The end-users assessed the system as Highly Accessible in terms of the Understan
 **Table 39.**
 Understandable — Information and the operation of the user interface must be understandable. (As Rated by End-Users, N = 100)
 
-| Item Statement | Highly Accessible (5) | Highly Accessible (5) | Accessible (4) | Accessible (4) | Moderately Accessible (3) | Moderately Accessible (3) | Slightly Accessible (2) | Slightly Accessible (2) | Not Accessible (1) | Not Accessible (1) | Mean | Verbal Description |
+| Item Statement | Highly Accessible (5) f | Highly Accessible (5) % | Accessible (4) f | Accessible (4) % | Moderately Accessible (3) f | Moderately Accessible (3) % | Slightly Accessible (2) f | Slightly Accessible (2) % | Not Accessible (1) f | Not Accessible (1) % | Mean | Verbal Description |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Item Statement | f | % | f | % | f | % | f | % | f | % | Mean | Verbal Description |
 | Content is written in clear and simple language. | 39 | 39.0% | 59 | 59.0% | 2 | 2.0% | 0 | 0.0% | 0 | 0.0% | 4.37 | Highly Accessible |
 | Instructions are easy to understand. | 48 | 48.0% | 50 | 50.0% | 2 | 2.0% | 0 | 0.0% | 0 | 0.0% | 4.46 | Highly Accessible |
 | Terminologies are appropriate for the target users. | 51 | 51.0% | 47 | 47.0% | 2 | 2.0% | 0 | 0.0% | 0 | 0.0% | 4.49 | Highly Accessible |
@@ -1354,7 +1337,7 @@ Understandable — Information and the operation of the user interface must be u
 | Forms include clear labels and instructions. | 41 | 41.0% | 56 | 56.0% | 3 | 3.0% | 0 | 0.0% | 0 | 0.0% | 4.38 | Highly Accessible |
 | Errors are clearly identified and explained. | 40 | 40.0% | 51 | 51.0% | 9 | 9.0% | 0 | 0.0% | 0 | 0.0% | 4.31 | Highly Accessible |
 | The system provides helpful suggestions for correcting errors. | 17 | 17.0% | 23 | 23.0% | 60 | 60.0% | 0 | 0.0% | 0 | 0.0% | 3.57 | Accessible |
-| Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | 4.32 | Highly Accessible |
+| Category Mean |  |  |  |  |  |  |  |  |  |  | 4.32 | Highly Accessible |
 
 Note. n = 100. Scale and verbal description: 4.21–5.00 = Highly Accessible (HA); 3.41–4.20 = Accessible (A); 2.61–3.40 = Moderately Accessible (MA); 1.81–2.60 = Slightly Accessible (SlA); 1.00–1.80 = Not Accessible (NA).
 As shown in Table 39, the end-users evaluated Understandable with a category mean of 4.32 (Highly Accessible). Appropriate terminology for target users received the highest rating (4.49), followed by easy-to-understand instructions (4.46) and consistent system behavior (4.44). Providing helpful suggestions for error correction scored lowest (3.57, Accessible), as 60% of respondents provided a neutral rating.
@@ -1364,16 +1347,15 @@ The end-users assessed the system as Accessible in terms of the Robust principle
 **Table 40.**
 Robust — Content must be robust enough to be interpreted reliably by a wide variety of user agents, including assistive technologies. (As Rated by End-Users, N = 100)
 
-| Item Statement | Highly Accessible (5) | Highly Accessible (5) | Accessible (4) | Accessible (4) | Moderately Accessible (3) | Moderately Accessible (3) | Slightly Accessible (2) | Slightly Accessible (2) | Not Accessible (1) | Not Accessible (1) | Mean | Verbal Description |
+| Item Statement | Highly Accessible (5) f | Highly Accessible (5) % | Accessible (4) f | Accessible (4) % | Moderately Accessible (3) f | Moderately Accessible (3) % | Slightly Accessible (2) f | Slightly Accessible (2) % | Not Accessible (1) f | Not Accessible (1) % | Mean | Verbal Description |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Item Statement | f | % | f | % | f | % | f | % | f | % | Mean | Verbal Description |
 | The system works across different browsers and devices. | 44 | 44.0% | 54 | 54.0% | 2 | 2.0% | 0 | 0.0% | 0 | 0.0% | 4.42 | Highly Accessible |
 | Code structure follows web standards. | 52 | 52.0% | 47 | 47.0% | 1 | 1.0% | 0 | 0.0% | 0 | 0.0% | 4.51 | Highly Accessible |
 | The system remains functional under different environments. | 56 | 56.0% | 36 | 36.0% | 7 | 7.0% | 1 | 1.0% | 0 | 0.0% | 4.47 | Highly Accessible |
 | The system is compatible with screen readers. | 6 | 6.0% | 21 | 21.0% | 70 | 70.0% | 3 | 3.0% | 0 | 0.0% | 3.30 | Moderately Accessible |
 | ARIA roles and labels are properly implemented. | 2 | 2.0% | 18 | 18.0% | 80 | 80.0% | 0 | 0.0% | 0 | 0.0% | 3.22 | Moderately Accessible |
 | Dynamic content updates are properly communicated to assistive tools. | 2 | 2.0% | 16 | 16.0% | 79 | 79.0% | 3 | 3.0% | 0 | 0.0% | 3.17 | Moderately Accessible |
-| Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | Category Mean | 3.85 | Accessible |
+| Category Mean |  |  |  |  |  |  |  |  |  |  | 3.85 | Accessible |
 
 Note. n = 100. Scale and verbal description: 4.21–5.00 = Highly Accessible (HA); 3.41–4.20 = Accessible (A); 2.61–3.40 = Moderately Accessible (MA); 1.81–2.60 = Slightly Accessible (SlA); 1.00–1.80 = Not Accessible (NA).
 As shown in Table 40, the end-users evaluated Robust with a category mean of 3.85 (Accessible). Clean web standards adherence scored 4.51, and cross-browser functionality scored 4.42. In contrast, screen reader compatibility (3.30), ARIA implementation (3.22), and communicating dynamic updates to assistive tools (3.17) scored in the Moderately Accessible range, with over 70% of respondents selecting neutral due to limited familiarity with assistive screen readers.
@@ -1397,9 +1379,9 @@ The overall accessibility assessment indicates that residents, barangay official
 
 ### Summary of Results
 The empirical evaluation of the Web-Based AI-Assisted Ordinance Information System for Cabanatuan City involved one hundred ten (110) respondents: ten (10) IT expert evaluators and one hundred (100) end-user evaluators comprising seventy-two (72) residents, eighteen (18) barangay officials or staff, and ten (10) LGU officials.
-Based on the ISO/IEC 25010:2023 evaluation, the IT experts rated the technical software quality of the platform with an Overall Mean of 4.28, verbally interpreted as Strongly Agree. All nine quality characteristics received favorable assessments. Compatibility recorded the highest category mean of 4.55, followed by Functional Suitability at 4.50, Performance Efficiency at 4.40, Maintainability at 4.30, and Interaction Capability at 4.24, all described as Strongly Agree. The remaining four characteristics—Security (4.17), Safety (4.17), Reliability (4.10), and Flexibility (4.07)—were all evaluated within the Agree range. These findings reflect strong expert confidence in the system's architecture, database performance, and legislative management features.
+Based on the ISO/IEC 25010:2023 evaluation, the IT experts rated the technical software quality of the platform with an Overall Mean of 4.28, verbally interpreted as Highly Suitable/Efficient. All nine quality characteristics received favorable assessments. Compatibility recorded the highest category mean of 4.55, followed by Functional Suitability at 4.50, Performance Efficiency at 4.40, Maintainability at 4.30, and Interaction Capability at 4.24, all within the highest evaluation band (4.21–5.00). The remaining four characteristics—Security (4.17), Safety (4.17), Reliability (4.10), and Flexibility (4.07)—were all evaluated favorably within the second-highest evaluation band (3.41–4.20). These findings reflect strong expert confidence in the system's architecture, database performance, and legislative management features.
 In the technical accessibility evaluation under WCAG, the IT experts awarded an Overall Mean of 4.19, interpreted as Accessible. The experts rated Understandable (4.34) and Operable (4.27) as Highly Accessible, while Perceivable (4.13) and Robust (4.03) were rated Accessible, validating the absence of keyboard focus traps, logical tab flows, and clean component structures.
-The usability evaluation conducted among the 100 community end-users using the System Usability Scale (SUS) yielded a composite score of 80.22 out of 100. This score exceeds the standard empirical benchmark of 68.00 by 12.22 points, placing the system within the Acceptable range and earning a Grade B ("Good") usability rating. End-users expressed strong agreement regarding their willingness to use the system frequently (4.30), the smooth integration of system features (4.27), and ease of learning (4.23), while strongly disagreeing that the system was complex, inconsistent, or cumbersome.
+The usability evaluation conducted among the 100 community end-users using the System Usability Scale (SUS) yielded a composite score of 75.13 out of 100. This score exceeds the standard empirical benchmark of 68.00 by 7.13 points, placing the system within the Acceptable range and earning a Grade B ("Good") usability rating. End-users expressed strong agreement regarding their willingness to use the system frequently (4.30), the smooth integration of system features (4.27), and ease of learning (4.23), while strongly disagreeing that the system was complex, inconsistent, or cumbersome.
 Furthermore, the end-users evaluated web accessibility across the four WCAG principles with an Overall Mean of 4.26, verbally described as Highly Accessible. Perceivable obtained the highest rating of 4.45, followed by Operable at 4.43 and Understandable at 4.32, with Robust receiving 3.85.
 Taken together, the evaluation results provide consistent empirical evidence that the Web-Based AI-Assisted Ordinance Information System fulfills its intended technical, operational, and civic objectives. The IT experts' assessment confirms that the system is technically sound, modular, and secure, while the end-users' assessment demonstrates that the platform is easy to navigate, visually accessible, and practical for daily municipal governance in Cabanatuan City.
 
@@ -1414,10 +1396,10 @@ The system was developed through four iterative Agile phases. The Planning and R
 The Testing and Deployment phase conducted unit, integration, and user acceptance testing, followed by a deployment costing analysis that estimated monthly operating costs ranging from approximately PHP 436.58 to PHP 976.59 under a baseline configuration and PHP 1,614.98 to PHP 1,867.27 under a municipal-scale Railway Pro configuration.
 
 ### 2. Technical Quality Evaluation Based on ISO/IEC 25010:2023 (SOP 2)
-The IT experts rated the system with an overall mean of 4.28, verbally interpreted as Strongly Agree. Compatibility obtained the highest category mean at 4.55 (Strongly Agree), followed by Functional Suitability at 4.50, Performance Efficiency at 4.40, Maintainability at 4.30, and Interaction Capability at 4.24, all within the Strongly Agree range. Security (4.17), Safety (4.17), Reliability (4.10), and Flexibility (4.07) were rated within the Agree range. Among the individual indicators, Recoverability received the lowest rating at 3.20 (Slightly Reliable), followed by Audit Logging at 3.60, Diagnostics at 3.70, Inclusive Access at 3.80, and Deployability at 3.80.
+The IT experts rated the system with an overall mean of 4.28, verbally interpreted as Highly Suitable/Efficient. Compatibility obtained the highest category mean at 4.55, followed by Functional Suitability at 4.50, Performance Efficiency at 4.40, Maintainability at 4.30, and Interaction Capability at 4.24, all within the highest evaluation band (4.21–5.00). Security (4.17), Safety (4.17), Reliability (4.10), and Flexibility (4.07) were rated within the second-highest evaluation band (3.41–4.20). Among the individual indicators, Recoverability received the lowest rating at 3.20 (Slightly Reliable), followed by Audit Logging at 3.60, Diagnostics at 3.70, Inclusive Access at 3.80, and Deployability at 3.80.
 
 ### 3. End-User Usability Evaluation Using SUS (SOP 3)
-The combined responses of the one hundred (100) end-users, comprising seventy-two (72) residents, eighteen (18) barangay officials or staff from nine (9) selected barangays, and ten (10) LGU officials from the City Government of Cabanatuan, produced a composite System Usability Scale (SUS) score of 80.22 out of 100. This score exceeds the standard empirical benchmark of 68.00 by 12.22 points and falls within the Acceptable range, earning a Grade B (“Good”) usability rating.
+The combined responses of the one hundred (100) end-users, comprising seventy-two (72) residents, eighteen (18) barangay officials or staff from nine (9) selected barangays, and ten (10) LGU officials from the City Government of Cabanatuan, produced a composite System Usability Scale (SUS) score of 75.13 out of 100. This score exceeds the standard empirical benchmark of 68.00 by 7.13 points and falls within the Acceptable range, earning a Grade B (“Good”) usability rating.
 The highest-rated positive items were willingness to use the system frequently (4.30), smooth integration of system features (4.27), and ease of learning (4.23). End-users also expressed disagreement with the negatively worded statements concerning unnecessary complexity, inconsistency, and cumbersome use. These results indicate favorable collective perceptions of the system's ease of use, efficiency, learnability, and user satisfaction.
 
 ### 4. System Accessibility Evaluation Based on WCAG Principles (SOP 4)
@@ -1429,7 +1411,7 @@ Based on the findings of the study, the following conclusions were drawn.
 The Agile Development Model provided a practical and effective framework for developing the Web-Based AI-Assisted Ordinance Information System. The iterative structure of the Agile phases allowed the researchers to refine each module through repeated cycles of planning, implementation, and testing. Each of the four major system modules (ordinance management, AI-assisted chatbot, resident reporting, and administrative dashboard) could be developed and tested individually before integration. This approach is consistent with the findings of Abiva et al. (2025), who demonstrated the value of iterative, participatory approaches in developing digital data management systems for barangay-level governance. The use of Agile also aligns with the multi-module development approach reported by Albano (2023), whose web-based platform for the municipal government of Cabagan was similarly built using modular, open-source components that could be assembled and refined through structured feedback.
 The technical quality of the system, as assessed by the IT experts using ISO 25010:2023, indicates that the platform meets its intended functional and architectural objectives. The overall mean of 4.28 and the strong ratings for Compatibility (4.55) and Functional Suitability (4.50) suggest that the system's core functions, including ordinance search, AI chatbot interaction, and administrative management, operate as designed and coexist reliably with external services such as the Google Gemini API and PDF rendering. This finding aligns with Patil et al. (2024), who reported measurable improvements in document accessibility (25 percent) and reduced data entry operations (40 percent) when AI and PDF management capabilities were integrated into a document management platform. In the present study, the integration of multimodal OCR and Retrieval-Augmented Generation similarly supported the digitization and retrieval of ordinance documents within a single platform.
 However, the evaluation also identified areas where the system's technical quality could be strengthened. The Recoverability indicator scored 3.20, which suggests that the system's capacity to restore data after an interruption or error requires further development. Audit Logging (3.60) and Diagnostics (3.70) received below-average ratings, indicating that the system's ability to record operational events and support debugging could be improved. These results point to a pattern in which the system's user-facing functions performed well, while its backend resilience and monitoring features received less favorable assessments. This pattern may be attributed to the development priorities during the study, where the researchers focused available time and resources on building the ordinance management, chatbot, and reporting modules that directly served the study's research questions. Backend features such as automated recovery, audit trails, and diagnostic logging are important for production-readiness but were not among the primary evaluation criteria.
-The SUS evaluation by end-users yielded a score of 80.22, which exceeds the standard benchmark of 68.00 and classifies the system's usability as "Good" (Grade B, Acceptable). This result suggests that the platform's interface, navigation, and learning curve met the expectations of community residents and barangay officials who tested it. The finding is consistent with Albano (2023), who reported strong user approval for visual organization and ease of navigation in a similarly structured LGU web platform. It also corroborates Rathnayake et al. (2025), who found that application design positively influences perceived ease of use, which in turn influences perceived usefulness and behavioral intention to adopt AI chatbot applications in government services. The system's responsive layout, bilingual chatbot interface, and clear menu structure appear to have contributed to the favorable usability ratings observed in the present study.
+The SUS evaluation by end-users yielded a score of 75.13, which exceeds the standard benchmark of 68.00 and classifies the system's usability as "Good" (Grade B, Acceptable). This result suggests that the platform's interface, navigation, and learning curve met the expectations of community residents and barangay officials who tested it. The finding is consistent with Albano (2023), who reported strong user approval for visual organization and ease of navigation in a similarly structured LGU web platform. It also corroborates Rathnayake et al. (2025), who found that application design positively influences perceived ease of use, which in turn influences perceived usefulness and behavioral intention to adopt AI chatbot applications in government services. The system's responsive layout, bilingual chatbot interface, and clear menu structure appear to have contributed to the favorable usability ratings observed in the present study.
 The SUS score also suggests that the system may help address the accessibility and dissemination barriers documented in the literature. Batacandolo et al. (2024) found that compliance with city ordinances was only moderate because residents lacked access to the actual texts of those ordinances. Palingkod et al. (2025) identified language barriers, poor use of technology, and inadequate training as persistent obstacles in ordinance dissemination across Philippine LGUs. The system's ability to provide ordinance content through a searchable digital repository and a chatbot that responds in everyday language may reduce some of these barriers, although the extent of this effect would require longitudinal study beyond the scope of the present evaluation.
 The WCAG-based accessibility evaluations provided two distinct perspectives on the system. The IT experts rated the system's accessibility with an overall mean of 4.19, interpreted as Accessible, while the combined end-user assessment received an overall mean of 4.26, interpreted as Highly Accessible. The end-user responses represented residents, barangay officials or staff, and LGU officials. Both evaluations identified the Robust principle as an area requiring further attention, particularly in screen reader compatibility, ARIA roles and labels, and communication of dynamic content updates to assistive technologies. End-users rated screen reader functionality at 3.30, ARIA compatibility at 3.22, and communication of dynamic updates at 3.17. Meanwhile, IT experts rated complex chart text explanations at 3.30, screen reader compatibility at 3.60, and dynamic content communication to assistive tools at 3.60. These findings identify specific areas for accessibility refinement. Further technical testing and evaluation involving individuals who regularly use assistive technologies would provide more direct evidence of the system's accessibility for these users.
 The deployment costing analysis demonstrated that the system is economically viable for a local government unit. Monthly operating costs under a baseline configuration were estimated at PHP 436.58 to PHP 976.59, and a city-wide Railway Pro deployment was projected at PHP 1,614.98 to PHP 1,867.27 per month. These figures represent a modest expenditure compared to the cost of traditional on-premise municipal IT infrastructure. This finding supports the broader literature on digital transformation in Philippine LGUs: Espiritu et al. (2024) and Andaya et al. (2025) both identified financial constraints as a primary barrier to digital adoption, and the present system's low operating cost profile suggests that this particular barrier can be addressed through cloud-based, managed infrastructure rather than capital-intensive hardware procurement.

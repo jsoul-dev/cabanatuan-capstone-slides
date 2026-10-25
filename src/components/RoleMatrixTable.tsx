@@ -72,7 +72,7 @@ export const DETAILED_MATRIX: MatrixRow[] = [
     lgu: true,
   },
   {
-    feature: 'Ask the Civic AI Legal Assistant (Gemini RAG)',
+    feature: 'Ask the Civic AI Chatbot Assistant (Gemini RAG)',
     resident: true,
     barangay: true,
     lgu: true,

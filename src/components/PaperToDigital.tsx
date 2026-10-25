@@ -139,7 +139,7 @@ export default function PaperToDigital({ showDigital = true }: PaperToDigitalPro
           </li>
           <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', lineHeight: 1.5, textAlign: 'left', color: 'var(--fg)' }}>
             <span style={{ color: '#10b981', fontWeight: 700, marginTop: '2px', flexShrink: 0 }}>✓</span>
-            <span style={{ textAlign: 'left' }}><strong>Civic AI Legal Assistant:</strong> Gemini RAG delivers plain-language answers in Tagalog, English, and Taglish with precise legislative citations.</span>
+            <span style={{ textAlign: 'left' }}><strong>Civic AI Chatbot Assistant:</strong> Gemini RAG delivers plain-language answers in Tagalog, English, and Taglish with precise legislative citations.</span>
           </li>
           <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', fontSize: '14px', lineHeight: 1.5, textAlign: 'left', color: 'var(--fg)' }}>
             <span style={{ color: '#10b981', fontWeight: 700, marginTop: '2px', flexShrink: 0 }}>✓</span>

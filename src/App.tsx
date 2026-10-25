@@ -391,7 +391,7 @@ export default function App() {
       <Slide
         center
         nav="System Modules"
-        notes="The system is structured into six core operational modules: public legislative exploration, an AI legal assistant, automated multimodal OCR document extraction, citizen reporting, a barangay-level administrative console, and a central municipal LGU governance suite."
+        notes="The system is structured into six core operational modules: public legislative exploration, an AI chatbot assistant, automated multimodal OCR document extraction, citizen reporting, a barangay-level administrative console, and a central municipal LGU governance suite."
       >
         <div style={{ maxWidth: 1180, marginInline: 'auto' }}>
           <span className="kicker" style={{ color: 'var(--primary)' }}>Core Functional Modules</span>

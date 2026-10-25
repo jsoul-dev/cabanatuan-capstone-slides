@@ -30,7 +30,7 @@ export default function CivicChatReplay() {
             <span style={{ width: 10, height: 10, borderRadius: '50%', background: '#10b981' }} />
           </div>
           <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--fg)' }}>
-            Cabanatuan Civic AI Legal Assistant (Gemini 3.5 Flash-Lite RAG)
+            Cabanatuan Civic AI Chatbot Assistant (Gemini 3.5 Flash-Lite RAG)
           </span>
         </div>
         <div

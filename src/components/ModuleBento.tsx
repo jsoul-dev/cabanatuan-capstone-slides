@@ -26,7 +26,7 @@ const MODULES: ModuleItem[] = [
   {
     id: 'ai-chat',
     number: '02',
-    title: 'Civic AI Legal Assistant',
+    title: 'Civic AI Chatbot Assistant',
     tag: 'Gemini RAG Engine',
     desc: 'Bilingual conversational queries (Tagalog, English, Taglish) with exact legislative citations and penalty breakdowns.',
     screenshot: '/screenshots/c06-ai-assistant.png',

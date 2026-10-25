@@ -94,7 +94,7 @@ export default function SusGauge({ score = 75.13, benchmark = 68.0 }: SusGaugePr
           <div
             style={{
               position: 'absolute',
-              bottom: 4,
+              bottom: 6,
               left: 0,
               right: 0,
               textAlign: 'center',
@@ -102,10 +102,10 @@ export default function SusGauge({ score = 75.13, benchmark = 68.0 }: SusGaugePr
           >
             <div
               style={{
-                fontSize: 'clamp(38px, 4vw, 48px)',
+                fontSize: 'clamp(28px, 2.8vw, 35px)',
                 fontWeight: 800,
                 color: '#f8fafc',
-                lineHeight: 1,
+                lineHeight: 1.05,
                 fontFeatureSettings: '"tnum" 1',
               }}
             >
@@ -113,12 +113,12 @@ export default function SusGauge({ score = 75.13, benchmark = 68.0 }: SusGaugePr
             </div>
             <div
               style={{
-                fontSize: '12px',
+                fontSize: '11px',
                 color: 'var(--fg-muted)',
                 textTransform: 'uppercase',
                 letterSpacing: '0.08em',
                 fontWeight: 600,
-                marginTop: '4px',
+                marginTop: '3px',
               }}
             >
               out of 100.00

@@ -21,16 +21,16 @@ export const DEFAULT_PRESENTERS: PresenterMember[] = [
   {
     name: 'Reyven B. Calara',
     role: 'Presenter',
-    photo: '/team/calara.jpg',
-    fallbackPhoto: '',
+    photo: '/team/calara.jpeg',
+    fallbackPhoto: '/team/calara.jpg',
     initials: 'RC',
     subtext: 'BSIT — Web Systems Technology',
   },
   {
     name: 'Chris Karl M. Lacanilao',
     role: 'Presenter',
-    photo: '/team/lacanilao.jpg',
-    fallbackPhoto: '',
+    photo: '/team/lacanilao.jpeg',
+    fallbackPhoto: '/team/lacanilao.jpg',
     initials: 'CL',
     subtext: 'BSIT — Web Systems Technology',
   },
@@ -73,10 +73,12 @@ export default function PresenterTeam({
       {showAdvisers && (
         <div
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(min(320px, 100%), 1fr))',
-            gap: '16px',
-            padding: '16px 24px',
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 'clamp(32px, 6vw, 72px)',
+            padding: '16px 32px',
             background: 'rgba(255, 255, 255, 0.025)',
             border: '1px solid var(--hair-2)',
             borderRadius: 'var(--radius)',
@@ -104,7 +106,7 @@ export default function PresenterTeam({
             </div>
             <div>
               <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--accent-gold)', fontWeight: 600 }}>
-                Capstone Adviser & Research Editor
+                Capstone Adviser
               </div>
               <div style={{ fontSize: '16px', fontWeight: 700, color: 'var(--fg)', marginTop: '2px' }}>
                 Cris Norman P. Olipas, EdD

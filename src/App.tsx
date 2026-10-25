@@ -145,7 +145,7 @@ export default function App() {
       <Slide
         center
         nav="The Team"
-        notes="Our development team comprises four researchers specializing in Web Systems Technology. This capstone endeavor was conducted under the direct guidance of our Capstone Adviser and Research Editor, Dr. Cris Norman P. Olipas, and our Faculty-in-Charge, Professor Alexander S. Cochanco."
+        notes="Our development team comprises four researchers specializing in Web Systems Technology. This capstone endeavor was conducted under the direct guidance of our Capstone Adviser, Dr. Cris Norman P. Olipas, and our Faculty-in-Charge, Professor Alexander S. Cochanco."
       >
         <div style={{ maxWidth: 1180, marginInline: 'auto' }}>
           <div style={{ marginBottom: 'clamp(20px, 3vh, 32px)' }}>

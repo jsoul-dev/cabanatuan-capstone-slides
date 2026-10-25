@@ -414,7 +414,7 @@ export default function App() {
         <div style={{ maxWidth: 980, marginInline: 'auto' }}>
           <span className="kicker" style={{ color: 'var(--primary)' }}>Retrieval-Augmented Generation</span>
           <h2 className="headline" style={{ margin: '6px 0 20px 0' }}>
-            Bilingual Civic AI Inquiries with Exact Legal Citations
+            Bilingual Civic AI Inquiries with Exact Ordinance Citations
           </h2>
 
           <CivicChatReplay />
@@ -480,7 +480,7 @@ export default function App() {
               </h3>
               <ul style={{ margin: 0, paddingLeft: '18px', fontSize: '13px', color: 'var(--fg-muted)', display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 <li>Read and search enacted city and barangay ordinances.</li>
-                <li>Inquire via the bilingual Civic AI Assistant with legal citations.</li>
+                <li>Inquire via the bilingual Civic AI Assistant with exact ordinance citations.</li>
                 <li>View official PDF text and civic news advisories.</li>
                 <li>Submit incident reports with photo proof and optional anonymity.</li>
               </ul>

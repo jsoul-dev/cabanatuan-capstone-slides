@@ -79,7 +79,7 @@
 > 
 > 1. **First, a Centralized Ordinance Hub** that consolidates fragmented municipal and barangay measures into an accessible, 24/7 digital archive.
 > 2. **Second, Decentralized Drafting and Review**, establishing a structured digital pipeline where barangay officials draft proposals while the City LGU retains sovereign enactment authority.
-> 3. **Third, Bilingual Civic AI Inquiries**, utilizing Retrieval-Augmented Generation to allow everyday citizens to ask questions in Tagalog or English and receive answers backed by exact legal citations and penalty tiers.
+> 3. **Third, Bilingual Civic AI Inquiries**, utilizing Retrieval-Augmented Generation to allow everyday citizens to ask questions in Tagalog or English and receive answers backed by exact ordinance citations and penalty tiers.
 > 4. **And fourth, Supplementary Incident Triage**, enabling residents to report neighborhood concerns—such as illegal waste burning or road obstructions—with photo verification routed directly to their barangay hall."
 
 - **Slide Transition:** *"Next slide, please. To understand why this modernization is critical, let us look at our empirical needs assessment."*

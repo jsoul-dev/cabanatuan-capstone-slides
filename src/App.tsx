@@ -47,28 +47,41 @@ export default function App() {
           }}
         >
           <Reveal>
-            <div
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                padding: '6px 18px',
-                borderRadius: '999px',
-                background: 'rgba(6, 9, 7, 0.85)',
-                backdropFilter: 'blur(12px)',
-                WebkitBackdropFilter: 'blur(12px)',
-                border: '1px solid rgba(16, 185, 129, 0.45)',
-                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.6)',
-                color: 'var(--primary)',
-                fontSize: '12.5px',
-                fontWeight: 700,
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                marginBottom: '20px',
-              }}
-            >
-              <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#10b981', boxShadow: '0 0 10px #10b981' }} />
-              Group 1 · Final Capstone Defense · October 2026
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <img
+                src="/logo/lgu-logo.png"
+                alt="Cabanatuan City Official Seal"
+                style={{
+                  width: 'clamp(60px, 5.5vw, 80px)',
+                  height: 'clamp(60px, 5.5vw, 80px)',
+                  objectFit: 'contain',
+                  marginBottom: '14px',
+                  filter: 'drop-shadow(0 4px 20px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 24px rgba(16, 185, 129, 0.3))',
+                }}
+              />
+              <div
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  padding: '6px 18px',
+                  borderRadius: '999px',
+                  background: 'rgba(6, 9, 7, 0.85)',
+                  backdropFilter: 'blur(12px)',
+                  WebkitBackdropFilter: 'blur(12px)',
+                  border: '1px solid rgba(16, 185, 129, 0.45)',
+                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.6)',
+                  color: 'var(--primary)',
+                  fontSize: '12.5px',
+                  fontWeight: 700,
+                  letterSpacing: '0.08em',
+                  textTransform: 'uppercase',
+                  marginBottom: '20px',
+                }}
+              >
+                <span style={{ width: 8, height: 8, borderRadius: '50%', background: '#10b981', boxShadow: '0 0 10px #10b981' }} />
+                Group 1 · Final Capstone Defense · October 2026
+              </div>
             </div>
           </Reveal>
 

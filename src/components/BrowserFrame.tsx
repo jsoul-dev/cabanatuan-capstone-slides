@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 /* Wrap a screenshot or UI mock in browser chrome — traffic dots, back/forward
    arrows, and a padlocked URL pill. children fill the body: an <img>, a
    <VisualDashboard/>, anything.
-   <BrowserFrame url="app.acme.com"><img …/></BrowserFrame> */
+   <BrowserFrame url="app.acme.com"><img src="..." /></BrowserFrame> */
 const Arrow = ({ back }: { back?: boolean }) => (
   <svg
     viewBox="0 0 24 24"
@@ -40,21 +40,40 @@ export default function BrowserFrame({
 }) {
   return (
     <div className="bf mat">
-      <div className="bf-bar">
-        <span className="bf-dots">
-          <i />
-          <i />
-          <i />
+      <div className="bf-bar" style={{ gap: '8px', padding: '8px 12px' }}>
+        <span className="bf-dots" style={{ gap: '5px' }}>
+          <i style={{ width: '9px', height: '9px' }} />
+          <i style={{ width: '9px', height: '9px' }} />
+          <i style={{ width: '9px', height: '9px' }} />
         </span>
-        <span className="bf-nav" aria-hidden>
+        <span className="bf-nav" aria-hidden style={{ gap: '2px' }}>
           <Arrow back />
           <Arrow />
         </span>
-        <span className="bf-url">
+        <span
+          className="bf-url"
+          style={{
+            minWidth: 0,
+            overflow: 'hidden',
+            padding: '4px 10px',
+            fontSize: '11.5px',
+            gap: '6px',
+            whiteSpace: 'nowrap',
+          }}
+        >
           <Lock />
-          {url}
+          <span
+            style={{
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              whiteSpace: 'nowrap',
+              minWidth: 0,
+            }}
+          >
+            {url}
+          </span>
         </span>
-        <span style={{ width: 52, flexShrink: 0 }} aria-hidden />
+        <span style={{ width: 16, flexShrink: 0 }} aria-hidden />
       </div>
       <div className="bf-body">{children}</div>
     </div>

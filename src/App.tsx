@@ -1450,19 +1450,19 @@ export default function App() {
           </h2>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '16px' }}>
-            <BrowserFrame url="ordinance.cabanatuan.gov.ph/architecture/dfd-0">
+            <BrowserFrame url="cabanatuan.gov.ph/dfd-l0">
               <div style={{ background: '#ffffff', padding: '10px', height: '240px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <img src="/figures/figure-15-dfd-l0.png" alt="Level 0 DFD" style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} />
               </div>
             </BrowserFrame>
 
-            <BrowserFrame url="ordinance.cabanatuan.gov.ph/architecture/dfd-1">
+            <BrowserFrame url="cabanatuan.gov.ph/dfd-l1">
               <div style={{ background: '#ffffff', padding: '10px', height: '240px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <img src="/figures/figure-16-dfd-l1.png" alt="Level 1 DFD" style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} />
               </div>
             </BrowserFrame>
 
-            <BrowserFrame url="ordinance.cabanatuan.gov.ph/architecture/erd">
+            <BrowserFrame url="cabanatuan.gov.ph/erd">
               <div style={{ background: '#ffffff', padding: '10px', height: '240px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <img src="/figures/figure-25-erd.png" alt="Entity Relationship Diagram" style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} />
               </div>

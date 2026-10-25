@@ -109,7 +109,7 @@ export default function PresenterTeam({
                 Capstone Adviser
               </div>
               <div style={{ fontSize: '16px', fontWeight: 700, color: 'var(--fg)', marginTop: '2px' }}>
-                Cris Norman P. Olipas, EdD
+                Cris Norman P. Olipas, Ed.D.
               </div>
             </div>
           </div>

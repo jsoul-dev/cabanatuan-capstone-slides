@@ -8,8 +8,8 @@ Preparation checklist for the presentation, system demonstration, and defense da
 - **Title:** A Web-Based AI-Assisted Ordinance Information System for Cabanatuan City
 - **Faculty-in-Charge (FIC):** Alexander S. Cochanco
 - **Presenters:** Agulto, Manny N.; Calara, Reyven B.; Lacanilao, Chris Karl M.; Lemence, John Carlo DG.
-- **Adviser:** Cris Norman P. Olipas, EdD
-- **Research Editor (per defense schedule sheet):** Cris Norman P. Olipas, EdD
+- **Adviser:** Cris Norman P. Olipas, Ed.D.
+- **Research Editor (per defense schedule sheet):** Cris Norman P. Olipas, Ed.D.
 - **Panelists:** intentionally left out of this context file.
 - **Role matrix:** the professor asked groups to present a feature-by-role matrix (check marks per role) so the roles are easy to compare. Earlier groups used a table with features as rows, roles as columns, and a highlighted admin column.
 

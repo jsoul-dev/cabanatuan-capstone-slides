@@ -20,8 +20,8 @@ Deck is built with bolt-slides (React + Vite, each slide is a component).
 
 - Group No.: **1**
 - Faculty-in-Charge (FIC): **Alexander S. Cochanco**
-- Capstone Adviser: **Cris Norman P. Olipas, EdD**
-- Research Editor (per the defense schedule sheet): **Cris Norman P. Olipas, EdD**
+- Capstone Adviser: **Cris Norman P. Olipas, Ed.D.**
+- Research Editor (per the defense schedule sheet): **Cris Norman P. Olipas, Ed.D.**
 - Presenters (schedule-sheet order): Agulto, Manny N.; Calara, Reyven B.; Lacanilao, Chris Karl M.; Lemence, John Carlo DG.
 - Photos: `public/team/agulto.jpg`, `calara.jpg`, `lacanilao.jpg`, `lemence.jpg` (use an initials avatar if a file is missing)
 - Captions: default to "Presenter"; keep the caption text in one data array so the group can edit it.
@@ -39,7 +39,7 @@ Deck is built with bolt-slides (React + Vite, each slide is a component).
 
 ### Slide 2. The Team (item 1)
 - Four presenter photos with name and caption beneath each.
-- Capstone Adviser: Cris Norman P. Olipas, EdD
+- Capstone Adviser: Cris Norman P. Olipas, Ed.D.
 - FIC: Alexander S. Cochanco
 - Effect: photos fade and tilt in one by one (`Team` component or `TiltCard`).
 

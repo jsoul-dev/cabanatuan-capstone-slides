@@ -43,6 +43,7 @@ export default function RecommendationsTimeline() {
         width: '100%',
         maxWidth: 1160,
         marginInline: 'auto',
+        textAlign: 'left',
       }}
     >
       {tracks.map((track, idx) => (
@@ -57,6 +58,7 @@ export default function RecommendationsTimeline() {
             flexDirection: 'column',
             boxShadow: '0 20px 45px -15px rgba(0, 0, 0, 0.7)',
             position: 'relative',
+            textAlign: 'left',
           }}
         >
           {/* Header */}
@@ -81,13 +83,34 @@ export default function RecommendationsTimeline() {
             </span>
           </div>
 
-          <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#f8fafc', margin: '0 0 14px 0', lineHeight: 1.3 }}>
+          <h3
+            style={{
+              fontSize: '16px',
+              fontWeight: 700,
+              color: '#f8fafc',
+              margin: '0 0 14px 0',
+              lineHeight: 1.35,
+              textAlign: 'left',
+            }}
+          >
             {track.title}
           </h3>
 
-          <ul style={{ margin: 0, paddingLeft: '18px', display: 'flex', flexDirection: 'column', gap: '10px', fontSize: '13px', color: 'var(--fg-muted)', lineHeight: 1.45 }}>
+          <ul
+            style={{
+              margin: 0,
+              paddingLeft: '18px',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '10px',
+              fontSize: '13px',
+              color: 'var(--fg-muted)',
+              lineHeight: 1.5,
+              textAlign: 'left',
+            }}
+          >
             {track.items.map((item, iIdx) => (
-              <li key={iIdx}>
+              <li key={iIdx} style={{ textAlign: 'left' }}>
                 {item}
               </li>
             ))}
